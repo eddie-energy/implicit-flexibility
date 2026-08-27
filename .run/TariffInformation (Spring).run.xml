@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TariffInformation (Spring)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" value="local,dev" />
+    <module name="implicit-flexibility.tariff-information.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="energy.eddie.implicitflexibility.TariffInformationApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
