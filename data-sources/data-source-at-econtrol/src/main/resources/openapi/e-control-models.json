@@ -1,0 +1,3301 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "E-Control Rate Calculator API Models",
+    "version": "1.0.0",
+    "description": "OpenAPI model definitions derived from the E-Control Rate Calculator documentation."
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "AccountingType": {
+        "type": "string",
+        "description": "Defines accounting types for products and product groups.",
+        "enum": [
+          "TOTAL_ACCOUNT",
+          "SEPARATED_ACCOUNT",
+          "BOTH_ACCOUNT"
+        ]
+      },
+      "BaseRateType": {
+        "type": "string",
+        "enum": [
+          "BASE_RATE",
+          "ENERGY_OUTPUT_RATE"
+        ]
+      },
+      "CombinationType": {
+        "type": "string",
+        "description": "Represents the types of combination options for Feed-In or Spotmarket Feed-In products.",
+        "enum": [
+          "ALL_STANDARD_PRODUCTS_OF_BRAND",
+          "SELECTED_STANDARD_PRODUCTS_OF_BRAND",
+          "WITH_OTHER_BRANDS"
+        ]
+      },
+      "ConsumptionType": {
+        "type": "string",
+        "description": "Specifies the different types of consumption.",
+        "enum": [
+          "NORM_POWER_STANDARD",
+          "NORM_POWER_DOUBLED_DAY_NIGHT",
+          "NORM_POWER_QUARTERED_MAXIMUM",
+          "NORM_POWER_DOUBLED_QUARTERED_MAXIMUM",
+          "HEATING_POWER_STANDARD",
+          "HEATING_POWER_DOUBLED_DAY_NIGHT",
+          "SMART_METER_PER_DAY",
+          "SMART_METER_PER_HOUR",
+          "SMART_METER_PER_DAY_ADD",
+          "SMART_METER_PER_HOUR_ADD",
+          "NORM_GAS_STANDARD"
+        ]
+      },
+      "EnergyType": {
+        "type": "string",
+        "description": "Supported energy types.",
+        "enum": [
+          "POWER",
+          "GAS"
+        ]
+      },
+      "GasGridMeasurementMode": {
+        "type": "string",
+        "description": "Enumerates the supported measurement methods on the gas grid.",
+        "enum": [
+          "METERED",
+          "UNMETERED"
+        ]
+      },
+      "Loadprofile": {
+        "type": "string",
+        "description": "Different power load profiles.",
+        "enum": [
+          "G0",
+          "G1",
+          "G2",
+          "G3",
+          "G4",
+          "G5",
+          "G6",
+          "L0",
+          "L1",
+          "L2",
+          "U0",
+          "U1",
+          "ULA",
+          "ULB",
+          "ULC",
+          "ULD",
+          "ULE",
+          "ULF",
+          "EAGU1_EAG",
+          "EAGU2_EAG",
+          "H0"
+        ]
+      },
+      "PaymentMethodDiscriminator": {
+        "type": "string",
+        "description": "Defines the discriminator values for PaymentMethod Business Objects.",
+        "enum": [
+          "PROD_GROUP",
+          "PRODUCT"
+        ]
+      },
+      "ProductType": {
+        "type": "string",
+        "description": "Specifies the different types of a product.",
+        "enum": [
+          "MAIN",
+          "ADDITIONAL",
+          "MAIN_ADDITIONAL",
+          "FEED_IN",
+          "SPOT_MARKET_MAIN",
+          "SPOT_MARKET_FEED_IN"
+        ]
+      },
+      "SmartMeterLoadProfileYearlyData": {
+        "type": "object",
+        "description": "The yearly data of the smart meter load profile.",
+        "properties": {}
+      },
+      "SmartMeterLoadProfileStateType": {
+        "type": "string",
+        "description": "The state of the smart meter load profile.",
+        "enum": [
+          "ACTIVE"
+        ]
+      },
+      "NlsText": {
+        "type": "object",
+        "description": "Localized text.",
+        "properties": {}
+      },
+      "PowerConnection": {
+        "type": "object",
+        "description": "Represents a power connection.",
+        "properties": {}
+      },
+
+      "RateType": {
+        "type": "string",
+        "description": "Represents different types of rates for a product.",
+        "enum": [
+          "STANDARD",
+          "STAGGERED_kWh",
+          "STAGGERED_kW",
+          "STAGGERED_kWp",
+          "ZONING",
+          "SMART_METER_UPLOADED_EXCEL",
+          "PRICE_PROFILE",
+          "COMPLEX"
+        ]
+      },
+      "RateZoningType": {
+        "type": "string",
+        "description": "Represents the different types of rate differentiation for a product.",
+        "enum": [
+          "STANDARD",
+          "HIGH_LOW",
+          "SUMMER_WINTER",
+          "NIGHT",
+          "SUMMER_WINTER_HIGH_LOW",
+          "SMART_METER_OPT_IN",
+          "SMART_METER",
+          "SPOT_MARKET_DYNAMIC_PRICE_MODEL",
+          "COMPLEX"
+        ]
+      },
+      "Unit": {
+        "type": "string",
+        "description": "Specifies the different energy unit types.",
+        "enum": [
+          "kWh",
+          "kW",
+          "kWp"
+        ]
+      },
+      "CustomerGroup": {
+        "type": "string",
+        "description": "Represents different customer groups the rate calculator application is able to calculate ratings for.",
+        "enum": [
+          "HOME",
+          "BUSINESS",
+          "HOME_BUSINESS"
+        ]
+      },
+      "PriceGuaranteeType": {
+        "type": "string",
+        "enum": [
+          "NO_GUARANTEE",
+          "GUARANTEE",
+          "ADJUSTING",
+          "DYNAMIC"
+        ]
+      },
+      "ContractTypeDiscriminator": {
+        "type": "string",
+        "enum": [
+          "PRODUCT",
+          "PRODUCT_GROUP"
+        ]
+      },
+      "FileType": {
+        "type": "string",
+        "enum": [
+          "EXCEL_UPLOAD",
+          "EXCEL_TEMPLATE",
+          "BASE64_IMAGE",
+          "GIF_IMAGE",
+          "JPEG_IMAGE",
+          "JPG_IMAGE",
+          "PDF",
+          "CSV"
+        ]
+      },
+      "ApprovalDecision": {
+        "type": "string",
+        "enum": [
+          "APPROVED",
+          "DECLINED"
+        ]
+      },
+      "StateTransitionContext": {
+        "type": "string",
+        "description": "State transition context.",
+        "enum": [
+          "USER_ACTION",
+          "AUTO_APPROVE",
+          "BATCH_JOB"
+        ]
+      },
+      "ProductStateType": {
+        "type": "string",
+        "enum": [
+          "AVAILABLE",
+          "EXPIRED"
+        ]
+      },
+      "ProductVersionState": {
+        "type": "string",
+        "enum": [
+          "PROCESSING",
+          "APPROVAL_READY",
+          "APPROVAL_REQUESTED",
+          "IN_REVISION",
+          "APPROVED",
+          "ONLINE",
+          "ONLINE_EXPIRED",
+          "CANCELLED"
+        ]
+      },
+      "TimeDifferentiation": {
+        "type": "string",
+        "enum": [
+          "SUMMER_WINTER",
+          "SUMMER_WINTER_WORKDAYS_WEEKEND",
+          "SUMMER_WINTER_WORKDAYS_SA_SU",
+          "SUMMER_WINTER_DAILY",
+          "SUMMER_WINTER_WEEK",
+          "SUMMER_WINTER_TRANS_PERIOD",
+          "SUMMER_WINTER_TRANS_PERIOD_WORKDAYS_WEEKEND",
+          "SUMMER_WINTER_TRANS_PERIOD_WORKDAYS_SA_SU",
+          "SUMMER_WINTER_TRANS_PERIOD_DAILY",
+          "SUMMER_WINTER_TRANS_PERIOD_WEEK",
+          "WORKDAYS_WEEKEND",
+          "WORKDAYS_SA_SU",
+          "DAILY",
+          "WEEK"
+        ]
+      },
+      "DiscountAllowanceType": {
+        "type": "string",
+        "description": "Represents different types of allowances which are considered when discounts are put into account.",
+        "enum": [
+          "FIRST_TRANCHE_BILL",
+          "EACH_TRANCHE_BILL",
+          "FIRST_ANNUAL_BILL",
+          "AFTER_ONE_YEAR_TRANCHE_BILL",
+          "PARTIAL_TRANCHE_BILL",
+          "AFTER_ONE_YEAR_BILL"
+        ]
+      },
+      "DiscountCategoryValidityType": {
+        "type": "string",
+        "description": "Represents the validity for calculation the discount category has.",
+        "enum": [
+          "YEAR_ONE",
+          "YEAR_TWO",
+          "YEAR_THREE",
+          "EVERY_YEAR",
+          "VARIABLE"
+        ]
+      },
+      "DiscountRateType": {
+        "type": "string",
+        "description": "Defines the different discount rate types.",
+        "enum": [
+          "FLAT_RATE_DISCOUNT",
+          "CONSUMPTION_DISCOUNT",
+          "PERCENTAGE_DISCOUNT",
+          "ENERGY_OUTPUT_RATE_DISCOUNT",
+          "ENERGY_RATE_DISCOUNT"
+        ]
+      },
+      "DiscountType": {
+        "type": "string",
+        "description": "Defines the type of the discount.",
+        "enum": [
+          "GENERAL_DISCOUNT",
+          "INDIVIDUAL_DISCOUNT",
+          "NON_MONETARY_DISCOUNT"
+        ]
+      },
+      "MeterDefinitionType": {
+        "type": "string",
+        "description": "The available Meter Definitions.",
+        "enum": [
+          "POWER_METER",
+          "GAS_METER",
+          "BELLOWS_METER",
+          "ROTARY_METER",
+          "TURBINE_METER",
+          "LOAD_PROFILE_METER",
+          "QTY_TRANSFORMER"
+        ]
+      },
+      "MeterMeasurementMode": {
+        "type": "string",
+        "description": "Defines the meter measurement modes.",
+        "enum": [
+          "METERED",
+          "UNMETERED",
+          "INTERRUPTIBLE",
+          "ADDITIONAL_METERED",
+          "QUANTITY_TRANSFORMER"
+        ]
+      },
+      "RCSearchMode": {
+        "type": "string",
+        "description": "Defines the search mode of the public rate calculator.",
+        "enum": [
+          "STANDARD",
+          "PREVIEW",
+          "EVALUATION",
+          "WIDGET"
+        ]
+      },
+      "ProductPropertyAdminType": {
+        "type": "string",
+        "enum": [
+          "AUTOMATIC",
+          "GLOBAL",
+          "NON_GLOBAL",
+          "CALCULATED"
+        ]
+      },
+      "Attachment": {
+        "type": "object",
+        "description": "Represents an attachment of a business object.",
+        "properties": {
+          "extension": {
+            "type": "string"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "fileSize": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileType": {
+            "$ref": "#/components/schemas/FileType"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "resourceType": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "BigDecimalRange": {
+        "type": "object",
+        "description": "Represents a range of floating point numbers.",
+        "properties": {
+          "from": {
+            "type": "number",
+            "format": "double"
+          },
+          "to": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "RateProductsRequest": {
+        "type": "object",
+        "properties": {
+          "comparisonOptions": {
+            "$ref": "#/components/schemas/CurrentProduct"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "gridAreaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "gridOperatorId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "includeSwitchingDiscounts": {
+            "type": "boolean"
+          },
+          "membership": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "moveHome": {
+            "type": "boolean"
+          },
+          "priceView": {
+            "$ref": "#/components/schemas/PriceViewOptionType"
+          },
+          "rateRequestDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "rcSearchMode": {
+            "$ref": "#/components/schemas/RCSearchMode"
+          },
+          "referencePeriod": {
+            "$ref": "#/components/schemas/ReferencePeriodOptionType"
+          },
+          "requirements": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "zipCode": {
+            "type": "integer"
+          }
+        }
+      },
+      "DateRange": {
+        "type": "object",
+        "description": "Denotes a date range.",
+        "properties": {
+          "from": {
+            "type": "string",
+            "format": "date"
+          },
+          "to": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "ContractTermProp": {
+        "type": "object",
+        "description": "Business object representing a contract term property, e.g. notice period.",
+        "properties": {
+          "defaultPropName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "ordering": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "propName": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PaymentMethodType": {
+        "type": "object",
+        "description": "Definition of a payment type.",
+        "properties": {
+          "defaultDisplayName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "validFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "validTo": {
+            "type": "string",
+            "format": "date"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ProductPaymentMethod": {
+        "type": "object",
+        "description": "Definition of a ProductPaymentMethod.",
+        "properties": {
+          "annual": {
+            "type": "boolean"
+          },
+          "annualEleven": {
+            "type": "boolean"
+          },
+          "annualHalf": {
+            "type": "boolean"
+          },
+          "annualTen": {
+            "type": "boolean"
+          },
+          "bimonth": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "month": {
+            "type": "boolean"
+          },
+          "paymentMethodType": {
+            "$ref": "#/components/schemas/PaymentMethodType"
+          },
+          "quarter": {
+            "type": "boolean"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PaymentMethodDiscriminator"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RCLink": {
+        "type": "object",
+        "description": "Link representations in rate calculator.",
+        "properties": {
+          "link": {
+            "type": "string"
+          },
+          "linkLabel": {
+            "type": "string"
+          }
+        }
+      },
+      "StockExchangeIndex": {
+        "type": "object",
+        "description": "Business object representing a stock exchange index.",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "link": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ProductBaseRate": {
+        "type": "object",
+        "description": "Represents one base charge of a product.",
+        "properties": {
+          "baseRateType": {
+            "$ref": "#/components/schemas/BaseRateType"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "staggerUnit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "staggering": {
+            "$ref": "#/components/schemas/BigDecimalRange"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ProductEnergyRate": {
+        "type": "object",
+        "description": "Represents the business object for one product energy rate.",
+        "properties": {
+          "highRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lowRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "staggerUnit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "staggering": {
+            "$ref": "#/components/schemas/BigDecimalRange"
+          },
+          "standardRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerHighRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerLowRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "winterHighRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterLowRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterRate": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "ProductContractTerm": {
+        "type": "object",
+        "description": "Product contract term.",
+        "properties": {
+          "indexDescription": {
+            "type": "string"
+          },
+          "lastDateChange": {
+            "type": "string",
+            "format": "date"
+          },
+          "minContractTermFeedIn": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minContractTermFeedInDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "minContractTermHousehold": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minContractTermHouseholdDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "minContractTermOtherBusiness": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minContractTermOtherBusinessDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "minContractTermSmallBusiness": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minContractTermSmallBusinessDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "noticePeriodHousehold": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noticePeriodOtherBusiness": {
+            "$ref": "#/components/schemas/ContractTermProp"
+          },
+          "noticePeriodSmallBusiness": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "priceAdjustment": {
+            "$ref": "#/components/schemas/ContractTermProp"
+          },
+          "priceCap": {
+            "type": "boolean"
+          },
+          "priceGuaranteeMonths": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "priceGuaranteeType": {
+            "$ref": "#/components/schemas/PriceGuaranteeType"
+          },
+          "priceGuaranteeUntil": {
+            "type": "string",
+            "format": "date"
+          },
+          "product": {
+            "$ref": "#/components/schemas/Product"
+          },
+          "spotMarketPriceAdjustment": {
+            "$ref": "#/components/schemas/ContractTermProp"
+          },
+          "stockExchangeIndex": {
+            "$ref": "#/components/schemas/StockExchangeIndex"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ContractTypeDiscriminator"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ProductContractTermInfo": {
+        "type": "object",
+        "description": "Represents a contract term info for a rated product which is displayed in the result list of a rating request.",
+        "properties": {
+          "lastDateChange": {
+            "type": "string",
+            "format": "date"
+          },
+          "noMinContractTermBind": {
+            "type": "boolean"
+          },
+          "priceAdjustment": {
+            "$ref": "#/components/schemas/ContractTermProp"
+          },
+          "priceCap": {
+            "type": "boolean"
+          },
+          "priceGuaranteeMonths": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "priceGuaranteeType": {
+            "$ref": "#/components/schemas/PriceGuaranteeType"
+          },
+          "priceGuaranteeUntil": {
+            "type": "string",
+            "format": "date"
+          },
+          "spotMarketPriceAdjustment": {
+            "$ref": "#/components/schemas/ContractTermProp"
+          },
+          "stockExchangeIndex": {
+            "$ref": "#/components/schemas/StockExchangeIndex"
+          }
+        }
+      },
+      "DiscountDetails": {
+        "type": "object",
+        "description": "Contains details of a discount shown on product details popup opened from a rating result. It contains additional informations to the discounts of the product.",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "DiscountCategory": {
+        "type": "object",
+        "description": "Business object representing a discount category.",
+        "properties": {
+          "categoryName": {
+            "type": "string"
+          },
+          "defaultCategoryName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "myBrandCurrentCustomers": {
+            "type": "boolean"
+          },
+          "myBrandNewCustomers": {
+            "type": "boolean"
+          },
+          "myProductCurrentCustomers": {
+            "type": "boolean"
+          },
+          "myProductNewCustomers": {
+            "type": "boolean"
+          },
+          "ordering": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "otherBrandCurrentCustomers": {
+            "type": "boolean"
+          },
+          "otherBrandNewCustomers": {
+            "type": "boolean"
+          },
+          "spotMarketRelevant": {
+            "type": "boolean"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          },
+          "yearValidity": {
+            "$ref": "#/components/schemas/DiscountCategoryValidityType"
+          }
+        }
+      },
+      "CalculatedDiscount": {
+        "type": "object",
+        "description": "Represents a calculated discount part of a product rating result.",
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/DiscountCategory"
+          },
+          "description": {
+            "type": "string"
+          },
+          "discountAllowanceType": {
+            "$ref": "#/components/schemas/DiscountAllowanceType"
+          },
+          "discountType": {
+            "$ref": "#/components/schemas/DiscountType"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "included": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "CalculatedFee": {
+        "type": "object",
+        "description": "Represents a calculated fee part of a product rating result. A calculated fee may be common or associated to a specific product.",
+        "properties": {
+          "appliedToEnergyRate": {
+            "type": "boolean"
+          },
+          "feeCategory": {
+            "type": "string",
+            "description": "Fee category. The documentation identifies the type as feecategory, but its model definition has not yet been provided."
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "partSumsOfAppliedToTheProportionalFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "proportionalRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "CalculatedGridCosts": {
+        "type": "object",
+        "description": "Contains detailed information on grid parts of a rated product. All values represented in cent.",
+        "properties": {
+          "calculatedFees": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CalculatedFee"
+            }
+          },
+          "governmentSubvention": {
+            "type": "number",
+            "format": "double"
+          },
+          "gridBaseRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "gridCostsNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "gridFeeNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "gridLossRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "gridUsageRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "measurementMode": {
+            "type": "string"
+          },
+          "meterRateNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "tax": {
+            "type": "number",
+            "format": "double"
+          },
+          "taxRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalGrossSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalNetSum": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "ProductPropertyTypeData": {
+        "type": "object",
+        "description": "Definition of a ProductPropertyTypeData.",
+        "properties": {
+          "adminType": {
+            "$ref": "#/components/schemas/ProductPropertyAdminType"
+          },
+          "classicFeedInRelevant": {
+            "type": "boolean"
+          },
+          "classicRelevant": {
+            "type": "boolean"
+          },
+          "defaultPropName": {
+            "type": "string"
+          },
+          "defaultTooltip": {
+            "type": "string"
+          },
+          "gas": {
+            "type": "boolean"
+          },
+          "iconColor": {
+            "type": "string"
+          },
+          "iconData": {
+            "type": "string"
+          },
+          "iconOrdering": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "ordering": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "power": {
+            "type": "boolean"
+          },
+          "propName": {
+            "type": "string"
+          },
+          "spotMarketFeedInRelevant": {
+            "type": "boolean"
+          },
+          "spotMarketRelevant": {
+            "type": "boolean"
+          },
+          "tooltipName": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "ProductRequirement": {
+        "type": "object",
+        "description": "Represents a product requirement ('Voraussetzung') or membership ('Mitgliedschaft').",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "productType": {
+            "$ref": "#/components/schemas/ProductType"
+          }
+        }
+      },
+      "EnergySource": {
+        "type": "object",
+        "description": "The defined energy source.",
+        "properties": {
+          "energySourceDefaultName": {
+            "type": "string"
+          },
+          "energySourceName": {
+            "type": "string"
+          },
+          "energySourceType": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "ordering": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "EnergySourceType": {
+        "type": "object",
+        "description": "Represents a localized energy source type object. Energy source types are the main categories for energy sources.",
+        "properties": {
+          "barColor": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "ordering": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "PowerLabelingEnergySource": {
+        "type": "object",
+        "description": "The mapping between power labellings and energy sources, holding the percentage.",
+        "properties": {
+          "energySource": {
+            "$ref": "#/components/schemas/EnergySource"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "percentage": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "PowerLabelingProducingCountry": {
+        "type": "object",
+        "description": "The mapping between power labellings and producing countries holding the percentage.",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "percentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "producingCountry": {
+            "$ref": "#/components/schemas/ProducingCountry"
+          }
+        }
+      },
+      "BrandContact": {
+        "type": "object",
+        "description": "Representation of a brand contact data.",
+        "properties": {
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "email": {
+            "type": "string"
+          },
+          "energySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "fax": {
+            "type": "string"
+          },
+          "information": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "supplierEcadId": {
+            "type": "string"
+          },
+          "supplierName": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "description": "Representation of a product domain entity localized.",
+        "properties": {
+          "accountingType": {
+            "$ref": "#/components/schemas/AccountingType"
+          },
+          "additionalInfo": {
+            "$ref": "#/components/schemas/Attachment"
+          },
+          "additionalProducts": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          },
+          "approvalDecision": {
+            "$ref": "#/components/schemas/ApprovalDecision"
+          },
+          "approvalDecisionContext": {
+            "$ref": "#/components/schemas/StateTransitionContext"
+          },
+          "approvalDecisionTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "approvalDecisionUserEcadId": {
+            "type": "string"
+          },
+          "approvalDecisionUserEmail": {
+            "type": "string"
+          },
+          "approvalDecisionUserFullName": {
+            "type": "string"
+          },
+          "approvalDecisionUserPhone": {
+            "type": "string"
+          },
+          "approvalExternalDescription": {
+            "type": "string"
+          },
+          "approvalInternalDescription": {
+            "type": "string"
+          },
+          "approvalRequestContext": {
+            "$ref": "#/components/schemas/StateTransitionContext"
+          },
+          "approvalRequestTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "approvalRequestUserEcadId": {
+            "type": "string"
+          },
+          "approvalRequestUserEmail": {
+            "type": "string"
+          },
+          "approvalRequestUserFullName": {
+            "type": "string"
+          },
+          "approvalRequestUserPhone": {
+            "type": "string"
+          },
+          "associationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "attachmentsFromMainProduct": {
+            "type": "boolean"
+          },
+          "baseRates": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/ProductBaseRate"
+            }
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "brandName": {
+            "type": "string"
+          },
+          "changeLink": {
+            "$ref": "#/components/schemas/RCLink"
+          },
+          "combinationType": {
+            "$ref": "#/components/schemas/CombinationType"
+          },
+          "complexPrice": {
+            "type": "string"
+          },
+          "consumptionRange": {
+            "type": "object"
+          },
+          "consumptionTypes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/ConsumptionType"
+            }
+          },
+          "contract": {
+            "$ref": "#/components/schemas/Attachment"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "deliveryTerms": {
+            "$ref": "#/components/schemas/Attachment"
+          },
+          "description": {
+            "type": "string"
+          },
+          "discounts": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object"
+            }
+          },
+          "energyOutputRange": {
+            "type": "object"
+          },
+          "energyOutputRates": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/ProductBaseRate"
+            }
+          },
+          "energyRates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductEnergyRate"
+            }
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "excludeAdditionalFlatRate": {
+            "type": "boolean"
+          },
+          "feedInProducts": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          },
+          "feedInRange": {
+            "type": "object"
+          },
+          "firstLink": {
+            "$ref": "#/components/schemas/RCLink"
+          },
+          "gridAreaCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasOverPercentCustomers": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "imageBase64": {
+            "type": "string"
+          },
+          "internalDescription": {
+            "type": "string"
+          },
+          "internalDescription2": {
+            "type": "string"
+          },
+          "internalNote": {
+            "type": "string"
+          },
+          "loadprofiles": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/Loadprofile"
+            }
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "lockedBy": {
+            "type": "string"
+          },
+          "lockedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "mainProducts": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          },
+          "measurementModes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/GasGridMeasurementMode"
+            }
+          },
+          "membership": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nominalPowerRange": {
+            "$ref": "#/components/schemas/BigDecimalRange"
+          },
+          "onlineContext": {
+            "$ref": "#/components/schemas/StateTransitionContext"
+          },
+          "onlineTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "originalProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "paymentMethods": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/ProductPaymentMethod"
+            }
+          },
+          "powerLabeling": {
+            "$ref": "#/components/schemas/Attachment"
+          },
+          "predecessorId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "prevVersion": {
+            "$ref": "#/components/schemas/Product"
+          },
+          "priceInfo": {
+            "$ref": "#/components/schemas/Attachment"
+          },
+          "productContractTerm": {
+            "$ref": "#/components/schemas/ProductContractTerm"
+          },
+          "productGroupId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "productProperties": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object"
+            }
+          },
+          "productState": {
+            "$ref": "#/components/schemas/ProductStateType"
+          },
+          "productStateTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "productType": {
+            "$ref": "#/components/schemas/ProductType"
+          },
+          "productValidityPeriod": {
+            "$ref": "#/components/schemas/DateRange"
+          },
+          "rateTimeDifferentiation": {
+            "$ref": "#/components/schemas/TimeDifferentiation"
+          },
+          "rateType": {
+            "$ref": "#/components/schemas/RateType"
+          },
+          "rateZoningType": {
+            "$ref": "#/components/schemas/RateZoningType"
+          },
+          "regularCustomersFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "requirements": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "secondLink": {
+            "$ref": "#/components/schemas/RCLink"
+          },
+          "smartMeterRates": {
+            "$ref": "#/components/schemas/Attachment"
+          },
+          "specialConditionsDescription": {
+            "type": "string"
+          },
+          "supplierName": {
+            "type": "string"
+          },
+          "tenantId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "validOnlyWithAdditional": {
+            "type": "boolean"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "versionState": {
+            "$ref": "#/components/schemas/ProductVersionState"
+          },
+          "versionStateTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "versionValidityPeriod": {
+            "$ref": "#/components/schemas/DateRange"
+          },
+          "zipCodeCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ProducingCountry": {
+        "type": "object",
+        "description": "Producing country.",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "producingCountryDefaultName": {
+            "type": "string"
+          },
+          "producingCountryIsoCode": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Brand": {
+        "type": "object",
+        "description": "Representation of a brand domain entity.",
+        "properties": {
+          "brandContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BrandContact"
+            }
+          },
+          "gas": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "information": {
+            "type": "string"
+          },
+          "logoBase64": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "power": {
+            "type": "boolean"
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "BrandSearchResult": {
+        "type": "object",
+        "description": "Results of a brand search.",
+        "properties": {
+          "brandData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Brand"
+            }
+          },
+          "defaultId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localPlayerId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "CalculatedProductEnergyCosts": {
+        "type": "object",
+        "description": "Contains detailed information on parts of a rated product. All values represented in cent.",
+        "properties": {
+          "baseRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "calculatedDiscount": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CalculatedDiscount"
+            }
+          },
+          "calculatedFees": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CalculatedFee"
+            }
+          },
+          "complexPrice": {
+            "type": "string"
+          },
+          "discountNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "energyOutputRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "energyRateNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "energyRateTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "productFeeNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "tax": {
+            "type": "number",
+            "format": "double"
+          },
+          "taxRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalGrossSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalNetSum": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "CurrentProductData": {
+        "type": "object",
+        "description": "Data for the current product selection dropdown.",
+        "properties": {
+          "defaultId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "productData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EligibleProductData"
+            }
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "EligibleProductData": {
+        "type": "object",
+        "description": "Drop down line for current product selection.",
+        "properties": {
+          "additionalAssociationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "additionalId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "feedInAssociationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "feedInId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mainAssociationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mainId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "membership": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "productValidityFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "regularCustomersFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "GasMeterStandardType": {
+        "type": "object",
+        "properties": {
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "inclQuantityTransformer": {
+            "type": "boolean"
+          },
+          "measurementMode": {
+            "$ref": "#/components/schemas/MeterMeasurementMode"
+          },
+          "meterDefinitionDefaultType": {
+            "type": "boolean"
+          },
+          "meterDefinitionType": {
+            "$ref": "#/components/schemas/MeterDefinitionType"
+          },
+          "meterType": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "GasSearchValuesResponse": {
+        "type": "object",
+        "properties": {
+          "meterTypeMapping": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "standardMeterTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GasMeterStandardType"
+            }
+          }
+        }
+      },
+      "GridOperator": {
+        "type": "object",
+        "description": "Representation of a grid operator.",
+        "properties": {
+          "assignType": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "MANUAL"
+            ]
+          },
+          "brandBusiness": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "brandHome": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "deactivatedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "ecadId": {
+            "type": "string"
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "gridAreaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "gridAreaName": {
+            "type": "string"
+          },
+          "hasIndividualMeterRates": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localPlayerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "localPlayerName": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "registeredOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          },
+          "zipCode": {
+            "type": "string"
+          },
+          "zipCodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZipCode"
+            },
+            "uniqueItems": true
+          },
+          "zipCodesCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "zpAtnrA2": {
+            "type": "string"
+          },
+          "zpAtnrB2": {
+            "type": "string"
+          },
+          "zpLnrB4": {
+            "type": "string"
+          },
+          "zpMonthB5": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "zpPlzB3": {
+            "type": "string"
+          }
+        }
+      },
+      "GridOperatorContact": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "ecadId": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "fax": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Indicator": {
+        "type": "object",
+        "properties": {
+          "artificialIndicator": {
+            "type": "boolean"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "energyRateNetSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PowerSearchValuesResponse": {
+        "type": "object",
+        "properties": {
+          "additionalLoadProfiles": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Loadprofile"
+              }
+            }
+          },
+          "consumptionTypes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ConsumptionType"
+              }
+            }
+          },
+          "mainLoadProfiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Loadprofile"
+            }
+          },
+          "powerConnections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PowerConnection"
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "ProductComparisonData": {
+        "type": "object",
+        "properties": {
+          "additionalProductDiscountDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DiscountDetails"
+            }
+          },
+          "additionalProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "discountDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DiscountDetails"
+            }
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "imageBase64": {
+            "type": "string"
+          }
+        }
+      },
+      "ProductComparisonDetails": {
+        "type": "object",
+        "properties": {
+          "locations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductComparisonData"
+            }
+          }
+        }
+      },
+      "ProductDetails": {
+        "type": "object"
+      },
+      "ProductsRating": {
+        "type": "object",
+        "properties": {
+          "annualRateRange": {
+            "$ref": "#/components/schemas/BigDecimalRange"
+          },
+          "gridOperatorName": {
+            "type": "string"
+          },
+          "maxSaving": {
+            "type": "number",
+            "format": "double"
+          },
+          "rateProductsRequest": {
+            "$ref": "#/components/schemas/RateProductsRequest"
+          },
+          "ratedProducts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RatedProduct"
+            }
+          }
+        }
+      },
+      "RatedProduct": {
+        "type": "object",
+        "properties": {
+          "additionalProduct": {
+            "$ref": "#/components/schemas/RatedProduct"
+          },
+          "annualGrossRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "annualRising": {
+            "type": "number",
+            "format": "double"
+          },
+          "annualSaving": {
+            "type": "number",
+            "format": "double"
+          },
+          "associationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "averageEnergyOutputRateInCentKW": {
+            "type": "number",
+            "format": "double"
+          },
+          "averageEnergyPriceInCentKWh": {
+            "type": "number",
+            "format": "double"
+          },
+          "averageTotalPriceInCentKWh": {
+            "type": "number",
+            "format": "double"
+          },
+          "baseRateWithTax": {
+            "type": "number",
+            "format": "double"
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "brandName": {
+            "type": "string"
+          },
+          "calculatedGridCosts": {
+            "$ref": "#/components/schemas/CalculatedGridCosts"
+          },
+          "calculatedProductEnergyCosts": {
+            "$ref": "#/components/schemas/CalculatedProductEnergyCosts"
+          },
+          "changeLink": {
+            "$ref": "#/components/schemas/RCLink"
+          },
+          "combinationType": {
+            "$ref": "#/components/schemas/CombinationType"
+          },
+          "comparison": {
+            "type": "boolean"
+          },
+          "contractTermInfo": {
+            "$ref": "#/components/schemas/ProductContractTermInfo"
+          },
+          "energySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "membershipId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "producingCountryAustria": {
+            "type": "boolean"
+          },
+          "productName": {
+            "type": "string"
+          },
+          "productProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductPropertyTypeData"
+            },
+            "uniqueItems": true
+          },
+          "productType": {
+            "$ref": "#/components/schemas/ProductType"
+          },
+          "rateZoningType": {
+            "$ref": "#/components/schemas/RateZoningType"
+          },
+          "requirementIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "uniqueItems": true
+          },
+          "supplierName": {
+            "type": "string"
+          },
+          "versionState": {
+            "$ref": "#/components/schemas/ProductVersionState"
+          }
+        }
+      },
+      "SmartMeterLoadProfile": {
+        "type": "object",
+        "properties": {
+          "comment": {
+            "type": "string"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "eMobilityConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "normalizationType": {
+            "$ref": "#/components/schemas/SmartMeterLoadProfileNormalizationType"
+          },
+          "online": {
+            "type": "boolean"
+          },
+          "productType": {
+            "$ref": "#/components/schemas/ProductType"
+          },
+          "smartMeterLoadProfileYearlyData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SmartMeterLoadProfileYearlyData"
+            },
+            "uniqueItems": true
+          },
+          "state": {
+            "$ref": "#/components/schemas/SmartMeterLoadProfileStateType"
+          },
+          "typeName": {
+            "type": "string"
+          },
+          "typeText": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "SystemParameter": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NlsText"
+            },
+            "uniqueItems": true
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedTs": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ParameterType"
+          },
+          "value": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "ZipCode": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "ContactType": {
+        "type": "string",
+        "description": "This type is used in the database in order to determine what kind of contact the entry represents.",
+        "enum": [
+          "ADDRESS",
+          "CONTACT_EMAIL",
+          "CONTACT_FAX",
+          "CONTACT_HOMEPAGE",
+          "CONTACT_PHONE"
+        ]
+      },
+      "ParameterType": {
+        "type": "string",
+        "description": "Represents different data types a system parameter may be made of.",
+        "enum": [
+          "INTEGER",
+          "TEXT",
+          "BOOLEAN",
+          "PERCENT",
+          "EMAIL",
+          "DECIMAL_WITH_SCALE_AND_PRECISION_OF_TWO",
+          "DECIMAL_WITH_SCALE_5_AND_PRECISION_8"
+        ]
+      },
+      "PriceViewOptionType": {
+        "type": "string",
+        "description": "Represents different price view types.",
+        "enum": [
+          "EUR_PER_YEAR",
+          "CENT_PER_YEAR",
+          "ENERGY_PRICE",
+          "SPOT_MARKET_MARGIN",
+          "SPOT_MARKET_BREAKDOWN"
+        ]
+      },
+      "ProductPropertyType": {
+        "type": "string",
+        "description": "Discriminator column enum for the Product Property Type.",
+        "enum": [
+          "NOTICE_PERIOD",
+          "PRICE_ADJUSTMENT",
+          "SPOT_MARKET_PRICE_ADJUSTMENT",
+          "PRODUCT"
+        ]
+      },
+      "RateUnit": {
+        "type": "string",
+        "description": "Defines the rate unit for a specific rate.",
+        "enum": [
+          "CENT",
+          "PERCENTAGE"
+        ]
+      },
+      "ReferencePeriodOptionType": {
+        "type": "string",
+        "description": "Represents the length of time for the rate calculation.",
+        "enum": [
+          "ONE_YEAR",
+          "TWO_YEARS",
+          "THREE_YEARS"
+        ]
+      },
+      "SmartMeterLoadProfileNormalizationType": {
+        "type": "string",
+        "description": "Specifies the different types of a load profile normalization.",
+        "enum": [
+          "NORMALIZED",
+          "UNNORMALIZED"
+        ]
+      },
+      "AbstractSmartMeterValuesContainer": {
+        "type": "object",
+        "properties": {
+          "smartDateRange": {
+            "$ref": "#/components/schemas/SmartMeterDateRange"
+          },
+          "weekDay": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          }
+        },
+        "required": [
+          "smartDateRange",
+          "weekDay"
+        ]
+      },
+      "AdvancedGasRequestOptions": {
+        "type": "object",
+        "properties": {
+          "annualConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "energyOutput": {
+            "type": "number",
+            "format": "double"
+          },
+          "includeQuantityTransformer": {
+            "type": "boolean"
+          },
+          "loadProfileModel": {
+            "type": "string"
+          },
+          "measurementMode": {
+            "$ref": "#/components/schemas/GasGridMeasurementMode"
+          },
+          "meterDefinitionType": {
+            "$ref": "#/components/schemas/MeterDefinitionType"
+          },
+          "meterTypeName": {
+            "type": "string"
+          },
+          "productType": {
+            "$ref": "#/components/schemas/ProductType"
+          }
+        },
+        "required": [
+          "annualConsumption"
+        ]
+      },
+      "AdvancedPowerRequestOptions": {
+        "type": "object",
+        "properties": {
+          "consumptionType": {
+            "$ref": "#/components/schemas/ConsumptionType"
+          },
+          "energyOutput": {
+            "type": "number",
+            "format": "double"
+          },
+          "highConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "loadprofile": {
+            "$ref": "#/components/schemas/Loadprofile"
+          },
+          "lowConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "powerConnectionType": {
+            "type": "string"
+          },
+          "productType": {
+            "$ref": "#/components/schemas/ProductType"
+          },
+          "rateZoningType": {
+            "$ref": "#/components/schemas/RateZoningType"
+          },
+          "smartMeterRequestOptions": {
+            "$ref": "#/components/schemas/SmartMeterRequestOptions"
+          },
+          "standardConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerHighConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerLowConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterHighConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterLowConsumption": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "BrandSearch": {
+        "type": "object",
+        "properties": {
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "gridOperatorId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "required": [
+          "customerGroup",
+          "energyType",
+          "gridOperatorId"
+        ]
+      },
+      "BrandWithSupplier": {
+        "type": "object",
+        "description": "Representation of a brand with supplier information.",
+        "properties": {
+          "brandName": {
+            "type": "string"
+          },
+          "ecadId": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "supplierName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "brandName",
+          "ecadId",
+          "id",
+          "supplierName"
+        ]
+      },
+      "CurrentProduct": {
+        "type": "object",
+        "description": "A wrapper object that holds the information about the current user product and brand used as reference when rating products. The brand and product may be provided by the user or retrieved from a specialized REST API that provides a default brand and product for a given grid area, grid operator and zip code.",
+        "properties": {
+          "additionalProductAssociationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "additionalProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "feedInProductAssociationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "feedInProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mainBaseRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "mainEnergyRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "mainProductAssociationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mainProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "manualEntry": {
+            "type": "boolean"
+          },
+          "productName": {
+            "type": "string"
+          }
+        }
+      },
+      "FeedInRequestOptions": {
+        "type": "object",
+        "description": "Represents the feed-in search object when rating products",
+        "properties": {
+          "energyOutput": {
+            "type": "number",
+            "format": "double"
+          },
+          "feedIn": {
+            "type": "number",
+            "format": "double"
+          },
+          "nominalPower": {
+            "type": "number",
+            "format": "double"
+          },
+          "smartMeterRequestOptions": {
+            "$ref": "#/components/schemas/SmartMeterFeedInRequestOptions"
+          }
+        }
+      },
+      "PowerSearchValuesRequest": {
+        "type": "object",
+        "description": "Request object to retrieve search values for the advanced power product search, which depend on settings defined here.",
+        "properties": {
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "gridAreaId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "required": [
+          "customerGroup",
+          "gridAreaId"
+        ]
+      },
+      "ProductComparisionProductRequest": {
+        "type": "object",
+        "description": "Represents a request for product to get the comparison details for the product which are shown on product comparison popup opened from a rating result view.",
+        "properties": {
+          "additionalProductDiscountIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "additionalProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "discountIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ProductComparisonDetailsRequest": {
+        "type": "object",
+        "description": "Represents a request for product comparison details which are shown on product comparison popup opened from a rating result view.",
+        "properties": {
+          "productRequests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductComparisionProductRequest"
+            }
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ProductDetailsRequest": {
+        "type": "object",
+        "description": "Represents a request for product details which are shown on product details popup opened from a rating result.",
+        "properties": {
+          "additionalProductDiscountIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "additionalProductId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "discountIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RateGasProductsRequest": {
+        "type": "object",
+        "description": "A request to rate GAS products that match the specified search options.",
+        "properties": {
+          "comparisonOptions": {
+            "$ref": "#/components/schemas/CurrentProduct"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "gridAreaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "gridOperatorId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "includeSwitchingDiscounts": {
+            "type": "boolean"
+          },
+          "membership": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "moveHome": {
+            "type": "boolean"
+          },
+          "priceView": {
+            "$ref": "#/components/schemas/PriceViewOptionType"
+          },
+          "rateRequestDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "rcSearchMode": {
+            "$ref": "#/components/schemas/RCSearchMode"
+          },
+          "referencePeriod": {
+            "$ref": "#/components/schemas/ReferencePeriodOptionType"
+          },
+          "requirements": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gasRequestOptions": {
+            "$ref": "#/components/schemas/AdvancedGasRequestOptions"
+          }
+        },
+        "required": [
+          "customerGroup",
+          "energyType",
+          "gasRequestOptions",
+          "gridAreaId",
+          "gridOperatorId",
+          "rcSearchMode",
+          "zipCode"
+        ]
+      },
+      "RatePowerProductsRequest": {
+        "type": "object",
+        "description": "A request to rate POWER products that match the specified search options.",
+        "properties": {
+          "comparisonOptions": {
+            "$ref": "#/components/schemas/CurrentProduct"
+          },
+          "customerGroup": {
+            "$ref": "#/components/schemas/CustomerGroup"
+          },
+          "energyType": {
+            "$ref": "#/components/schemas/EnergyType"
+          },
+          "gridAreaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "gridOperatorId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "includeSwitchingDiscounts": {
+            "type": "boolean"
+          },
+          "membership": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "moveHome": {
+            "type": "boolean"
+          },
+          "priceView": {
+            "$ref": "#/components/schemas/PriceViewOptionType"
+          },
+          "rateRequestDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "rcSearchMode": {
+            "$ref": "#/components/schemas/RCSearchMode"
+          },
+          "referencePeriod": {
+            "$ref": "#/components/schemas/ReferencePeriodOptionType"
+          },
+          "requirements": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "feedInRequestOptions": {
+            "$ref": "#/components/schemas/FeedInRequestOptions"
+          },
+          "firstMeterOptions": {
+            "$ref": "#/components/schemas/AdvancedPowerRequestOptions"
+          },
+          "includeFeedInOptions": {
+            "type": "boolean"
+          },
+          "secondMeterOptions": {
+            "$ref": "#/components/schemas/AdvancedPowerRequestOptions"
+          }
+        },
+        "required": [
+          "customerGroup",
+          "energyType",
+          "firstMeterOptions",
+          "gridAreaId",
+          "gridOperatorId",
+          "rcSearchMode",
+          "zipCode"
+        ]
+      },
+      "SmartMeterDateRange": {
+        "type": "object",
+        "description": "Date ranged of a smart meter value",
+        "properties": {
+          "fromDay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "month": {
+            "type": "string",
+            "enum": [
+              "JANUARY",
+              "FEBRUARY",
+              "MARCH",
+              "APRIL",
+              "MAY",
+              "JUNE",
+              "JULY",
+              "AUGUST",
+              "SEPTEMBER",
+              "OCTOBER",
+              "NOVEMBER",
+              "DECEMBER"
+            ]
+          },
+          "toDay": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "fromDay",
+          "month",
+          "toDay"
+        ]
+      },
+      "DayOfWeek": {
+        "type": "string",
+        "description": "The day of the week of a smart meter value.",
+        "enum": [
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY",
+          "SATURDAY",
+          "SUNDAY"
+        ]
+      },
+      "SmartMeterFeedInRequestOptions": {
+        "type": "object",
+        "description": "Feed in specific Smart Meter request options for the search.",
+        "properties": {
+          "calculatedValues": {
+            "$ref": "#/components/schemas/SmartMeterLoadProfileCalculatedValues"
+          },
+          "consumptionType": {
+            "$ref": "#/components/schemas/ConsumptionType"
+          },
+          "detailedValues": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/SmartMeterLoadProfileDetailedValues"
+            }
+          },
+          "emobilityConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "lastUploadDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "loadEmobilityProfileId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "loadEmobilityProfileName": {
+            "type": "string"
+          },
+          "loadProfileId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "loadProfileName": {
+            "type": "string"
+          },
+          "loadProfileUpload": {
+            "type": "boolean"
+          },
+          "rateZoningTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RateZoningType"
+            }
+          },
+          "smartMeterSearch": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "loadProfileUpload",
+          "smartMeterSearch"
+        ]
+      },
+      "SmartMeterLoadProfileCalculatedValues": {
+        "type": "object",
+        "description": "Calculated values for a loadprofile that will be used instead of the consumption input-field, based on a file-upload.",
+        "properties": {
+          "energyOutput": {
+            "type": "number",
+            "format": "double"
+          },
+          "highConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "lowConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "standardConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerHighConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "summerLowConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterHighConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "winterLowConsumption": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "SmartMeterLoadProfileDetailedValues": {
+        "type": "object",
+        "description": "Detailed values for a loadprofile, based on a file-upload.",
+        "properties": {
+          "zeroClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "oneClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "twoClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "threeClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "fourClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "fiveClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "sixClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "sevenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "eightClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "nineClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "tenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "elevenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "twelveClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "thirteenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "fourteenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "fifteenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "sixteenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "seventeenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "eighteenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "nineteenClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "twentyClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "twentyOneClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "twentyTwoClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "twentyThreeClockConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "smartDateRange": {
+            "$ref": "#/components/schemas/SmartMeterDateRange"
+          },
+          "weekDay": {
+            "type": "string",
+            "enum": [
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+              "SUNDAY"
+            ]
+          }
+        },
+        "required": [
+          "smartDateRange",
+          "weekDay"
+        ]
+      },
+      "SmartMeterRequestOptions": {
+        "type": "object",
+        "properties": {
+          "calculatedValues": {
+            "$ref": "#/components/schemas/SmartMeterLoadProfileCalculatedValues"
+          },
+          "consumptionType": {
+            "$ref": "#/components/schemas/ConsumptionType"
+          },
+          "detailedValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SmartMeterLoadProfileDetailedValues"
+            },
+            "uniqueItems": true
+          },
+          "emobilityConsumption": {
+            "type": "number",
+            "format": "double"
+          },
+          "lastUploadDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "loadEmobilityProfileId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "loadEmobilityProfileName": {
+            "type": "string"
+          },
+          "loadProfileId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "loadProfileName": {
+            "type": "string"
+          },
+          "loadProfileUpload": {
+            "type": "boolean"
+          },
+          "smartMeterSearch": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "loadProfileUpload",
+          "smartMeterSearch"
+        ]
+      }
+    }
+  }
+}
