@@ -12,12 +12,9 @@ public class EControlClient {
     private final RestClient restClient;
 
     public EControlClient(EControlProperties properties) {
-        this.restClient = RestClient.builder().baseUrl(properties.getBaseUrl().toString())
-                .defaultHeaders(headers -> {
-                    if (properties.getUsername() != null && !properties.getUsername().isBlank()) {
-                        headers.setBasicAuth(properties.getUsername(), properties.getPassword());
-                    }
-                })
+        this.restClient = RestClient.builder().baseUrl(properties.baseUrl().toString())
+                .defaultHeaders(headers ->
+                        headers.setBasicAuth(properties.username(), properties.password()))
                 .build();
     }
 

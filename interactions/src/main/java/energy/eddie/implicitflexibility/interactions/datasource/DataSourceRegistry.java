@@ -14,17 +14,17 @@ import java.util.stream.Collectors;
 @Component
 public class DataSourceRegistry {
 
-    private static final Logger log = LoggerFactory.getLogger(DataSourceRegistry.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DataSourceRegistry.class);
     private final Map<String, DataSource> enabledDataSources;
 
     public DataSourceRegistry(List<DataSource> dataSources, Environment environment) {
 
-        log.info("Discovering data sources...");
+        LOG.info("Discovering data sources...");
         this.enabledDataSources = dataSources.stream()
                 .filter(dataSource -> {
                     String propertyName = "data-source.%s.enabled".formatted(dataSource.getId());
                     boolean enabled = environment.getProperty(propertyName, Boolean.class, false);
-                    log.info("Data source '{}' - {}", dataSource.getId(), enabled ? "ENABLED" : "DISABLED");
+                    LOG.info("Data source '{}' - {}", dataSource.getId(), enabled ? "ENABLED" : "DISABLED");
                     return enabled;
                 })
                 .collect(Collectors.toUnmodifiableMap(

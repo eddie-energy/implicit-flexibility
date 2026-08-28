@@ -14,7 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class EControlTariffsRepository implements TariffInformationRepository {
 
     private final EControlClient client;
-    private static final Logger log = LoggerFactory.getLogger(EControlTariffsRepository.class);
+    private static final Logger LOG = LoggerFactory.getLogger(EControlTariffsRepository.class);
 
     public EControlTariffsRepository(EControlClient client) {
         this.client = client;
@@ -34,15 +34,15 @@ public class EControlTariffsRepository implements TariffInformationRepository {
     public Object execute(Object query) {
 
         EControlTariffQuery eControlQuery = (EControlTariffQuery) query;
-        var informationType = eControlQuery.getInformationType();
+        var informationType = eControlQuery.informationType();
 
         try {
             return switch (informationType) {
-                case CONTRACT -> client.getContract(eControlQuery.getProductId());
-                case PRICE_INFO -> client.getPriceInfo(eControlQuery.getProductId());
+                case CONTRACT -> client.getContract(eControlQuery.productId());
+                case PRICE_INFO -> client.getPriceInfo(eControlQuery.productId());
             };
         } catch (HttpServerErrorException e) {
-            log.error("Failed fetching {} from E-Control: {}",
+            LOG.error("Failed fetching {} from E-Control: {}",
                     informationType,
                     e.getResponseBodyAsString()
             );
