@@ -1,8 +1,9 @@
-package energy.eddie.implicitflexibility.transport.controller;
+package energy.eddie.implicitflexibility.transport.datasource;
 
 import energy.eddie.implicitflexibility.interactions.datasource.DataSourceRegistry;
-import energy.eddie.implicitflexibility.interactions.tariff.TariffInteractionRegistry;
-import energy.eddie.implicitflexibility.transport.representation.DataSourceRepresentation;
+import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
+import energy.eddie.implicitflexibility.transport.tariff.TariffController;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,10 +19,10 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class DataSourceController {
 
     private final DataSourceRegistry dataSourceRegistry;
-    private final TariffInteractionRegistry tariffInteractionRegistry;
+    private final TariffProviderRegistry tariffInteractionRegistry;
 
     public DataSourceController(DataSourceRegistry dataSourceRegistry,
-                                TariffInteractionRegistry tariffInteractionRegistry) {
+                                TariffProviderRegistry tariffInteractionRegistry) {
         this.dataSourceRegistry = dataSourceRegistry;
         this.tariffInteractionRegistry = tariffInteractionRegistry;
     }
@@ -46,7 +47,7 @@ public class DataSourceController {
         DataSourceRepresentation representation = new DataSourceRepresentation(countryCode);
         representation.add(linkTo(methodOn(DataSourceController.class).getDataSource(countryCode)).withSelfRel());
         tariffInteractionRegistry.getAll(countryCode).forEach(interaction -> representation.add(
-                linkTo(methodOn(TariffController.class).discover(countryCode)).withRel("tariffs")
+                WebMvcLinkBuilder.linkTo(methodOn(TariffController.class).discover(countryCode)).withRel("tariffs")
         ));
 
         return representation;

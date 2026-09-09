@@ -1,4 +1,4 @@
-package energy.eddie.implicitflexibility.transport.representation;
+package energy.eddie.implicitflexibility.transport.datasource;
 
 import org.springframework.hateoas.RepresentationModel;
 

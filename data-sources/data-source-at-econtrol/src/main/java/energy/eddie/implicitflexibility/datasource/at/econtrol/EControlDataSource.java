@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @ConditionalOnProperty(prefix = "data-source.at.e-control", name = "enabled", havingValue = "true")
 public class EControlDataSource implements DataSource {
 
-    private static final String DATA_SOURCE_ID = "at.e-control";
+    public static final String DATA_SOURCE_ID = "at.e-control";
     public static final String COUNTRY_CODE = "AT";
 
     @Override

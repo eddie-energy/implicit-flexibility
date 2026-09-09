@@ -19,6 +19,7 @@ dependencies {
 
     implementation(libs.spring.boot.starter.web)
     implementation(libs.spring.boot.starter.hateoas)
+    implementation(libs.springdoc.openapi.starter.webmvc.ui)
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)

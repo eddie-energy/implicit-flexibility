@@ -6,21 +6,20 @@ openapi-generator = "7.14.0"
 hateoas = "3.1.2"
 jackson = "3.2.2"
 spring-context = "7.0.9"
-gson = "2.14.0"
-okio = "3.9.0"
-okhttp = "4.12.0"
-gson-fire = "1.9.0"
+springdoc-openapi = "3.1.1"
+errorpronePlugin = "5.1.0"
+errorproneCore = "2.50.0"
+nullaway = "0.13.8"
+jspecify = "1.0.0"
 
 [libraries]
 # Aggregator artifact of junit6
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
-google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
-squareup-okio = { group = "com.squareup.okio", name = "okio", version.ref = "okio" }
-squareup-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
-squareup-okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
-gson-fire = { group = "io.gsonfire", name = "gson-fire", version.ref = "gson-fire" }
+errorprone-core = { group = "com.google.errorprone", name = "error_prone_core", version.ref = "errorproneCore" }
+nullaway = { group = "com.uber.nullaway", name = "nullaway", version.ref = "nullaway" }
+jspecify = { group = "org.jspecify", name = "jspecify", version.ref = "jspecify" }
 
 # Jackson
 jackson-databind = { module = "tools.jackson.core:jackson-databind", version.ref = "jackson" }
@@ -33,7 +32,11 @@ spring-context = { module = "org.springframework:spring-context", version.ref = 
 spring-boot-autoconfigure = { module = "org.springframework.boot:spring-boot-autoconfigure" }
 spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
 
+springdoc-openapi-starter-webmvc-api = { module = "org.springdoc:springdoc-openapi-starter-webmvc-api", version.ref = "springdoc-openapi" }
+springdoc-openapi-starter-webmvc-ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc-openapi" }
+
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
 openapi-generator = { id = "org.openapi.generator", version.ref = "openapi-generator" }
+errorprone = { id = "net.ltgt.errorprone", version.ref = "errorpronePlugin" }

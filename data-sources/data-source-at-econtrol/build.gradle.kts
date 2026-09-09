@@ -17,18 +17,13 @@ repositories {
 
 dependencies {
     implementation(project(":interactions"))
+    implementation(project(":transport"))
 
     implementation(libs.spring.context)
     implementation(libs.spring.boot.starter.web)
-    implementation(libs.jackson.databind)
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.hateoas)
-
-    implementation(libs.google.gson)
-    implementation(libs.squareup.okio)
-    implementation(libs.squareup.okhttp)
-    implementation(libs.squareup.okhttp.logging)
-    implementation(libs.gson.fire)
+    implementation(libs.springdoc.openapi.starter.webmvc.api)
 
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly(libs.junit.platform.launcher)
@@ -38,59 +33,53 @@ tasks.test {
     useJUnitPlatform()
 }
 
-/*
- * -------------------------------------------------------------------------
- * OpenAPI model generation
- * -------------------------------------------------------------------------
- */
-
-val econtrolOpenApi =
-    layout.projectDirectory.file("src/main/resources/openapi/e-control-models.json")
-
-val econtrolGeneratedDir =
-    layout.buildDirectory.dir("generated/econtrol")
+val econtrolOpenApi = layout.projectDirectory.file("src/main/resources/openapi/e-control-models.json")
+val econtrolGeneratedDir = layout.buildDirectory.dir("generated/econtrol")
 
 tasks.register<GenerateTask>("openApiGenerateEcontrol") {
     group = "code generation"
-    description = "Generates the OpenAPI client stubs for the E-Control API."
+    description = "Generates the E-Control API models."
 
-    generatorName.set("java")
+    generatorName.set("spring")
 
     inputSpec.set(econtrolOpenApi.asFile.absolutePath)
     outputDir.set(econtrolGeneratedDir.get().asFile.absolutePath)
+
+    cleanupOutput.set(true)
 
     modelPackage.set("energy.eddie.datasource.at.econtrol")
 
     generateModelTests.set(false)
     generateModelDocumentation.set(false)
 
-    generateApiTests.set(false)
-    generateApiDocumentation.set(false)
+    openapiNormalizer.set(
+        mapOf(
+            "REF_AS_PARENT_IN_ALLOF" to "true"
+        )
+    )
 
     configOptions.set(
         mapOf(
+            "library" to "spring-boot",
             "dateLibrary" to "java8",
             "serializationLibrary" to "jackson",
             "useJakartaEe" to "true",
             "openApiNullable" to "false",
-            "hideGenerationTimestamp" to "true"
+            "hideGenerationTimestamp" to "true",
+            "useSpringBoot4" to "true",
+            "useJackson3" to "true",
+            "useBeanValidation" to "true",
+            "performBeanValidation" to "true",
+            "useInstanceOfEqualsInEqualsMethod" to "true"
         )
     )
 
     globalProperties.set(
         mapOf(
-            "models" to "",
-            "apis" to "",
-            "supportingFiles" to ""
+            "models" to ""
         )
     )
 }
-
-/*
- * -------------------------------------------------------------------------
- * Generated sources
- * -------------------------------------------------------------------------
- */
 
 sourceSets {
     main {
@@ -99,12 +88,6 @@ sourceSets {
         }
     }
 }
-
-/*
- * -------------------------------------------------------------------------
- * Make Java compilation depend on OpenAPI generation
- * -------------------------------------------------------------------------
- */
 
 tasks.named("compileJava") {
     dependsOn(tasks.named("openApiGenerateEcontrol"))
