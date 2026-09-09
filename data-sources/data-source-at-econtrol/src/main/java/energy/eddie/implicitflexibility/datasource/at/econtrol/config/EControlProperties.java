@@ -9,7 +9,7 @@ import java.net.URI;
 
 @Validated
 @ConfigurationProperties(prefix = "data-source.at.e-control")
-public record EControlProperties (@NotNull boolean enabled,
+public record EControlProperties (boolean enabled,
                                   @NotNull URI baseUrl,
                                   @NotBlank String username,
                                   @NotNull String password) { }
