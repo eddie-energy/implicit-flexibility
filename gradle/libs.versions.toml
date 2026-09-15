@@ -1,0 +1,39 @@
+[versions]
+spring-boot = "4.0.7"
+spring-dependency-management = "1.1.7"
+junit = "6.0.0"
+openapi-generator = "7.14.0"
+hateoas = "3.1.2"
+jackson = "3.2.2"
+spring-context = "7.0.9"
+gson = "2.14.0"
+okio = "3.9.0"
+okhttp = "4.12.0"
+gson-fire = "1.9.0"
+
+[libraries]
+# Aggregator artifact of junit6
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+squareup-okio = { group = "com.squareup.okio", name = "okio", version.ref = "okio" }
+squareup-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+squareup-okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+gson-fire = { group = "io.gsonfire", name = "gson-fire", version.ref = "gson-fire" }
+
+# Jackson
+jackson-databind = { module = "tools.jackson.core:jackson-databind", version.ref = "jackson" }
+
+# Spring Boot
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-starter-hateoas = { module = "org.springframework.boot:spring-boot-starter-hateoas", version.ref = "hateoas" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-context = { module = "org.springframework:spring-context", version.ref = "spring-context" }
+spring-boot-autoconfigure = { module = "org.springframework.boot:spring-boot-autoconfigure" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+openapi-generator = { id = "org.openapi.generator", version.ref = "openapi-generator" }
