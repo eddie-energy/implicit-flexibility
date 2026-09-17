@@ -12,11 +12,7 @@ import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
-import org.springframework.hateoas.mediatype.Affordances;
-import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -36,16 +32,12 @@ public class EControlTariffController {
     }
 
     @PostMapping("/grid-operators")
-    public CollectionModel<EntityModel<GridOperator>> gridOperators(@RequestBody Optional<GridOperatorQuery> query) {
+    public CollectionModel<EntityModel<GridOperator>> gridOperators(@RequestBody GridOperatorQuery query) {
         var res = client.findGridOperators(query).stream().map(gridOperator -> {
             EntityModel<GridOperator> model = EntityModel.of(gridOperator);
-            Link brandsLink = Affordances.of(linkTo(methodOn(EControlTariffController.class)
-                                                            .brands(Optional.empty())).withRel("brands"))
-                                         .afford(HttpMethod.POST)
-                                         .withInput(BrandSearch.class)
-                                         .withName("brands")
-                                         .toLink();
-            model.add(brandsLink);
+            model.add(tariffInformationAffordance.generateDiscoveryLink("brands",
+                                                                        this.getClass(),
+                                                                        BrandSearch.class));
             return model;
         }).toList();
 
@@ -53,30 +45,20 @@ public class EControlTariffController {
     }
 
     @PostMapping("/brands")
-    public EntityModel<BrandSearchResult> brands(@RequestBody Optional<BrandSearch> query) {
+    public EntityModel<BrandSearchResult> brands(@RequestBody BrandSearch query) {
         var res = client.findBrands(query);
         EntityModel<BrandSearchResult> model = EntityModel.of(res);
-
-        var affordanceBuilder = Affordances.of(linkTo(methodOn(EControlTariffController.class)
-                                                              .products(Optional.empty()))
-                                                       .withRel("products"))
-                                           .afford(HttpMethod.POST);
-
-        query.map(BrandSearch::getEnergyType).ifPresent(energyType -> {
-            Class<?> inputType = (energyType == EnergyType.POWER)
-                    ? PowerProductQuery.class
-                    : GasProductQuery.class;
-
-            affordanceBuilder.withInput(inputType);
-        });
-
-        Link productsLink = affordanceBuilder.withName("products").toLink();
+        Link productsLink = tariffInformationAffordance
+                .generateDiscoveryLink("products",
+                                       this.getClass(),
+                                       query.getEnergyType() == EnergyType.POWER ?
+                                               PowerProductQuery.class : GasProductQuery.class);
         model.add(productsLink);
         return model;
     }
 
     @PostMapping("/products")
-    public EntityModel<CurrentProductData> products(@RequestBody Optional<ProductQuery> query) {
+    public EntityModel<CurrentProductData> products(@RequestBody ProductQuery query) {
         var res = client.findProducts(query);
         EntityModel<CurrentProductData> model = EntityModel.of(res);
         model.add(tariffInformationAffordance.create(EControlDataSource.COUNTRY_CODE));
@@ -86,11 +68,10 @@ public class EControlTariffController {
     @GetMapping("/discovery")
     public RepresentationModel<?> discovery() {
         var model = new RepresentationModel<>();
-        model.add(linkTo(methodOn(EControlTariffController.class).discovery())
-                          .withSelfRel());
-        model.add(linkTo(methodOn(EControlTariffController.class).gridOperators(Optional.empty()))
-                          .withRel("grid-operators"));
-
+        model.add(linkTo(methodOn(EControlTariffController.class).discovery()).withSelfRel());
+        model.add(tariffInformationAffordance.generateDiscoveryLink("grid-operators",
+                                                                    this.getClass(),
+                                                                    GridOperatorQuery.class));
         return model;
     }
 }

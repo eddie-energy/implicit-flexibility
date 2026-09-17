@@ -6,8 +6,7 @@ import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mediatype.Affordances;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
-
-import java.util.Optional;
+import tools.jackson.databind.node.JsonNodeFactory;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -22,13 +21,20 @@ public class TariffInformationAffordance {
 
     public Link create(String countryCode) {
         TariffInformationRepository repository = registry.getTariffs(countryCode);
-
         return Affordances.of(linkTo(methodOn(TariffController.class)
-                                             .query(countryCode, Optional.empty()))
+                                             .query(countryCode, JsonNodeFactory.instance.objectNode()))
                                       .withRel("tariff-information"))
                           .afford(HttpMethod.POST)
                           .withInput(repository.getQueryType())
                           .withName("query")
+                          .toLink();
+    }
+
+    public Link generateDiscoveryLink(String name, Class<?> link, Class<?> input) {
+        return Affordances.of(linkTo(link).slash(name).withRel(name))
+                          .afford(HttpMethod.POST)
+                          .withInput(input)
+                          .withName(name)
                           .toLink();
     }
 }

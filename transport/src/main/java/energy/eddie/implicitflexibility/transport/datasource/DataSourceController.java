@@ -1,9 +1,9 @@
 package energy.eddie.implicitflexibility.transport.datasource;
 
+import energy.eddie.implicitflexibility.interactions.datasource.DataSource;
 import energy.eddie.implicitflexibility.interactions.datasource.DataSourceRegistry;
 import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
 import energy.eddie.implicitflexibility.transport.tariff.TariffController;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,37 +19,40 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class DataSourceController {
 
     private final DataSourceRegistry dataSourceRegistry;
-    private final TariffProviderRegistry tariffInteractionRegistry;
+    private final TariffProviderRegistry tariffProviderRegistry;
 
-    public DataSourceController(DataSourceRegistry dataSourceRegistry,
-                                TariffProviderRegistry tariffInteractionRegistry) {
+    public DataSourceController(
+            DataSourceRegistry dataSourceRegistry,
+            TariffProviderRegistry tariffProviderRegistry
+    ) {
         this.dataSourceRegistry = dataSourceRegistry;
-        this.tariffInteractionRegistry = tariffInteractionRegistry;
+        this.tariffProviderRegistry = tariffProviderRegistry;
     }
 
     @GetMapping
     public Collection<DataSourceRepresentation> getDataSources() {
         return dataSourceRegistry.getAll()
-                .stream()
-                .map(dataSource -> {
-                    DataSourceRepresentation representation = new DataSourceRepresentation("countries");
-                    String countryCode = dataSource.getCountry();
-                    representation.add(
-                            linkTo(methodOn(DataSourceController.class).getDataSource(countryCode))
-                                    .withRel(countryCode)
-                    );
-                    return representation;
-                }).toList();
+                                 .stream()
+                                 .map(DataSource::getCountry)
+                                 .distinct()
+                                 .map(this::createCountryRepresentation)
+                                 .toList();
     }
 
     @GetMapping("/{countryCode}")
     public DataSourceRepresentation getDataSource(@PathVariable String countryCode) {
+        DataSourceRepresentation representation = createCountryRepresentation(countryCode);
+
+        if (!tariffProviderRegistry.getAll(countryCode).isEmpty()) {
+            representation.add(linkTo(methodOn(TariffController.class).discover(countryCode)).withRel("tariffs"));
+        }
+
+        return representation;
+    }
+
+    private DataSourceRepresentation createCountryRepresentation(String countryCode) {
         DataSourceRepresentation representation = new DataSourceRepresentation(countryCode);
         representation.add(linkTo(methodOn(DataSourceController.class).getDataSource(countryCode)).withSelfRel());
-        tariffInteractionRegistry.getAll(countryCode).forEach(interaction -> representation.add(
-                WebMvcLinkBuilder.linkTo(methodOn(TariffController.class).discover(countryCode)).withRel("tariffs")
-        ));
-
         return representation;
     }
 }
