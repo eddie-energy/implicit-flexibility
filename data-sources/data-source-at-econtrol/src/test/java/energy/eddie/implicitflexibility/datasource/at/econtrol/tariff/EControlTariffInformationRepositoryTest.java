@@ -6,24 +6,25 @@ import energy.eddie.implicitflexibility.datasource.at.econtrol.EControlClient;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.EControlDataSource;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.EControlInformationType;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.EControlTariffQuery;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.hateoas.Link;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class EControlTariffInformationRepositoryTest {
 
+    @Mock
     private EControlClient client;
-    private EControlTariffInformationRepository repository;
 
-    @BeforeEach
-    void setUp() {
-        client = mock(EControlClient.class);
-        repository = new EControlTariffInformationRepository(client);
-    }
+    @InjectMocks
+    private EControlTariffInformationRepository repository;
 
     @Test
     void testGetCountryCode() {

@@ -8,8 +8,11 @@ import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperato
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.PowerProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQuery;
 import energy.eddie.implicitflexibility.transport.tariff.TariffInformationAffordance;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
@@ -20,18 +23,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class EControlTariffControllerTest {
 
+    @Mock
     private EControlClient client;
-    private TariffInformationAffordance tariffInformationAffordance;
-    private EControlTariffController controller;
 
-    @BeforeEach
-    void setUp() {
-        client = mock(EControlClient.class);
-        tariffInformationAffordance = mock(TariffInformationAffordance.class);
-        controller = new EControlTariffController(client, tariffInformationAffordance);
-    }
+    @Mock
+    private TariffInformationAffordance tariffInformationAffordance;
+
+    @InjectMocks
+    private EControlTariffController controller;
 
     @Test
     void testGridOperators() {

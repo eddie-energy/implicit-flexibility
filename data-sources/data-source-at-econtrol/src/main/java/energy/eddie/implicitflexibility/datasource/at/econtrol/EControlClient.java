@@ -1,6 +1,7 @@
 package energy.eddie.implicitflexibility.datasource.at.econtrol;
 
 import energy.eddie.datasource.at.econtrol.*;
+import energy.eddie.implicitflexibility.datasource.at.econtrol.config.EControlProperties;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperatorQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQueryMapper;
@@ -29,8 +30,14 @@ public class EControlClient {
     private final ProductQueryMapper productQueryMapper;
     private static final Logger LOG = LoggerFactory.getLogger(EControlClient.class);
 
-    public EControlClient(RestClient restClient, ProductQueryMapper productQueryMapper) {
-        this.restClient = restClient;
+    public EControlClient(
+            RestClient.Builder restClientBuilder,
+            EControlProperties properties,
+            ProductQueryMapper productQueryMapper
+    ) {
+        this.restClient = restClientBuilder.baseUrl(properties.baseUrl().toString())
+                                           .defaultHeaders(headers -> headers.setBasicAuth(
+                                                   properties.username(), properties.password())).build();
         this.productQueryMapper = productQueryMapper;
     }
 

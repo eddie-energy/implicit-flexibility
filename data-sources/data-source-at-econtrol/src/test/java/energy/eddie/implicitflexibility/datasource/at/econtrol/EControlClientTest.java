@@ -1,6 +1,7 @@
 package energy.eddie.implicitflexibility.datasource.at.econtrol;
 
 import energy.eddie.datasource.at.econtrol.*;
+import energy.eddie.implicitflexibility.datasource.at.econtrol.config.EControlProperties;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GasProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperatorQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.PowerProductQuery;
@@ -9,12 +10,16 @@ import energy.eddie.implicitflexibility.interactions.exception.DataSourceNotFoun
 import energy.eddie.implicitflexibility.interactions.exception.DataSourceServerException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.response.DefaultResponseCreator;
 import org.springframework.web.client.RestClient;
 
+import java.net.URI;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,21 +29,26 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
 
+@ExtendWith(MockitoExtension.class)
 class EControlClientTest {
 
     private static final String BASE_URL = "http://e-control.test";
 
     private MockRestServiceServer server;
-    private ProductQueryMapper productQueryMapper;
     private EControlClient client;
+
+    @Mock
+    private ProductQueryMapper productQueryMapper;
 
     @BeforeEach
     void setUp() {
-        RestClient.Builder builder = RestClient.builder();
+        RestClient.Builder builder = RestClient.builder().baseUrl(BASE_URL);
         server = MockRestServiceServer.bindTo(builder).build();
-        RestClient restClient = builder.baseUrl(BASE_URL).build();
-        productQueryMapper = mock(ProductQueryMapper.class);
-        client = new EControlClient(restClient, productQueryMapper);
+        EControlProperties properties = new EControlProperties(true,
+                                                               URI.create(BASE_URL),
+                                                               "username",
+                                                               "password");
+        client = new EControlClient(builder, properties, productQueryMapper);
     }
 
     @Test

@@ -3,23 +3,24 @@ package energy.eddie.implicitflexibility.datasource.at.econtrol.query;
 import energy.eddie.datasource.at.econtrol.RateGasProductsRequest;
 import energy.eddie.datasource.at.econtrol.RatePowerProductsRequest;
 import energy.eddie.datasource.at.econtrol.RateProductsRequest;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import tools.jackson.databind.ObjectMapper;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class ProductQueryMapperTest {
 
+    @Mock
     private ObjectMapper objectMapper;
-    private ProductQueryMapper mapper;
 
-    @BeforeEach
-    void setUp() {
-        objectMapper = mock(ObjectMapper.class);
-        mapper = new ProductQueryMapper(objectMapper);
-    }
+    @InjectMocks
+    private ProductQueryMapper mapper;
 
     @Test
     void mapPowerProductQuery() {

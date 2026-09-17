@@ -21,6 +21,7 @@ dependencies {
 
     implementation(libs.spring.context)
     implementation(libs.spring.boot.starter.web)
+    implementation(libs.spring.boot.starter.restclient)
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.hateoas)
     implementation(libs.springdoc.openapi.starter.webmvc.api)

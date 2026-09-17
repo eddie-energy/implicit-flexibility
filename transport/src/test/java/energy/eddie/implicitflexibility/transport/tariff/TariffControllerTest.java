@@ -2,8 +2,11 @@ package energy.eddie.implicitflexibility.transport.tariff;
 
 import energy.eddie.implicitflexibility.interactions.tariff.TariffInformationRepository;
 import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
@@ -15,20 +18,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class TariffControllerTest {
 
+    @Mock
     private TariffProviderRegistry tariffInteractionRegistry;
-    private ObjectMapper objectMapper;
-    private TariffInformationAffordance tariffInformationAffordance;
-    private TariffController controller;
 
-    @BeforeEach
-    void setUp() {
-        tariffInteractionRegistry = mock(TariffProviderRegistry.class);
-        objectMapper = mock(ObjectMapper.class);
-        tariffInformationAffordance = mock(TariffInformationAffordance.class);
-        controller = new TariffController(tariffInteractionRegistry, objectMapper, tariffInformationAffordance);
-    }
+    @Mock
+    private ObjectMapper objectMapper;
+
+    @Mock
+    private TariffInformationAffordance tariffInformationAffordance;
+
+    @InjectMocks
+    private TariffController controller;
 
     @Test
     void getTariffs_SelfLink() {
