@@ -20,6 +20,7 @@ dependencies {
     implementation(libs.spring.boot.starter.web)
 
     testImplementation(libs.junit.jupiter)
+    testImplementation(libs.spring.boot.starter.test)
     testRuntimeOnly(libs.junit.platform.launcher)
 }
 

@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties(EControlProperties.class)
-public class EControlConfiguration {
-}
+public class EControlConfiguration {}

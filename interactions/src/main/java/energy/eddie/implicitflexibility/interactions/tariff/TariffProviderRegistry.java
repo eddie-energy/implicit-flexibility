@@ -10,11 +10,11 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Component
-public class TariffInteractionRegistry {
+public class TariffProviderRegistry {
 
     private final Map<String, TariffInformationRepository> interactions;
 
-    public TariffInteractionRegistry(List<TariffInformationRepository> interactions) {
+    public TariffProviderRegistry(List<TariffInformationRepository> interactions) {
         this.interactions = interactions.stream().collect(
                 Collectors.toUnmodifiableMap(TariffInformationRepository::getCountryCode, Function.identity())
         );

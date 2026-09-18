@@ -465,7 +465,15 @@
           "zipCode": {
             "type": "integer"
           }
-        }
+        },
+        "required": [
+          "customerGroup",
+          "energyType",
+          "gasRequestOptions",
+          "gridAreaId",
+          "gridOperatorId",
+          "zipCode"
+        ]
       },
       "DateRange": {
         "type": "object",
@@ -1852,12 +1860,12 @@
             "type": "string"
           },
           "productValidityFrom": {
-            "type": "string",
-            "format": "date"
+            "type": "integer",
+            "format": "int64"
           },
           "regularCustomersFrom": {
-            "type": "string",
-            "format": "date"
+            "type": "integer",
+            "format": "int64"
           },
           "requirements": {
             "type": "array",
@@ -2817,160 +2825,50 @@
         }
       },
       "RateGasProductsRequest": {
-        "type": "object",
-        "description": "A request to rate GAS products that match the specified search options.",
-        "properties": {
-          "comparisonOptions": {
-            "$ref": "#/components/schemas/CurrentProduct"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RateProductsRequest"
           },
-          "customerGroup": {
-            "$ref": "#/components/schemas/CustomerGroup"
-          },
-          "energyType": {
-            "$ref": "#/components/schemas/EnergyType"
-          },
-          "gridAreaId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "gridOperatorId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "includeSwitchingDiscounts": {
-            "type": "boolean"
-          },
-          "membership": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "moveHome": {
-            "type": "boolean"
-          },
-          "priceView": {
-            "$ref": "#/components/schemas/PriceViewOptionType"
-          },
-          "rateRequestDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "rcSearchMode": {
-            "$ref": "#/components/schemas/RCSearchMode"
-          },
-          "referencePeriod": {
-            "$ref": "#/components/schemas/ReferencePeriodOptionType"
-          },
-          "requirements": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          "supplierId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "zipCode": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "gasRequestOptions": {
-            "$ref": "#/components/schemas/AdvancedGasRequestOptions"
+          {
+            "type": "object",
+            "description": "A request to rate GAS products that match the specified search options.",
+            "properties": {
+              "gasRequestOptions": {
+                "$ref": "#/components/schemas/AdvancedGasRequestOptions"
+              }
+            },
+            "required": [
+              "gasRequestOptions"
+            ]
           }
-        },
-        "required": [
-          "customerGroup",
-          "energyType",
-          "gasRequestOptions",
-          "gridAreaId",
-          "gridOperatorId",
-          "rcSearchMode",
-          "zipCode"
         ]
       },
       "RatePowerProductsRequest": {
-        "type": "object",
-        "description": "A request to rate POWER products that match the specified search options.",
-        "properties": {
-          "comparisonOptions": {
-            "$ref": "#/components/schemas/CurrentProduct"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RateProductsRequest"
           },
-          "customerGroup": {
-            "$ref": "#/components/schemas/CustomerGroup"
-          },
-          "energyType": {
-            "$ref": "#/components/schemas/EnergyType"
-          },
-          "gridAreaId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "gridOperatorId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "includeSwitchingDiscounts": {
-            "type": "boolean"
-          },
-          "membership": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "moveHome": {
-            "type": "boolean"
-          },
-          "priceView": {
-            "$ref": "#/components/schemas/PriceViewOptionType"
-          },
-          "rateRequestDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "rcSearchMode": {
-            "$ref": "#/components/schemas/RCSearchMode"
-          },
-          "referencePeriod": {
-            "$ref": "#/components/schemas/ReferencePeriodOptionType"
-          },
-          "requirements": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          "supplierId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "zipCode": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "feedInRequestOptions": {
-            "$ref": "#/components/schemas/FeedInRequestOptions"
-          },
-          "firstMeterOptions": {
-            "$ref": "#/components/schemas/AdvancedPowerRequestOptions"
-          },
-          "includeFeedInOptions": {
-            "type": "boolean"
-          },
-          "secondMeterOptions": {
-            "$ref": "#/components/schemas/AdvancedPowerRequestOptions"
+          {
+            "type": "object",
+            "description": "A request to rate POWER products that match the specified search options.",
+            "properties": {
+              "feedInRequestOptions": {
+                "$ref": "#/components/schemas/FeedInRequestOptions"
+              },
+              "firstMeterOptions": {
+                "$ref": "#/components/schemas/AdvancedPowerRequestOptions"
+              },
+              "includeFeedInOptions": {
+                "type": "boolean"
+              },
+              "secondMeterOptions": {
+                "$ref": "#/components/schemas/AdvancedPowerRequestOptions"
+              }
+            },
+            "required": [
+              "firstMeterOptions"
+            ]
           }
-        },
-        "required": [
-          "customerGroup",
-          "energyType",
-          "firstMeterOptions",
-          "gridAreaId",
-          "gridOperatorId",
-          "rcSearchMode",
-          "zipCode"
         ]
       },
       "SmartMeterDateRange": {

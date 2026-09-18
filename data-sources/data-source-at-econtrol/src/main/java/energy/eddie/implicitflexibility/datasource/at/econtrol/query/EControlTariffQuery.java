@@ -1,4 +1,4 @@
-package energy.eddie.implicitflexibility.datasource.at.econtrol.tariff;
+package energy.eddie.implicitflexibility.datasource.at.econtrol.query;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
