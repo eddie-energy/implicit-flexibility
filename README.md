@@ -2,4 +2,5 @@ The **Implicit Flexibility Service** provides a unified framework for requesting
 
 ## Overview of the Implicit Flexibility Service Framework
 
-<img width="5335" height="2530" alt="image" src="https://github.com/user-attachments/assets/125daf64-4437-41f3-9087-20ebfe75175d" />
+<img width="993" height="407" alt="Implicit Flexibilities" src="https://github.com/user-attachments/assets/17212246-8979-4ec4-8071-12701f43ecdd" />
+
