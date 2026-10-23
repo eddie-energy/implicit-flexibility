@@ -178,8 +178,17 @@ Provides the main Spring Boot application that assembles the framework component
 The request flow is as follows:
 
 1. A client sends a request to the common tariff API, which is received by the transport controller.
-2. The API identifies the country associated with the request.
+2. The country associated with the request is identified.
 3. The tariff provider registry resolves the corresponding `TariffInformationRepository`.
 4. The request body is converted into the repository's query type.
-5. The repository executes the query.
-6. The result is returned to the client through the common API.
+5. The query is sent to the repository.
+6. The tariff information is requested.
+7. The client retrieves the tariff information from the external API.
+8. The response from the external API is received by the client
+9. The tariff information result is received by the corresponding data source's repository
+10. The result is forwarded to the transport module.
+11. The HTTP response is returned to the client.
+
+The following diagram illustrates how a tariff information request is processed by the framework.
+
+![DFD implicit flexibility](../public/images/DFD_implicit_flexibility.png)

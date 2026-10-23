@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import renderMarkdownImage from "./theme/renderMarkdownImage";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -40,5 +41,19 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/eddie-energy" },
     ],
+  },
+
+  vue: {
+    template: {
+      transformAssetUrls: {
+        Img: ["src"],
+      },
+    },
+  },
+
+  markdown: {
+    config: (md) => {
+      md.renderer.rules.image = renderMarkdownImage;
+    },
   },
 });
