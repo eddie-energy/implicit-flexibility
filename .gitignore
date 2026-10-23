@@ -15,3 +15,10 @@ build
 
 # ignore local run configuration
 application-local.properties
+
+# VitePress
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
+# Node.js
+docs/node_modules/
