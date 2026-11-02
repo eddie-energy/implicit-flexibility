@@ -10,8 +10,11 @@ hero:
     src: /images/Lego-Eddie.png
     alt: EDDIE Lego figure
   actions:
-    - text: Get Started
-      link: /guide/index
+    - text: Run the EDDIE Implicit Flexibility Framework
+      link: /run/index
+    - theme: alt
+      text: Integrate into your application
+      link: /integrate/index
     - theme: alt
       text: Extend and Contribute
       link: /extend/index

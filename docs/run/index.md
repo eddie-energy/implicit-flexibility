@@ -6,15 +6,13 @@ It allows country-specific data sources to integrate with a shared framework whi
 
 ## Guide
 
-This section explains the existing framework, its architecture, API, and supported data sources.
+This section explains the existing framework, its architecture and supported data sources.
 
-- [Overview](./overview)
+- [Overview](./overview):
   Introduction to the framework, its purpose, and its main capabilities.
-- [Architecture](./architecture)
+- [Architecture](./architecture):
   Understand the modules, integration points, and main components.
-- [API](./api)
-  Explore the REST endpoints and their request and response formats.
-- [Data Sources](./data-sources/)
+- Data Sources:
   Discover the available provider integrations.
-    - [E-Control (Austria)](./data-sources/e-control)
+    - [E-Control (Austria)](./datasources/datasource-at-econtrol):
       Learn about the Austrian E-Control integration and its configuration.

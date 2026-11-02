@@ -2,6 +2,8 @@
 
 The EDDIE Implicit Flexibility API exposes endpoints for country discovery, tariff information and provider-specific tariff discovery.
 
+Currently, two-letter, case-sensitive country code based on ISO 3166 Alpha 2 is used (e.g., AT for Austria).
+
 ## Countries
 
 | Method | Endpoint                   | Description                                |

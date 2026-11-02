@@ -30,7 +30,7 @@ Each integration encapsulates its provider-specific configuration, API communica
 <img width="993" height="407" alt="Implicit Flexibilities" src="https://github.com/user-attachments/assets/17212246-8979-4ec4-8071-12701f43ecdd" />
 
 
-For more information, see the [Architecture Guide](docs/guide/architecture.md).
+For more information, see the [Architecture Guide](docs/run/architecture.md).
 
 ## Technology Stack
 
