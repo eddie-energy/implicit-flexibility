@@ -72,7 +72,7 @@ tasks.register<GenerateTask>("openApiGenerateEcontrol") {
             "useJackson3" to "true",
             "useBeanValidation" to "true",
             "performBeanValidation" to "true",
-            "useInstanceOfEqualsInEqualsMethod" to "true"
+            "useInstanceOfEqualsInEqualsMethod" to true.toString()
         )
     )
 
