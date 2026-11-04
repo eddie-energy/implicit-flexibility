@@ -15,6 +15,7 @@ repositories {
 dependencies {
     implementation(project(":transport"))
     implementation(project(":data-sources:data-source-at-econtrol"))
+    implementation(project(":data-sources:data-source-es-esios"))
     implementation(project(":interactions"))
 
     implementation(libs.spring.boot.starter.web)
