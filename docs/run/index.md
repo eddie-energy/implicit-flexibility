@@ -16,3 +16,5 @@ This section explains the existing framework, its architecture and supported dat
   Discover the available provider integrations.
     - [E-Control (Austria)](./datasources/datasource-at-econtrol):
       Learn about the Austrian E-Control integration and its configuration.
+    - [ESIOS (Spain)](./datasources/datasource-es-esios):
+      Learn about the Spanish ESIOS integration and its configuration.

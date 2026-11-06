@@ -23,6 +23,7 @@ export default defineConfig({
             text: "Data Sources",
             items: [
               { text: "E-Control (Austria)", link: "/run/datasources/datasource-at-econtrol" },
+              { text: "ESIOS (Spain)", link: "/run/datasources/datasource-es-esios" },
             ],
           },
         ],
