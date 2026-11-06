@@ -11,6 +11,7 @@ errorpronePlugin = "5.1.1"
 errorproneCore = "2.51.0"
 nullaway = "0.14.3"
 jspecify = "1.0.1"
+sonar = "7.5.0.8588"
 
 [libraries]
 # Aggregator artifact of junit6
@@ -41,3 +42,4 @@ spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
 openapi-generator = { id = "org.openapi.generator", version.ref = "openapi-generator" }
 errorprone = { id = "net.ltgt.errorprone", version.ref = "errorpronePlugin" }
+sonarqube = { id = "org.sonarqube", version.ref = "sonar" }
