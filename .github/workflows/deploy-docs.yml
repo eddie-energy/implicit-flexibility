@@ -27,5 +27,5 @@ jobs:
           password: ${{ secrets.EDDIE_ENERGY_SSH_PASSWORD }}
           source: "./implicit-flexibility/docs/.vitepress/dist/"
           target: "/var/www/vhosts/eddie.energy/architecture.eddie.energy/implicit-flexibility/"
-          strip_components: "6"
+          strip_components: "5"
           overwrite: true
