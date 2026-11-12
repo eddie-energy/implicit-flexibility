@@ -1,18 +1,21 @@
 package energy.eddie.implicitflexibility.transport.hateoas;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
+import org.springframework.hateoas.mediatype.hal.forms.HalFormsConfiguration;
+import org.springframework.hateoas.mediatype.hal.forms.HalFormsOptions;
+
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.RecordComponent;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.hateoas.mediatype.hal.forms.HalFormsConfiguration;
-import org.springframework.hateoas.mediatype.hal.forms.HalFormsOptions;
-
 public final class HalFormsEnumOptions {
 
-    private HalFormsEnumOptions() { }
+    private HalFormsEnumOptions() {}
 
     public static HalFormsConfiguration register(HalFormsConfiguration configuration, Class<?> formType) {
         if (formType.isRecord()) {
@@ -27,7 +30,13 @@ public final class HalFormsEnumOptions {
             if (!propertyType.isEnum()) {
                 continue;
             }
-            configuration = registerEnum(configuration, formType, component.getName(), propertyType);
+
+            String propertyName = getJsonPropertyName(
+                    component.getName(),
+                    component.getAccessor().getAnnotation(JsonProperty.class)
+            );
+
+            configuration = registerEnum(configuration, formType, propertyName, propertyType);
         }
         return configuration;
     }
@@ -36,7 +45,7 @@ public final class HalFormsEnumOptions {
 
         try {
             for (PropertyDescriptor property : Introspector.getBeanInfo(formType, Object.class)
-                            .getPropertyDescriptors()) {
+                                                           .getPropertyDescriptors()) {
 
                 Method getter = property.getReadMethod();
                 if (getter == null) {
@@ -48,28 +57,35 @@ public final class HalFormsEnumOptions {
                     continue;
                 }
 
-                configuration = registerEnum(configuration, formType, property.getName(), propertyType);
+                String propertyName = getJsonPropertyName(
+                        formType,
+                        property,
+                        getter
+                );
+
+                configuration = registerEnum(configuration, formType, propertyName, propertyType);
             }
 
             return configuration;
-
         } catch (Exception e) {
             throw new IllegalStateException("Failed to inspect HAL-FORMS type: " + formType.getName(), e);
         }
     }
 
-    private static HalFormsConfiguration registerEnum(HalFormsConfiguration configuration,
-                                                      Class<?> formType,
-                                                      String propertyName,
-                                                      Class<?> enumType) {
+    private static HalFormsConfiguration registerEnum(
+            HalFormsConfiguration configuration,
+            Class<?> formType,
+            String propertyName,
+            Class<?> enumType
+    ) {
         return configuration.withOptions(formType, propertyName,
-                metadata -> HalFormsOptions.inline(enumValues(enumType)));
+                                         metadata -> HalFormsOptions.inline(enumValues(enumType)));
     }
 
     private static List<String> enumValues(Class<?> enumType) {
         return Arrays.stream(enumType.getEnumConstants())
-                .map(HalFormsEnumOptions::serializedValue)
-                .toList();
+                     .map(HalFormsEnumOptions::serializedValue)
+                     .toList();
     }
 
     private static String serializedValue(Object enumValue) {
@@ -80,7 +96,53 @@ public final class HalFormsEnumOptions {
             return ((Enum<?>) enumValue).name();
         } catch (ReflectiveOperationException e) {
             throw new IllegalStateException("Could not determine serialized value for enum: "
-                            + enumValue.getClass().getName(), e);
+                                            + enumValue.getClass().getName(), e);
         }
+    }
+
+    private static String getJsonPropertyName(
+            Class<?> formType,
+            PropertyDescriptor property,
+            Method getter
+    ) {
+        JsonProperty annotation = getter.getAnnotation(JsonProperty.class);
+
+        if (annotation != null && !annotation.value().isEmpty()) {
+            return annotation.value();
+        }
+
+        Method setter = property.getWriteMethod();
+
+        if (setter != null) {
+            annotation = setter.getAnnotation(JsonProperty.class);
+
+            if (annotation != null && !annotation.value().isEmpty()) {
+                return annotation.value();
+            }
+        }
+
+        try {
+            Field field = formType.getDeclaredField(property.getName());
+            annotation = field.getAnnotation(JsonProperty.class);
+
+            if (annotation != null && !annotation.value().isEmpty()) {
+                return annotation.value();
+            }
+        } catch (NoSuchFieldException ignored) {
+            // Fall back to the Java property name.
+        }
+
+        return property.getName();
+    }
+
+    private static String getJsonPropertyName(
+            String propertyName,
+            @Nullable JsonProperty annotation
+    ) {
+        if (annotation != null && !annotation.value().isEmpty()) {
+            return annotation.value();
+        }
+
+        return propertyName;
     }
 }
