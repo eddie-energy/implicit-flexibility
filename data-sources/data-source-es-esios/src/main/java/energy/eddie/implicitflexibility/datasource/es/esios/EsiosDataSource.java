@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 @ConditionalOnProperty(prefix = "data-source.es.esios", name = "enabled", havingValue = "true")
 public class EsiosDataSource implements DataSource {
 
-    private static final String DATA_SOURCE_ID = "es.esios";
-    private static final String COUNTRY_CODE = "ES";
+    public static final String DATA_SOURCE_ID = "es.esios";
+    public static final String COUNTRY_CODE = "ES";
 
     @Override
     public String getId() {

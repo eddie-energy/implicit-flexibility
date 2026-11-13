@@ -12,6 +12,7 @@ plugins {
 subprojects {
     pluginManager.withPlugin("java") {
         pluginManager.apply("net.ltgt.errorprone")
+        pluginManager.apply("jacoco")
 
         val catalog = rootProject.libs
 
@@ -79,13 +80,23 @@ tasks.register<JacocoReport>("codeCoverageReport") {
     description = "Generates a jacoco report for all subprojects."
     group = "verification"
 
+    dependsOn(subprojects.map { subproject ->
+        subproject.tasks.withType<Test>()
+    })
+
     subprojects {
         val subproject = this
+
         subproject.plugins.withType<JacocoPlugin>().configureEach {
-            subproject.tasks.matching { it.extensions.findByType<JacocoTaskExtension>() != null }.configureEach {
-                val testTask = this
-                sourceSets(subproject.the<SourceSetContainer>().named("main").get())
-                executionData(testTask)
+            subproject.tasks.matching {
+                it.extensions.findByType<JacocoTaskExtension>() != null
+            }.configureEach {
+                sourceSets(
+                    subproject.the<SourceSetContainer>()
+                        .named("main")
+                        .get()
+                )
+                executionData(this)
             }
         }
     }
