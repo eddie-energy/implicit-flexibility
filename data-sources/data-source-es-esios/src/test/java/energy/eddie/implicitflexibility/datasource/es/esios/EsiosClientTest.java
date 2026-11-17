@@ -13,10 +13,16 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestClient;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -28,13 +34,16 @@ class EsiosClientTest {
     private static final String BASE_URL = "https://api.esios.ree.es";
     private static final String TOKEN = "test-token";
 
+    private final ObjectMapper objectMapper = JsonMapper.builder().build();
     private EsiosClient esiosClient;
     private MockRestServiceServer mockServer;
 
     private static final String INDICATOR_RESPONSE = """
             {
-              "id": 600,
-              "name": "Test indicator"
+                "indicator": {
+                    "id": 600,
+                    "name": "Test indicator"
+                }
             }
             """;
 
@@ -43,21 +52,28 @@ class EsiosClientTest {
         RestClient.Builder builder = RestClient.builder().baseUrl(BASE_URL);
         mockServer = MockRestServiceServer.bindTo(builder).build();
         EsiosProperties properties = new EsiosProperties(true, URI.create(BASE_URL), TOKEN);
-        esiosClient = new EsiosClient(builder, properties, new ClientExceptionHandler());
+        esiosClient = new EsiosClient(builder, properties, new ClientExceptionHandler(), objectMapper);
     }
 
     @Test
-    void testRetrieveIndicator() {
+    void testRetrieveIndicator() throws IOException {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(600, null, null);
-        expectIndicatorRequest("/indicators/600");
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        InputStream inputStream = Objects.requireNonNull(getClass().getResourceAsStream(
+                "/esios/ESIOS_indicator_600.json"));
+        String responseBody = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+        expectIndicatorRequest("/indicators/600", responseBody);
 
         // When
         Indicator result = esiosClient.getIndicatorTariff(query);
 
         // Then
         assertNotNull(result);
-        assertEquals(600, result.getId());
+        assertEquals(600L, result.getId());
+        assertEquals("Precio mercado SPOT Diario", result.getName());
+        assertEquals("Mercado SPOT", result.getShortName());
+        assertEquals(6, result.getGeos().size());
 
         mockServer.verify();
     }
@@ -65,11 +81,9 @@ class EsiosClientTest {
     @Test
     void testLanguageFilter() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                600,
-                Language.EN,
-                null
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setLanguage(Language.EN);
 
         expectIndicatorRequest("/indicators/600?locale=en");
 
@@ -83,11 +97,9 @@ class EsiosClientTest {
     @Test
     void testTimeFilters() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                600,
-                null,
-                OffsetDateTime.parse("2026-11-10T10:00:00Z")
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setDatetime(OffsetDateTime.parse("2026-11-10T10:00:00Z"));
 
         expectIndicatorRequest(
                 "/indicators/600"
@@ -104,17 +116,10 @@ class EsiosClientTest {
     @Test
     void testTimeAggregationFilters() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                600,
-                null,
-                null,
-                null,
-                Aggregation.AVERAGE,
-                TimeTruncation.HOUR,
-                null,
-                null,
-                null
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setTimeAggregation(Aggregation.AVERAGE);
+        query.setTimeTruncation(TimeTruncation.HOUR);
 
         expectIndicatorRequest("/indicators/600?time_agg=avg&time_trunc=hour");
 
@@ -128,17 +133,11 @@ class EsiosClientTest {
     @Test
     void testGeoFilters() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                600,
-                null,
-                null,
-                null,
-                null,
-                null,
-                List.of(1, 2),
-                Aggregation.SUM,
-                GeoTruncation.COUNTRY
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setGeoIds(List.of(1, 2));
+        query.setGeoAggregation(Aggregation.SUM);
+        query.setGeoTruncation(GeoTruncation.COUNTRY);
 
         expectIndicatorRequest("/indicators/600?geo_ids%5B%5D=1&geo_ids%5B%5D=2&geo_agg=sum&geo_trunc=country");
 
@@ -153,17 +152,16 @@ class EsiosClientTest {
     @Test
     void testAllFilters() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                600,
-                Language.EN,
-                OffsetDateTime.parse("2026-11-01T00:00:00Z"),
-                OffsetDateTime.parse("2026-11-10T23:59:59Z"),
-                Aggregation.AVERAGE,
-                TimeTruncation.HOUR,
-                List.of(1, 2),
-                Aggregation.SUM,
-                GeoTruncation.COUNTRY
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setLanguage(Language.EN);
+        query.setStartDate(OffsetDateTime.parse("2026-11-01T00:00:00Z"));
+        query.setEndDate(OffsetDateTime.parse("2026-11-10T23:59:59Z"));
+        query.setTimeAggregation(Aggregation.AVERAGE);
+        query.setTimeTruncation(TimeTruncation.HOUR);
+        query.setGeoIds(List.of(1, 2));
+        query.setGeoAggregation(Aggregation.SUM);
+        query.setGeoTruncation(GeoTruncation.COUNTRY);
 
         expectIndicatorRequest(
                 "/indicators/600?locale=en"
@@ -185,9 +183,13 @@ class EsiosClientTest {
     }
 
     private void expectIndicatorRequest(String expectedUri) {
+        expectIndicatorRequest(expectedUri, INDICATOR_RESPONSE);
+    }
+
+    private void expectIndicatorRequest(String expectedUri, String response) {
         mockServer.expect(requestTo(BASE_URL + expectedUri))
                   .andExpect(method(HttpMethod.GET))
                   .andExpect(header(HttpHeaders.AUTHORIZATION, "Bearer " + TOKEN))
-                  .andRespond(withSuccess(INDICATOR_RESPONSE, MediaType.APPLICATION_JSON));
+                  .andRespond(withSuccess(response, MediaType.APPLICATION_JSON));
     }
 }

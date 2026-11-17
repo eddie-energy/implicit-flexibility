@@ -39,11 +39,10 @@ class EsiosTariffQueryValidatorTest {
     @Test
     void testDatetimeOnly() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                600,
-                Language.EN,
-                DATETIME
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setLanguage(Language.EN);
+        query.setDatetime(DATETIME);
 
         // When
         Set<ConstraintViolation<EsiosTariffQuery>> violations = validator.validate(query);
@@ -91,17 +90,12 @@ class EsiosTariffQueryValidatorTest {
             @Nullable OffsetDateTime startDate,
             @Nullable OffsetDateTime endDate
     ) {
-        return new EsiosTariffQuery(
-                600,
-                Language.EN,
-                startDate,
-                endDate,
-                null,
-                null,
-                null,
-                null,
-                null
-        );
+        var query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
+        query.setLanguage(Language.EN);
+        query.setStartDate(startDate);
+        query.setEndDate(endDate);
+        return query;
     }
 
     private void assertValid(EsiosTariffQuery query) {

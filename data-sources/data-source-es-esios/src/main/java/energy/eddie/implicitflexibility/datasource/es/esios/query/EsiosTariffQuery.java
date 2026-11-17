@@ -55,41 +55,6 @@ public class EsiosTariffQuery {
     @Nullable
     private GeoTruncation geoTruncation;
 
-    public EsiosTariffQuery() {
-    }
-
-    public EsiosTariffQuery(
-            int indicatorId,
-            @Nullable Language language,
-            @Nullable OffsetDateTime startDate,
-            @Nullable OffsetDateTime endDate,
-            @Nullable Aggregation timeAggregation,
-            @Nullable TimeTruncation timeTruncation,
-            @Nullable List<Integer> geoIds,
-            @Nullable Aggregation geoAggregation,
-            @Nullable GeoTruncation geoTruncation
-    ) {
-        this.indicatorId = indicatorId;
-        this.language = language;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.timeAggregation = timeAggregation;
-        this.timeTruncation = timeTruncation;
-        this.geoIds = geoIds;
-        this.geoAggregation = geoAggregation;
-        this.geoTruncation = geoTruncation;
-    }
-
-    public EsiosTariffQuery(
-            int indicatorId,
-            @Nullable Language language,
-            @Nullable OffsetDateTime datetime
-    ) {
-        this.indicatorId = indicatorId;
-        this.language = language;
-        this.datetime = datetime;
-    }
-
     public int getIndicatorId() {
         return indicatorId;
     }

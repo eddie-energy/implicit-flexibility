@@ -50,17 +50,16 @@ class EsiosTariffQueryTest {
         GeoTruncation geoTruncation = GeoTruncation.COUNTRY;
 
         // When
-        EsiosTariffQuery query = new EsiosTariffQuery(
-                indicatorId,
-                language,
-                startDate,
-                endDate,
-                timeAggregation,
-                timeTruncation,
-                geoIds,
-                geoAggregation,
-                geoTruncation
-        );
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(indicatorId);
+        query.setLanguage(language);
+        query.setStartDate(startDate);
+        query.setEndDate(endDate);
+        query.setTimeAggregation(timeAggregation);
+        query.setTimeTruncation(timeTruncation);
+        query.setGeoIds(geoIds);
+        query.setGeoAggregation(geoAggregation);
+        query.setGeoTruncation(geoTruncation);
 
         // Then
         assertAll(
@@ -83,7 +82,10 @@ class EsiosTariffQueryTest {
         Language language = Language.EN;
 
         // When
-        EsiosTariffQuery query = new EsiosTariffQuery(indicatorId, language, DATETIME);
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(indicatorId);
+        query.setLanguage(language);
+        query.setDatetime(DATETIME);
 
         // Then
         assertAll(

@@ -50,7 +50,8 @@ class EsiosTariffInformationRepositoryTest {
     @Test
     void testExecuteQuery() {
         // Given
-        EsiosTariffQuery query = new EsiosTariffQuery(600, null, null);
+        EsiosTariffQuery query = new EsiosTariffQuery();
+        query.setIndicatorId(600);
         Indicator expectedResult = mock(Indicator.class);
 
         when(client.getIndicatorTariff(query)).thenReturn(expectedResult);

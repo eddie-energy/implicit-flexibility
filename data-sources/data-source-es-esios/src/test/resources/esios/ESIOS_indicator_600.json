@@ -1,0 +1,4659 @@
+{
+  "indicator": {
+    "name": "Precio mercado SPOT Diario",
+    "short_name": "Mercado SPOT",
+    "id": 600,
+    "composited": false,
+    "step_type": "linear",
+    "disaggregated": true,
+    "magnitud": [
+      {
+        "name": "Precio €/MWh",
+        "id": 23
+      }
+    ],
+    "tiempo": [
+      {
+        "name": "Quince minutos",
+        "id": 218
+      }
+    ],
+    "geos": [
+      {
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      }
+    ],
+    "values_updated_at": "2026-11-05T14:46:50.000+01:00",
+    "values": [
+      {
+        "value": 275.3,
+        "datetime": "2026-11-06T00:00:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:00:00Z",
+        "tz_time": "2026-11-05T23:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 250.0,
+        "datetime": "2026-11-06T00:00:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:00:00Z",
+        "tz_time": "2026-11-05T23:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 275.3,
+        "datetime": "2026-11-06T00:00:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:00:00Z",
+        "tz_time": "2026-11-05T23:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 247.25,
+        "datetime": "2026-11-06T00:00:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:00:00Z",
+        "tz_time": "2026-11-05T23:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 247.53,
+        "datetime": "2026-11-06T00:00:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:00:00Z",
+        "tz_time": "2026-11-05T23:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 246.63,
+        "datetime": "2026-11-06T00:00:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:00:00Z",
+        "tz_time": "2026-11-05T23:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 261.04,
+        "datetime": "2026-11-06T00:15:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:15:00Z",
+        "tz_time": "2026-11-05T23:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 239.24,
+        "datetime": "2026-11-06T00:15:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:15:00Z",
+        "tz_time": "2026-11-05T23:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 261.04,
+        "datetime": "2026-11-06T00:15:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:15:00Z",
+        "tz_time": "2026-11-05T23:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 235.81,
+        "datetime": "2026-11-06T00:15:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:15:00Z",
+        "tz_time": "2026-11-05T23:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 236.34,
+        "datetime": "2026-11-06T00:15:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:15:00Z",
+        "tz_time": "2026-11-05T23:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 235.13,
+        "datetime": "2026-11-06T00:15:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:15:00Z",
+        "tz_time": "2026-11-05T23:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 250.8,
+        "datetime": "2026-11-06T00:30:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:30:00Z",
+        "tz_time": "2026-11-05T23:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 234.08,
+        "datetime": "2026-11-06T00:30:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:30:00Z",
+        "tz_time": "2026-11-05T23:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 250.8,
+        "datetime": "2026-11-06T00:30:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:30:00Z",
+        "tz_time": "2026-11-05T23:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 230.59,
+        "datetime": "2026-11-06T00:30:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:30:00Z",
+        "tz_time": "2026-11-05T23:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 230.97,
+        "datetime": "2026-11-06T00:30:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:30:00Z",
+        "tz_time": "2026-11-05T23:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 229.76,
+        "datetime": "2026-11-06T00:30:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:30:00Z",
+        "tz_time": "2026-11-05T23:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 239.28,
+        "datetime": "2026-11-06T00:45:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:45:00Z",
+        "tz_time": "2026-11-05T23:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 232.46,
+        "datetime": "2026-11-06T00:45:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:45:00Z",
+        "tz_time": "2026-11-05T23:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 239.28,
+        "datetime": "2026-11-06T00:45:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:45:00Z",
+        "tz_time": "2026-11-05T23:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 229.11,
+        "datetime": "2026-11-06T00:45:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:45:00Z",
+        "tz_time": "2026-11-05T23:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 229.5,
+        "datetime": "2026-11-06T00:45:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:45:00Z",
+        "tz_time": "2026-11-05T23:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 228.38,
+        "datetime": "2026-11-06T00:45:00.000+01:00",
+        "datetime_utc": "2026-11-05T23:45:00Z",
+        "tz_time": "2026-11-05T23:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 241.4,
+        "datetime": "2026-11-06T01:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:00:00Z",
+        "tz_time": "2026-11-06T00:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 241.4,
+        "datetime": "2026-11-06T01:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:00:00Z",
+        "tz_time": "2026-11-06T00:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 241.4,
+        "datetime": "2026-11-06T01:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:00:00Z",
+        "tz_time": "2026-11-06T00:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 238.98,
+        "datetime": "2026-11-06T01:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:00:00Z",
+        "tz_time": "2026-11-06T00:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 238.98,
+        "datetime": "2026-11-06T01:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:00:00Z",
+        "tz_time": "2026-11-06T00:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 238.11,
+        "datetime": "2026-11-06T01:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:00:00Z",
+        "tz_time": "2026-11-06T00:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 235.99,
+        "datetime": "2026-11-06T01:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:15:00Z",
+        "tz_time": "2026-11-06T00:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 235.99,
+        "datetime": "2026-11-06T01:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:15:00Z",
+        "tz_time": "2026-11-06T00:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 235.99,
+        "datetime": "2026-11-06T01:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:15:00Z",
+        "tz_time": "2026-11-06T00:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 235.0,
+        "datetime": "2026-11-06T01:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:15:00Z",
+        "tz_time": "2026-11-06T00:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 234.97,
+        "datetime": "2026-11-06T01:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:15:00Z",
+        "tz_time": "2026-11-06T00:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 234.6,
+        "datetime": "2026-11-06T01:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:15:00Z",
+        "tz_time": "2026-11-06T00:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 233.02,
+        "datetime": "2026-11-06T01:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:30:00Z",
+        "tz_time": "2026-11-06T00:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 233.02,
+        "datetime": "2026-11-06T01:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:30:00Z",
+        "tz_time": "2026-11-06T00:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 233.02,
+        "datetime": "2026-11-06T01:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:30:00Z",
+        "tz_time": "2026-11-06T00:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 231.34,
+        "datetime": "2026-11-06T01:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:30:00Z",
+        "tz_time": "2026-11-06T00:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 231.38,
+        "datetime": "2026-11-06T01:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:30:00Z",
+        "tz_time": "2026-11-06T00:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 230.79,
+        "datetime": "2026-11-06T01:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:30:00Z",
+        "tz_time": "2026-11-06T00:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 231.72,
+        "datetime": "2026-11-06T01:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:45:00Z",
+        "tz_time": "2026-11-06T00:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 231.72,
+        "datetime": "2026-11-06T01:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:45:00Z",
+        "tz_time": "2026-11-06T00:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 231.72,
+        "datetime": "2026-11-06T01:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:45:00Z",
+        "tz_time": "2026-11-06T00:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 229.28,
+        "datetime": "2026-11-06T01:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:45:00Z",
+        "tz_time": "2026-11-06T00:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 229.39,
+        "datetime": "2026-11-06T01:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:45:00Z",
+        "tz_time": "2026-11-06T00:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 228.55,
+        "datetime": "2026-11-06T01:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T00:45:00Z",
+        "tz_time": "2026-11-06T00:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 230.0,
+        "datetime": "2026-11-06T02:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:00:00Z",
+        "tz_time": "2026-11-06T01:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 230.0,
+        "datetime": "2026-11-06T02:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:00:00Z",
+        "tz_time": "2026-11-06T01:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 230.0,
+        "datetime": "2026-11-06T02:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:00:00Z",
+        "tz_time": "2026-11-06T01:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 226.56,
+        "datetime": "2026-11-06T02:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:00:00Z",
+        "tz_time": "2026-11-06T01:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 226.81,
+        "datetime": "2026-11-06T02:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:00:00Z",
+        "tz_time": "2026-11-06T01:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 225.63,
+        "datetime": "2026-11-06T02:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:00:00Z",
+        "tz_time": "2026-11-06T01:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 230.0,
+        "datetime": "2026-11-06T02:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:15:00Z",
+        "tz_time": "2026-11-06T01:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 230.0,
+        "datetime": "2026-11-06T02:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:15:00Z",
+        "tz_time": "2026-11-06T01:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 230.0,
+        "datetime": "2026-11-06T02:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:15:00Z",
+        "tz_time": "2026-11-06T01:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 227.91,
+        "datetime": "2026-11-06T02:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:15:00Z",
+        "tz_time": "2026-11-06T01:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 227.91,
+        "datetime": "2026-11-06T02:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:15:00Z",
+        "tz_time": "2026-11-06T01:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 227.22,
+        "datetime": "2026-11-06T02:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:15:00Z",
+        "tz_time": "2026-11-06T01:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 228.46,
+        "datetime": "2026-11-06T02:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:30:00Z",
+        "tz_time": "2026-11-06T01:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 228.46,
+        "datetime": "2026-11-06T02:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:30:00Z",
+        "tz_time": "2026-11-06T01:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 228.46,
+        "datetime": "2026-11-06T02:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:30:00Z",
+        "tz_time": "2026-11-06T01:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 226.37,
+        "datetime": "2026-11-06T02:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:30:00Z",
+        "tz_time": "2026-11-06T01:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 226.4,
+        "datetime": "2026-11-06T02:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:30:00Z",
+        "tz_time": "2026-11-06T01:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 225.7,
+        "datetime": "2026-11-06T02:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:30:00Z",
+        "tz_time": "2026-11-06T01:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 225.35,
+        "datetime": "2026-11-06T02:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:45:00Z",
+        "tz_time": "2026-11-06T01:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 225.35,
+        "datetime": "2026-11-06T02:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:45:00Z",
+        "tz_time": "2026-11-06T01:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 225.35,
+        "datetime": "2026-11-06T02:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:45:00Z",
+        "tz_time": "2026-11-06T01:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 222.91,
+        "datetime": "2026-11-06T02:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:45:00Z",
+        "tz_time": "2026-11-06T01:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 222.97,
+        "datetime": "2026-11-06T02:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:45:00Z",
+        "tz_time": "2026-11-06T01:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 222.15,
+        "datetime": "2026-11-06T02:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T01:45:00Z",
+        "tz_time": "2026-11-06T01:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 226.15,
+        "datetime": "2026-11-06T03:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:00:00Z",
+        "tz_time": "2026-11-06T02:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 226.15,
+        "datetime": "2026-11-06T03:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:00:00Z",
+        "tz_time": "2026-11-06T02:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 226.15,
+        "datetime": "2026-11-06T03:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:00:00Z",
+        "tz_time": "2026-11-06T02:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T03:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:00:00Z",
+        "tz_time": "2026-11-06T02:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 223.37,
+        "datetime": "2026-11-06T03:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:00:00Z",
+        "tz_time": "2026-11-06T02:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 222.33,
+        "datetime": "2026-11-06T03:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:00:00Z",
+        "tz_time": "2026-11-06T02:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 226.75,
+        "datetime": "2026-11-06T03:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:15:00Z",
+        "tz_time": "2026-11-06T02:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 226.75,
+        "datetime": "2026-11-06T03:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:15:00Z",
+        "tz_time": "2026-11-06T02:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 226.75,
+        "datetime": "2026-11-06T03:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:15:00Z",
+        "tz_time": "2026-11-06T02:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 224.31,
+        "datetime": "2026-11-06T03:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:15:00Z",
+        "tz_time": "2026-11-06T02:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 224.4,
+        "datetime": "2026-11-06T03:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:15:00Z",
+        "tz_time": "2026-11-06T02:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 223.55,
+        "datetime": "2026-11-06T03:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:15:00Z",
+        "tz_time": "2026-11-06T02:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 224.4,
+        "datetime": "2026-11-06T03:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:30:00Z",
+        "tz_time": "2026-11-06T02:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 224.4,
+        "datetime": "2026-11-06T03:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:30:00Z",
+        "tz_time": "2026-11-06T02:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 224.4,
+        "datetime": "2026-11-06T03:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:30:00Z",
+        "tz_time": "2026-11-06T02:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 221.95,
+        "datetime": "2026-11-06T03:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:30:00Z",
+        "tz_time": "2026-11-06T02:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 222.1,
+        "datetime": "2026-11-06T03:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:30:00Z",
+        "tz_time": "2026-11-06T02:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 221.23,
+        "datetime": "2026-11-06T03:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:30:00Z",
+        "tz_time": "2026-11-06T02:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T03:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:45:00Z",
+        "tz_time": "2026-11-06T02:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T03:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:45:00Z",
+        "tz_time": "2026-11-06T02:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T03:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:45:00Z",
+        "tz_time": "2026-11-06T02:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 220.07,
+        "datetime": "2026-11-06T03:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:45:00Z",
+        "tz_time": "2026-11-06T02:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 220.16,
+        "datetime": "2026-11-06T03:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:45:00Z",
+        "tz_time": "2026-11-06T02:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 219.07,
+        "datetime": "2026-11-06T03:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T02:45:00Z",
+        "tz_time": "2026-11-06T02:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 227.0,
+        "datetime": "2026-11-06T04:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:00:00Z",
+        "tz_time": "2026-11-06T03:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 227.0,
+        "datetime": "2026-11-06T04:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:00:00Z",
+        "tz_time": "2026-11-06T03:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 227.0,
+        "datetime": "2026-11-06T04:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:00:00Z",
+        "tz_time": "2026-11-06T03:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 225.17,
+        "datetime": "2026-11-06T04:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:00:00Z",
+        "tz_time": "2026-11-06T03:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 225.17,
+        "datetime": "2026-11-06T04:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:00:00Z",
+        "tz_time": "2026-11-06T03:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 224.53,
+        "datetime": "2026-11-06T04:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:00:00Z",
+        "tz_time": "2026-11-06T03:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 225.66,
+        "datetime": "2026-11-06T04:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:15:00Z",
+        "tz_time": "2026-11-06T03:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 225.66,
+        "datetime": "2026-11-06T04:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:15:00Z",
+        "tz_time": "2026-11-06T03:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 225.66,
+        "datetime": "2026-11-06T04:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:15:00Z",
+        "tz_time": "2026-11-06T03:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 223.77,
+        "datetime": "2026-11-06T04:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:15:00Z",
+        "tz_time": "2026-11-06T03:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 221.14,
+        "datetime": "2026-11-06T04:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:15:00Z",
+        "tz_time": "2026-11-06T03:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 220.1,
+        "datetime": "2026-11-06T04:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:15:00Z",
+        "tz_time": "2026-11-06T03:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 223.85,
+        "datetime": "2026-11-06T04:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:30:00Z",
+        "tz_time": "2026-11-06T03:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 223.85,
+        "datetime": "2026-11-06T04:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:30:00Z",
+        "tz_time": "2026-11-06T03:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 223.85,
+        "datetime": "2026-11-06T04:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:30:00Z",
+        "tz_time": "2026-11-06T03:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 223.85,
+        "datetime": "2026-11-06T04:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:30:00Z",
+        "tz_time": "2026-11-06T03:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 215.48,
+        "datetime": "2026-11-06T04:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:30:00Z",
+        "tz_time": "2026-11-06T03:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 214.32,
+        "datetime": "2026-11-06T04:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:30:00Z",
+        "tz_time": "2026-11-06T03:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 226.0,
+        "datetime": "2026-11-06T04:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:45:00Z",
+        "tz_time": "2026-11-06T03:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 226.0,
+        "datetime": "2026-11-06T04:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:45:00Z",
+        "tz_time": "2026-11-06T03:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 226.0,
+        "datetime": "2026-11-06T04:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:45:00Z",
+        "tz_time": "2026-11-06T03:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 226.0,
+        "datetime": "2026-11-06T04:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:45:00Z",
+        "tz_time": "2026-11-06T03:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 217.04,
+        "datetime": "2026-11-06T04:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:45:00Z",
+        "tz_time": "2026-11-06T03:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 215.8,
+        "datetime": "2026-11-06T04:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T03:45:00Z",
+        "tz_time": "2026-11-06T03:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 230.23,
+        "datetime": "2026-11-06T05:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:00:00Z",
+        "tz_time": "2026-11-06T04:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 230.49,
+        "datetime": "2026-11-06T05:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:00:00Z",
+        "tz_time": "2026-11-06T04:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 230.23,
+        "datetime": "2026-11-06T05:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:00:00Z",
+        "tz_time": "2026-11-06T04:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 230.49,
+        "datetime": "2026-11-06T05:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:00:00Z",
+        "tz_time": "2026-11-06T04:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 220.59,
+        "datetime": "2026-11-06T05:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:00:00Z",
+        "tz_time": "2026-11-06T04:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 219.26,
+        "datetime": "2026-11-06T05:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:00:00Z",
+        "tz_time": "2026-11-06T04:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 227.29,
+        "datetime": "2026-11-06T05:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:15:00Z",
+        "tz_time": "2026-11-06T04:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 227.29,
+        "datetime": "2026-11-06T05:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:15:00Z",
+        "tz_time": "2026-11-06T04:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 227.29,
+        "datetime": "2026-11-06T05:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:15:00Z",
+        "tz_time": "2026-11-06T04:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 225.49,
+        "datetime": "2026-11-06T05:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:15:00Z",
+        "tz_time": "2026-11-06T04:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 213.44,
+        "datetime": "2026-11-06T05:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:15:00Z",
+        "tz_time": "2026-11-06T04:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 211.27,
+        "datetime": "2026-11-06T05:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:15:00Z",
+        "tz_time": "2026-11-06T04:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 230.89,
+        "datetime": "2026-11-06T05:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:30:00Z",
+        "tz_time": "2026-11-06T04:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 231.78,
+        "datetime": "2026-11-06T05:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:30:00Z",
+        "tz_time": "2026-11-06T04:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 230.89,
+        "datetime": "2026-11-06T05:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:30:00Z",
+        "tz_time": "2026-11-06T04:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 231.78,
+        "datetime": "2026-11-06T05:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:30:00Z",
+        "tz_time": "2026-11-06T04:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 216.84,
+        "datetime": "2026-11-06T05:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:30:00Z",
+        "tz_time": "2026-11-06T04:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 214.9,
+        "datetime": "2026-11-06T05:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:30:00Z",
+        "tz_time": "2026-11-06T04:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 235.86,
+        "datetime": "2026-11-06T05:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:45:00Z",
+        "tz_time": "2026-11-06T04:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 235.86,
+        "datetime": "2026-11-06T05:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:45:00Z",
+        "tz_time": "2026-11-06T04:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 235.86,
+        "datetime": "2026-11-06T05:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:45:00Z",
+        "tz_time": "2026-11-06T04:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 230.83,
+        "datetime": "2026-11-06T05:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:45:00Z",
+        "tz_time": "2026-11-06T04:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 224.51,
+        "datetime": "2026-11-06T05:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:45:00Z",
+        "tz_time": "2026-11-06T04:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 222.06,
+        "datetime": "2026-11-06T05:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T04:45:00Z",
+        "tz_time": "2026-11-06T04:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 244.5,
+        "datetime": "2026-11-06T06:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:00:00Z",
+        "tz_time": "2026-11-06T05:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 244.5,
+        "datetime": "2026-11-06T06:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:00:00Z",
+        "tz_time": "2026-11-06T05:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 244.5,
+        "datetime": "2026-11-06T06:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:00:00Z",
+        "tz_time": "2026-11-06T05:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 243.19,
+        "datetime": "2026-11-06T06:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:00:00Z",
+        "tz_time": "2026-11-06T05:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 235.88,
+        "datetime": "2026-11-06T06:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:00:00Z",
+        "tz_time": "2026-11-06T05:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 225.57,
+        "datetime": "2026-11-06T06:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:00:00Z",
+        "tz_time": "2026-11-06T05:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 260.62,
+        "datetime": "2026-11-06T06:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:15:00Z",
+        "tz_time": "2026-11-06T05:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 283.06,
+        "datetime": "2026-11-06T06:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:15:00Z",
+        "tz_time": "2026-11-06T05:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 260.62,
+        "datetime": "2026-11-06T06:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:15:00Z",
+        "tz_time": "2026-11-06T05:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 284.99,
+        "datetime": "2026-11-06T06:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:15:00Z",
+        "tz_time": "2026-11-06T05:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 272.2,
+        "datetime": "2026-11-06T06:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:15:00Z",
+        "tz_time": "2026-11-06T05:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 256.09,
+        "datetime": "2026-11-06T06:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:15:00Z",
+        "tz_time": "2026-11-06T05:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 261.05,
+        "datetime": "2026-11-06T06:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:30:00Z",
+        "tz_time": "2026-11-06T05:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 307.69,
+        "datetime": "2026-11-06T06:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:30:00Z",
+        "tz_time": "2026-11-06T05:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 261.05,
+        "datetime": "2026-11-06T06:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:30:00Z",
+        "tz_time": "2026-11-06T05:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 310.21,
+        "datetime": "2026-11-06T06:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:30:00Z",
+        "tz_time": "2026-11-06T05:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 300.74,
+        "datetime": "2026-11-06T06:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:30:00Z",
+        "tz_time": "2026-11-06T05:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T06:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:30:00Z",
+        "tz_time": "2026-11-06T05:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 275.3,
+        "datetime": "2026-11-06T06:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:45:00Z",
+        "tz_time": "2026-11-06T05:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 303.72,
+        "datetime": "2026-11-06T06:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:45:00Z",
+        "tz_time": "2026-11-06T05:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 275.3,
+        "datetime": "2026-11-06T06:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:45:00Z",
+        "tz_time": "2026-11-06T05:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 308.76,
+        "datetime": "2026-11-06T06:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:45:00Z",
+        "tz_time": "2026-11-06T05:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 298.05,
+        "datetime": "2026-11-06T06:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:45:00Z",
+        "tz_time": "2026-11-06T05:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T06:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T05:45:00Z",
+        "tz_time": "2026-11-06T05:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 277.98,
+        "datetime": "2026-11-06T07:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:00:00Z",
+        "tz_time": "2026-11-06T06:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 324.05,
+        "datetime": "2026-11-06T07:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:00:00Z",
+        "tz_time": "2026-11-06T06:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 277.98,
+        "datetime": "2026-11-06T07:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:00:00Z",
+        "tz_time": "2026-11-06T06:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 322.82,
+        "datetime": "2026-11-06T07:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:00:00Z",
+        "tz_time": "2026-11-06T06:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 322.79,
+        "datetime": "2026-11-06T07:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:00:00Z",
+        "tz_time": "2026-11-06T06:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 322.34,
+        "datetime": "2026-11-06T07:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:00:00Z",
+        "tz_time": "2026-11-06T06:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 285.44,
+        "datetime": "2026-11-06T07:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:15:00Z",
+        "tz_time": "2026-11-06T06:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 324.68,
+        "datetime": "2026-11-06T07:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:15:00Z",
+        "tz_time": "2026-11-06T06:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 285.44,
+        "datetime": "2026-11-06T07:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:15:00Z",
+        "tz_time": "2026-11-06T06:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 324.44,
+        "datetime": "2026-11-06T07:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:15:00Z",
+        "tz_time": "2026-11-06T06:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 324.43,
+        "datetime": "2026-11-06T07:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:15:00Z",
+        "tz_time": "2026-11-06T06:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 324.34,
+        "datetime": "2026-11-06T07:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:15:00Z",
+        "tz_time": "2026-11-06T06:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 286.77,
+        "datetime": "2026-11-06T07:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:30:00Z",
+        "tz_time": "2026-11-06T06:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 324.62,
+        "datetime": "2026-11-06T07:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:30:00Z",
+        "tz_time": "2026-11-06T06:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 286.77,
+        "datetime": "2026-11-06T07:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:30:00Z",
+        "tz_time": "2026-11-06T06:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 324.6,
+        "datetime": "2026-11-06T07:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:30:00Z",
+        "tz_time": "2026-11-06T06:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 324.6,
+        "datetime": "2026-11-06T07:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:30:00Z",
+        "tz_time": "2026-11-06T06:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 324.58,
+        "datetime": "2026-11-06T07:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:30:00Z",
+        "tz_time": "2026-11-06T06:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 286.87,
+        "datetime": "2026-11-06T07:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:45:00Z",
+        "tz_time": "2026-11-06T06:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 320.38,
+        "datetime": "2026-11-06T07:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:45:00Z",
+        "tz_time": "2026-11-06T06:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 286.87,
+        "datetime": "2026-11-06T07:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:45:00Z",
+        "tz_time": "2026-11-06T06:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 320.38,
+        "datetime": "2026-11-06T07:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:45:00Z",
+        "tz_time": "2026-11-06T06:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 320.38,
+        "datetime": "2026-11-06T07:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:45:00Z",
+        "tz_time": "2026-11-06T06:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 320.38,
+        "datetime": "2026-11-06T07:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T06:45:00Z",
+        "tz_time": "2026-11-06T06:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 291.59,
+        "datetime": "2026-11-06T08:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:00:00Z",
+        "tz_time": "2026-11-06T07:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 339.14,
+        "datetime": "2026-11-06T08:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:00:00Z",
+        "tz_time": "2026-11-06T07:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 291.59,
+        "datetime": "2026-11-06T08:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:00:00Z",
+        "tz_time": "2026-11-06T07:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 339.14,
+        "datetime": "2026-11-06T08:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:00:00Z",
+        "tz_time": "2026-11-06T07:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 339.14,
+        "datetime": "2026-11-06T08:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:00:00Z",
+        "tz_time": "2026-11-06T07:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 339.14,
+        "datetime": "2026-11-06T08:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:00:00Z",
+        "tz_time": "2026-11-06T07:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 277.04,
+        "datetime": "2026-11-06T08:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:15:00Z",
+        "tz_time": "2026-11-06T07:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 326.27,
+        "datetime": "2026-11-06T08:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:15:00Z",
+        "tz_time": "2026-11-06T07:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 277.04,
+        "datetime": "2026-11-06T08:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:15:00Z",
+        "tz_time": "2026-11-06T07:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 326.27,
+        "datetime": "2026-11-06T08:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:15:00Z",
+        "tz_time": "2026-11-06T07:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 326.27,
+        "datetime": "2026-11-06T08:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:15:00Z",
+        "tz_time": "2026-11-06T07:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 326.27,
+        "datetime": "2026-11-06T08:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:15:00Z",
+        "tz_time": "2026-11-06T07:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 251.4,
+        "datetime": "2026-11-06T08:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:30:00Z",
+        "tz_time": "2026-11-06T07:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 314.22,
+        "datetime": "2026-11-06T08:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:30:00Z",
+        "tz_time": "2026-11-06T07:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 251.4,
+        "datetime": "2026-11-06T08:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:30:00Z",
+        "tz_time": "2026-11-06T07:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 314.22,
+        "datetime": "2026-11-06T08:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:30:00Z",
+        "tz_time": "2026-11-06T07:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 314.22,
+        "datetime": "2026-11-06T08:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:30:00Z",
+        "tz_time": "2026-11-06T07:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 314.22,
+        "datetime": "2026-11-06T08:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:30:00Z",
+        "tz_time": "2026-11-06T07:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 247.95,
+        "datetime": "2026-11-06T08:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:45:00Z",
+        "tz_time": "2026-11-06T07:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 294.53,
+        "datetime": "2026-11-06T08:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:45:00Z",
+        "tz_time": "2026-11-06T07:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 210.76,
+        "datetime": "2026-11-06T08:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:45:00Z",
+        "tz_time": "2026-11-06T07:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 294.53,
+        "datetime": "2026-11-06T08:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:45:00Z",
+        "tz_time": "2026-11-06T07:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 294.53,
+        "datetime": "2026-11-06T08:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:45:00Z",
+        "tz_time": "2026-11-06T07:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 294.53,
+        "datetime": "2026-11-06T08:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T07:45:00Z",
+        "tz_time": "2026-11-06T07:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 250.7,
+        "datetime": "2026-11-06T09:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:00:00Z",
+        "tz_time": "2026-11-06T08:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 311.0,
+        "datetime": "2026-11-06T09:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:00:00Z",
+        "tz_time": "2026-11-06T08:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 250.7,
+        "datetime": "2026-11-06T09:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:00:00Z",
+        "tz_time": "2026-11-06T08:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 311.0,
+        "datetime": "2026-11-06T09:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:00:00Z",
+        "tz_time": "2026-11-06T08:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 311.0,
+        "datetime": "2026-11-06T09:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:00:00Z",
+        "tz_time": "2026-11-06T08:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 311.0,
+        "datetime": "2026-11-06T09:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:00:00Z",
+        "tz_time": "2026-11-06T08:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 261.95,
+        "datetime": "2026-11-06T09:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:15:00Z",
+        "tz_time": "2026-11-06T08:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T09:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:15:00Z",
+        "tz_time": "2026-11-06T08:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 261.95,
+        "datetime": "2026-11-06T09:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:15:00Z",
+        "tz_time": "2026-11-06T08:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T09:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:15:00Z",
+        "tz_time": "2026-11-06T08:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T09:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:15:00Z",
+        "tz_time": "2026-11-06T08:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T09:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:15:00Z",
+        "tz_time": "2026-11-06T08:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 250.8,
+        "datetime": "2026-11-06T09:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:30:00Z",
+        "tz_time": "2026-11-06T08:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 280.92,
+        "datetime": "2026-11-06T09:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:30:00Z",
+        "tz_time": "2026-11-06T08:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 250.8,
+        "datetime": "2026-11-06T09:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:30:00Z",
+        "tz_time": "2026-11-06T08:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 280.92,
+        "datetime": "2026-11-06T09:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:30:00Z",
+        "tz_time": "2026-11-06T08:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 280.92,
+        "datetime": "2026-11-06T09:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:30:00Z",
+        "tz_time": "2026-11-06T08:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 280.92,
+        "datetime": "2026-11-06T09:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:30:00Z",
+        "tz_time": "2026-11-06T08:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 231.0,
+        "datetime": "2026-11-06T09:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:45:00Z",
+        "tz_time": "2026-11-06T08:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 250.08,
+        "datetime": "2026-11-06T09:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:45:00Z",
+        "tz_time": "2026-11-06T08:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 231.0,
+        "datetime": "2026-11-06T09:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:45:00Z",
+        "tz_time": "2026-11-06T08:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 250.08,
+        "datetime": "2026-11-06T09:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:45:00Z",
+        "tz_time": "2026-11-06T08:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 250.08,
+        "datetime": "2026-11-06T09:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:45:00Z",
+        "tz_time": "2026-11-06T08:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 250.08,
+        "datetime": "2026-11-06T09:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T08:45:00Z",
+        "tz_time": "2026-11-06T08:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 227.0,
+        "datetime": "2026-11-06T10:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:00:00Z",
+        "tz_time": "2026-11-06T09:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 282.37,
+        "datetime": "2026-11-06T10:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:00:00Z",
+        "tz_time": "2026-11-06T09:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 227.0,
+        "datetime": "2026-11-06T10:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:00:00Z",
+        "tz_time": "2026-11-06T09:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 282.37,
+        "datetime": "2026-11-06T10:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:00:00Z",
+        "tz_time": "2026-11-06T09:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 282.37,
+        "datetime": "2026-11-06T10:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:00:00Z",
+        "tz_time": "2026-11-06T09:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 282.37,
+        "datetime": "2026-11-06T10:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:00:00Z",
+        "tz_time": "2026-11-06T09:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 210.91,
+        "datetime": "2026-11-06T10:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:15:00Z",
+        "tz_time": "2026-11-06T09:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 254.59,
+        "datetime": "2026-11-06T10:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:15:00Z",
+        "tz_time": "2026-11-06T09:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 210.91,
+        "datetime": "2026-11-06T10:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:15:00Z",
+        "tz_time": "2026-11-06T09:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 254.59,
+        "datetime": "2026-11-06T10:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:15:00Z",
+        "tz_time": "2026-11-06T09:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 254.59,
+        "datetime": "2026-11-06T10:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:15:00Z",
+        "tz_time": "2026-11-06T09:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 254.59,
+        "datetime": "2026-11-06T10:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:15:00Z",
+        "tz_time": "2026-11-06T09:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 207.08,
+        "datetime": "2026-11-06T10:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:30:00Z",
+        "tz_time": "2026-11-06T09:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 239.0,
+        "datetime": "2026-11-06T10:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:30:00Z",
+        "tz_time": "2026-11-06T09:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 207.08,
+        "datetime": "2026-11-06T10:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:30:00Z",
+        "tz_time": "2026-11-06T09:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 237.59,
+        "datetime": "2026-11-06T10:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:30:00Z",
+        "tz_time": "2026-11-06T09:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 238.27,
+        "datetime": "2026-11-06T10:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:30:00Z",
+        "tz_time": "2026-11-06T09:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 237.96,
+        "datetime": "2026-11-06T10:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:30:00Z",
+        "tz_time": "2026-11-06T09:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 204.94,
+        "datetime": "2026-11-06T10:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:45:00Z",
+        "tz_time": "2026-11-06T09:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 232.61,
+        "datetime": "2026-11-06T10:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:45:00Z",
+        "tz_time": "2026-11-06T09:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 204.94,
+        "datetime": "2026-11-06T10:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:45:00Z",
+        "tz_time": "2026-11-06T09:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 231.82,
+        "datetime": "2026-11-06T10:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:45:00Z",
+        "tz_time": "2026-11-06T09:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 232.2,
+        "datetime": "2026-11-06T10:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:45:00Z",
+        "tz_time": "2026-11-06T09:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 232.02,
+        "datetime": "2026-11-06T10:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T09:45:00Z",
+        "tz_time": "2026-11-06T09:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 201.0,
+        "datetime": "2026-11-06T11:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:00:00Z",
+        "tz_time": "2026-11-06T10:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 240.34,
+        "datetime": "2026-11-06T11:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:00:00Z",
+        "tz_time": "2026-11-06T10:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 201.0,
+        "datetime": "2026-11-06T11:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:00:00Z",
+        "tz_time": "2026-11-06T10:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 237.06,
+        "datetime": "2026-11-06T11:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:00:00Z",
+        "tz_time": "2026-11-06T10:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 241.21,
+        "datetime": "2026-11-06T11:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:00:00Z",
+        "tz_time": "2026-11-06T10:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 235.0,
+        "datetime": "2026-11-06T11:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:00:00Z",
+        "tz_time": "2026-11-06T10:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T11:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:15:00Z",
+        "tz_time": "2026-11-06T10:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 236.77,
+        "datetime": "2026-11-06T11:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:15:00Z",
+        "tz_time": "2026-11-06T10:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 199.8,
+        "datetime": "2026-11-06T11:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:15:00Z",
+        "tz_time": "2026-11-06T10:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 229.81,
+        "datetime": "2026-11-06T11:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:15:00Z",
+        "tz_time": "2026-11-06T10:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 238.97,
+        "datetime": "2026-11-06T11:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:15:00Z",
+        "tz_time": "2026-11-06T10:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 224.99,
+        "datetime": "2026-11-06T11:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:15:00Z",
+        "tz_time": "2026-11-06T10:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T11:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:30:00Z",
+        "tz_time": "2026-11-06T10:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 234.33,
+        "datetime": "2026-11-06T11:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:30:00Z",
+        "tz_time": "2026-11-06T10:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 198.3,
+        "datetime": "2026-11-06T11:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:30:00Z",
+        "tz_time": "2026-11-06T10:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 228.23,
+        "datetime": "2026-11-06T11:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:30:00Z",
+        "tz_time": "2026-11-06T10:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 236.76,
+        "datetime": "2026-11-06T11:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:30:00Z",
+        "tz_time": "2026-11-06T10:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 223.39,
+        "datetime": "2026-11-06T11:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:30:00Z",
+        "tz_time": "2026-11-06T10:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T11:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:45:00Z",
+        "tz_time": "2026-11-06T10:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 238.22,
+        "datetime": "2026-11-06T11:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:45:00Z",
+        "tz_time": "2026-11-06T10:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 195.0,
+        "datetime": "2026-11-06T11:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:45:00Z",
+        "tz_time": "2026-11-06T10:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 230.82,
+        "datetime": "2026-11-06T11:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:45:00Z",
+        "tz_time": "2026-11-06T10:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 241.12,
+        "datetime": "2026-11-06T11:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:45:00Z",
+        "tz_time": "2026-11-06T10:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 225.0,
+        "datetime": "2026-11-06T11:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T10:45:00Z",
+        "tz_time": "2026-11-06T10:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T12:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:00:00Z",
+        "tz_time": "2026-11-06T11:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 238.51,
+        "datetime": "2026-11-06T12:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:00:00Z",
+        "tz_time": "2026-11-06T11:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 193.49,
+        "datetime": "2026-11-06T12:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:00:00Z",
+        "tz_time": "2026-11-06T11:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 228.17,
+        "datetime": "2026-11-06T12:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:00:00Z",
+        "tz_time": "2026-11-06T11:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 242.56,
+        "datetime": "2026-11-06T12:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:00:00Z",
+        "tz_time": "2026-11-06T11:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 219.95,
+        "datetime": "2026-11-06T12:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:00:00Z",
+        "tz_time": "2026-11-06T11:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T12:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:15:00Z",
+        "tz_time": "2026-11-06T11:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 233.0,
+        "datetime": "2026-11-06T12:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:15:00Z",
+        "tz_time": "2026-11-06T11:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 193.49,
+        "datetime": "2026-11-06T12:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:15:00Z",
+        "tz_time": "2026-11-06T11:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 227.2,
+        "datetime": "2026-11-06T12:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:15:00Z",
+        "tz_time": "2026-11-06T11:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 235.15,
+        "datetime": "2026-11-06T12:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:15:00Z",
+        "tz_time": "2026-11-06T11:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 222.74,
+        "datetime": "2026-11-06T12:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:15:00Z",
+        "tz_time": "2026-11-06T11:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T12:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:30:00Z",
+        "tz_time": "2026-11-06T11:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 237.89,
+        "datetime": "2026-11-06T12:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:30:00Z",
+        "tz_time": "2026-11-06T11:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 196.8,
+        "datetime": "2026-11-06T12:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:30:00Z",
+        "tz_time": "2026-11-06T11:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 228.8,
+        "datetime": "2026-11-06T12:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:30:00Z",
+        "tz_time": "2026-11-06T11:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 241.33,
+        "datetime": "2026-11-06T12:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:30:00Z",
+        "tz_time": "2026-11-06T11:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 221.73,
+        "datetime": "2026-11-06T12:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:30:00Z",
+        "tz_time": "2026-11-06T11:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T12:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:45:00Z",
+        "tz_time": "2026-11-06T11:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 229.45,
+        "datetime": "2026-11-06T12:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:45:00Z",
+        "tz_time": "2026-11-06T11:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 196.8,
+        "datetime": "2026-11-06T12:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:45:00Z",
+        "tz_time": "2026-11-06T11:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 223.71,
+        "datetime": "2026-11-06T12:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:45:00Z",
+        "tz_time": "2026-11-06T11:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 231.27,
+        "datetime": "2026-11-06T12:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:45:00Z",
+        "tz_time": "2026-11-06T11:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 219.68,
+        "datetime": "2026-11-06T12:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T11:45:00Z",
+        "tz_time": "2026-11-06T11:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T13:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:00:00Z",
+        "tz_time": "2026-11-06T12:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 235.5,
+        "datetime": "2026-11-06T13:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:00:00Z",
+        "tz_time": "2026-11-06T12:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 199.7,
+        "datetime": "2026-11-06T13:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:00:00Z",
+        "tz_time": "2026-11-06T12:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 228.58,
+        "datetime": "2026-11-06T13:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:00:00Z",
+        "tz_time": "2026-11-06T12:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 238.07,
+        "datetime": "2026-11-06T13:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:00:00Z",
+        "tz_time": "2026-11-06T12:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 223.2,
+        "datetime": "2026-11-06T13:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:00:00Z",
+        "tz_time": "2026-11-06T12:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T13:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:15:00Z",
+        "tz_time": "2026-11-06T12:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 233.2,
+        "datetime": "2026-11-06T13:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:15:00Z",
+        "tz_time": "2026-11-06T12:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 199.9,
+        "datetime": "2026-11-06T13:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:15:00Z",
+        "tz_time": "2026-11-06T12:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 229.85,
+        "datetime": "2026-11-06T13:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:15:00Z",
+        "tz_time": "2026-11-06T12:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 233.55,
+        "datetime": "2026-11-06T13:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:15:00Z",
+        "tz_time": "2026-11-06T12:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 224.99,
+        "datetime": "2026-11-06T13:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:15:00Z",
+        "tz_time": "2026-11-06T12:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T13:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:30:00Z",
+        "tz_time": "2026-11-06T12:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 238.78,
+        "datetime": "2026-11-06T13:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:30:00Z",
+        "tz_time": "2026-11-06T12:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 200.0,
+        "datetime": "2026-11-06T13:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:30:00Z",
+        "tz_time": "2026-11-06T12:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 235.01,
+        "datetime": "2026-11-06T13:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:30:00Z",
+        "tz_time": "2026-11-06T12:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 239.07,
+        "datetime": "2026-11-06T13:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:30:00Z",
+        "tz_time": "2026-11-06T12:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 229.84,
+        "datetime": "2026-11-06T13:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:30:00Z",
+        "tz_time": "2026-11-06T12:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 206.83,
+        "datetime": "2026-11-06T13:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:45:00Z",
+        "tz_time": "2026-11-06T12:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 236.76,
+        "datetime": "2026-11-06T13:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:45:00Z",
+        "tz_time": "2026-11-06T12:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 201.3,
+        "datetime": "2026-11-06T13:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:45:00Z",
+        "tz_time": "2026-11-06T12:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 234.57,
+        "datetime": "2026-11-06T13:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:45:00Z",
+        "tz_time": "2026-11-06T12:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 235.86,
+        "datetime": "2026-11-06T13:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:45:00Z",
+        "tz_time": "2026-11-06T12:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 234.57,
+        "datetime": "2026-11-06T13:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T12:45:00Z",
+        "tz_time": "2026-11-06T12:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 207.08,
+        "datetime": "2026-11-06T14:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:00:00Z",
+        "tz_time": "2026-11-06T13:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 236.97,
+        "datetime": "2026-11-06T14:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:00:00Z",
+        "tz_time": "2026-11-06T13:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 202.1,
+        "datetime": "2026-11-06T14:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:00:00Z",
+        "tz_time": "2026-11-06T13:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 236.97,
+        "datetime": "2026-11-06T14:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:00:00Z",
+        "tz_time": "2026-11-06T13:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 236.97,
+        "datetime": "2026-11-06T14:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:00:00Z",
+        "tz_time": "2026-11-06T13:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 236.97,
+        "datetime": "2026-11-06T14:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:00:00Z",
+        "tz_time": "2026-11-06T13:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 207.08,
+        "datetime": "2026-11-06T14:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:15:00Z",
+        "tz_time": "2026-11-06T13:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 245.03,
+        "datetime": "2026-11-06T14:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:15:00Z",
+        "tz_time": "2026-11-06T13:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 204.55,
+        "datetime": "2026-11-06T14:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:15:00Z",
+        "tz_time": "2026-11-06T13:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 243.95,
+        "datetime": "2026-11-06T14:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:15:00Z",
+        "tz_time": "2026-11-06T13:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 244.43,
+        "datetime": "2026-11-06T14:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:15:00Z",
+        "tz_time": "2026-11-06T13:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 244.17,
+        "datetime": "2026-11-06T14:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:15:00Z",
+        "tz_time": "2026-11-06T13:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 207.5,
+        "datetime": "2026-11-06T14:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:30:00Z",
+        "tz_time": "2026-11-06T13:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 269.91,
+        "datetime": "2026-11-06T14:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:30:00Z",
+        "tz_time": "2026-11-06T13:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 204.68,
+        "datetime": "2026-11-06T14:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:30:00Z",
+        "tz_time": "2026-11-06T13:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 267.81,
+        "datetime": "2026-11-06T14:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:30:00Z",
+        "tz_time": "2026-11-06T13:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 268.38,
+        "datetime": "2026-11-06T14:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:30:00Z",
+        "tz_time": "2026-11-06T13:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 267.83,
+        "datetime": "2026-11-06T14:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:30:00Z",
+        "tz_time": "2026-11-06T13:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 207.5,
+        "datetime": "2026-11-06T14:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:45:00Z",
+        "tz_time": "2026-11-06T13:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 292.26,
+        "datetime": "2026-11-06T14:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:45:00Z",
+        "tz_time": "2026-11-06T13:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 204.94,
+        "datetime": "2026-11-06T14:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:45:00Z",
+        "tz_time": "2026-11-06T13:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 285.0,
+        "datetime": "2026-11-06T14:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:45:00Z",
+        "tz_time": "2026-11-06T13:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 287.79,
+        "datetime": "2026-11-06T14:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:45:00Z",
+        "tz_time": "2026-11-06T13:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 285.93,
+        "datetime": "2026-11-06T14:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T13:45:00Z",
+        "tz_time": "2026-11-06T13:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 207.5,
+        "datetime": "2026-11-06T15:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:00:00Z",
+        "tz_time": "2026-11-06T14:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 280.88,
+        "datetime": "2026-11-06T15:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:00:00Z",
+        "tz_time": "2026-11-06T14:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 206.85,
+        "datetime": "2026-11-06T15:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:00:00Z",
+        "tz_time": "2026-11-06T14:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 275.31,
+        "datetime": "2026-11-06T15:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:00:00Z",
+        "tz_time": "2026-11-06T14:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 279.15,
+        "datetime": "2026-11-06T15:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:00:00Z",
+        "tz_time": "2026-11-06T14:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 278.28,
+        "datetime": "2026-11-06T15:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:00:00Z",
+        "tz_time": "2026-11-06T14:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 210.91,
+        "datetime": "2026-11-06T15:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:15:00Z",
+        "tz_time": "2026-11-06T14:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 306.47,
+        "datetime": "2026-11-06T15:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:15:00Z",
+        "tz_time": "2026-11-06T14:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 210.91,
+        "datetime": "2026-11-06T15:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:15:00Z",
+        "tz_time": "2026-11-06T14:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 298.76,
+        "datetime": "2026-11-06T15:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:15:00Z",
+        "tz_time": "2026-11-06T14:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 303.51,
+        "datetime": "2026-11-06T15:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:15:00Z",
+        "tz_time": "2026-11-06T14:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 302.28,
+        "datetime": "2026-11-06T15:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:15:00Z",
+        "tz_time": "2026-11-06T14:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 219.0,
+        "datetime": "2026-11-06T15:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:30:00Z",
+        "tz_time": "2026-11-06T14:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 319.19,
+        "datetime": "2026-11-06T15:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:30:00Z",
+        "tz_time": "2026-11-06T14:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 219.0,
+        "datetime": "2026-11-06T15:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:30:00Z",
+        "tz_time": "2026-11-06T14:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 308.78,
+        "datetime": "2026-11-06T15:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:30:00Z",
+        "tz_time": "2026-11-06T14:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 315.2,
+        "datetime": "2026-11-06T15:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:30:00Z",
+        "tz_time": "2026-11-06T14:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 313.53,
+        "datetime": "2026-11-06T15:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:30:00Z",
+        "tz_time": "2026-11-06T14:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T15:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:45:00Z",
+        "tz_time": "2026-11-06T14:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 327.86,
+        "datetime": "2026-11-06T15:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:45:00Z",
+        "tz_time": "2026-11-06T14:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T15:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:45:00Z",
+        "tz_time": "2026-11-06T14:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 313.0,
+        "datetime": "2026-11-06T15:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:45:00Z",
+        "tz_time": "2026-11-06T14:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 322.16,
+        "datetime": "2026-11-06T15:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:45:00Z",
+        "tz_time": "2026-11-06T14:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 319.78,
+        "datetime": "2026-11-06T15:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T14:45:00Z",
+        "tz_time": "2026-11-06T14:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T16:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:00:00Z",
+        "tz_time": "2026-11-06T15:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 330.76,
+        "datetime": "2026-11-06T16:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:00:00Z",
+        "tz_time": "2026-11-06T15:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 223.18,
+        "datetime": "2026-11-06T16:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:00:00Z",
+        "tz_time": "2026-11-06T15:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 320.1,
+        "datetime": "2026-11-06T16:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:00:00Z",
+        "tz_time": "2026-11-06T15:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 327.51,
+        "datetime": "2026-11-06T16:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:00:00Z",
+        "tz_time": "2026-11-06T15:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 325.91,
+        "datetime": "2026-11-06T16:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:00:00Z",
+        "tz_time": "2026-11-06T15:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 239.28,
+        "datetime": "2026-11-06T16:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:15:00Z",
+        "tz_time": "2026-11-06T15:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 337.5,
+        "datetime": "2026-11-06T16:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:15:00Z",
+        "tz_time": "2026-11-06T15:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 239.28,
+        "datetime": "2026-11-06T16:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:15:00Z",
+        "tz_time": "2026-11-06T15:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 328.44,
+        "datetime": "2026-11-06T16:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:15:00Z",
+        "tz_time": "2026-11-06T15:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 334.74,
+        "datetime": "2026-11-06T16:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:15:00Z",
+        "tz_time": "2026-11-06T15:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 333.38,
+        "datetime": "2026-11-06T16:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:15:00Z",
+        "tz_time": "2026-11-06T15:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 255.3,
+        "datetime": "2026-11-06T16:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:30:00Z",
+        "tz_time": "2026-11-06T15:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 349.22,
+        "datetime": "2026-11-06T16:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:30:00Z",
+        "tz_time": "2026-11-06T15:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 255.3,
+        "datetime": "2026-11-06T16:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:30:00Z",
+        "tz_time": "2026-11-06T15:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 342.05,
+        "datetime": "2026-11-06T16:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:30:00Z",
+        "tz_time": "2026-11-06T15:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 347.04,
+        "datetime": "2026-11-06T16:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:30:00Z",
+        "tz_time": "2026-11-06T15:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 345.96,
+        "datetime": "2026-11-06T16:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:30:00Z",
+        "tz_time": "2026-11-06T15:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 267.94,
+        "datetime": "2026-11-06T16:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:45:00Z",
+        "tz_time": "2026-11-06T15:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 342.52,
+        "datetime": "2026-11-06T16:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:45:00Z",
+        "tz_time": "2026-11-06T15:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 267.94,
+        "datetime": "2026-11-06T16:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:45:00Z",
+        "tz_time": "2026-11-06T15:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 333.35,
+        "datetime": "2026-11-06T16:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:45:00Z",
+        "tz_time": "2026-11-06T15:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 339.73,
+        "datetime": "2026-11-06T16:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:45:00Z",
+        "tz_time": "2026-11-06T15:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 338.35,
+        "datetime": "2026-11-06T16:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T15:45:00Z",
+        "tz_time": "2026-11-06T15:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 285.46,
+        "datetime": "2026-11-06T17:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:00:00Z",
+        "tz_time": "2026-11-06T16:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 342.56,
+        "datetime": "2026-11-06T17:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:00:00Z",
+        "tz_time": "2026-11-06T16:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 204.94,
+        "datetime": "2026-11-06T17:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:00:00Z",
+        "tz_time": "2026-11-06T16:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 340.19,
+        "datetime": "2026-11-06T17:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:00:00Z",
+        "tz_time": "2026-11-06T16:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 341.8,
+        "datetime": "2026-11-06T17:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:00:00Z",
+        "tz_time": "2026-11-06T16:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 341.38,
+        "datetime": "2026-11-06T17:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:00:00Z",
+        "tz_time": "2026-11-06T16:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 285.44,
+        "datetime": "2026-11-06T17:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:15:00Z",
+        "tz_time": "2026-11-06T16:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 351.69,
+        "datetime": "2026-11-06T17:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:15:00Z",
+        "tz_time": "2026-11-06T16:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 251.95,
+        "datetime": "2026-11-06T17:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:15:00Z",
+        "tz_time": "2026-11-06T16:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 347.62,
+        "datetime": "2026-11-06T17:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:15:00Z",
+        "tz_time": "2026-11-06T16:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 350.39,
+        "datetime": "2026-11-06T17:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:15:00Z",
+        "tz_time": "2026-11-06T16:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 349.67,
+        "datetime": "2026-11-06T17:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:15:00Z",
+        "tz_time": "2026-11-06T16:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 286.01,
+        "datetime": "2026-11-06T17:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:30:00Z",
+        "tz_time": "2026-11-06T16:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 366.25,
+        "datetime": "2026-11-06T17:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:30:00Z",
+        "tz_time": "2026-11-06T16:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 286.01,
+        "datetime": "2026-11-06T17:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:30:00Z",
+        "tz_time": "2026-11-06T16:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 363.88,
+        "datetime": "2026-11-06T17:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:30:00Z",
+        "tz_time": "2026-11-06T16:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 365.49,
+        "datetime": "2026-11-06T17:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:30:00Z",
+        "tz_time": "2026-11-06T16:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 365.07,
+        "datetime": "2026-11-06T17:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:30:00Z",
+        "tz_time": "2026-11-06T16:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 310.44,
+        "datetime": "2026-11-06T17:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:45:00Z",
+        "tz_time": "2026-11-06T16:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 370.09,
+        "datetime": "2026-11-06T17:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:45:00Z",
+        "tz_time": "2026-11-06T16:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 310.44,
+        "datetime": "2026-11-06T17:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:45:00Z",
+        "tz_time": "2026-11-06T16:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 368.98,
+        "datetime": "2026-11-06T17:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:45:00Z",
+        "tz_time": "2026-11-06T16:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 369.74,
+        "datetime": "2026-11-06T17:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:45:00Z",
+        "tz_time": "2026-11-06T16:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 369.54,
+        "datetime": "2026-11-06T17:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T16:45:00Z",
+        "tz_time": "2026-11-06T16:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 286.8,
+        "datetime": "2026-11-06T18:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:00:00Z",
+        "tz_time": "2026-11-06T17:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 361.82,
+        "datetime": "2026-11-06T18:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:00:00Z",
+        "tz_time": "2026-11-06T17:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 286.8,
+        "datetime": "2026-11-06T18:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:00:00Z",
+        "tz_time": "2026-11-06T17:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 358.27,
+        "datetime": "2026-11-06T18:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:00:00Z",
+        "tz_time": "2026-11-06T17:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 360.7,
+        "datetime": "2026-11-06T18:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:00:00Z",
+        "tz_time": "2026-11-06T17:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 360.08,
+        "datetime": "2026-11-06T18:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:00:00Z",
+        "tz_time": "2026-11-06T17:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 300.0,
+        "datetime": "2026-11-06T18:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:15:00Z",
+        "tz_time": "2026-11-06T17:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 359.57,
+        "datetime": "2026-11-06T18:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:15:00Z",
+        "tz_time": "2026-11-06T17:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 300.0,
+        "datetime": "2026-11-06T18:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:15:00Z",
+        "tz_time": "2026-11-06T17:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 357.53,
+        "datetime": "2026-11-06T18:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:15:00Z",
+        "tz_time": "2026-11-06T17:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 358.93,
+        "datetime": "2026-11-06T18:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:15:00Z",
+        "tz_time": "2026-11-06T17:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 358.57,
+        "datetime": "2026-11-06T18:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:15:00Z",
+        "tz_time": "2026-11-06T17:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 305.89,
+        "datetime": "2026-11-06T18:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:30:00Z",
+        "tz_time": "2026-11-06T17:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 360.36,
+        "datetime": "2026-11-06T18:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:30:00Z",
+        "tz_time": "2026-11-06T17:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 305.89,
+        "datetime": "2026-11-06T18:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:30:00Z",
+        "tz_time": "2026-11-06T17:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 357.71,
+        "datetime": "2026-11-06T18:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:30:00Z",
+        "tz_time": "2026-11-06T17:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 359.52,
+        "datetime": "2026-11-06T18:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:30:00Z",
+        "tz_time": "2026-11-06T17:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 359.06,
+        "datetime": "2026-11-06T18:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:30:00Z",
+        "tz_time": "2026-11-06T17:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 310.0,
+        "datetime": "2026-11-06T18:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:45:00Z",
+        "tz_time": "2026-11-06T17:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 355.27,
+        "datetime": "2026-11-06T18:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:45:00Z",
+        "tz_time": "2026-11-06T17:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 310.0,
+        "datetime": "2026-11-06T18:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:45:00Z",
+        "tz_time": "2026-11-06T17:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 354.98,
+        "datetime": "2026-11-06T18:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:45:00Z",
+        "tz_time": "2026-11-06T17:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 355.18,
+        "datetime": "2026-11-06T18:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:45:00Z",
+        "tz_time": "2026-11-06T17:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 355.13,
+        "datetime": "2026-11-06T18:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T17:45:00Z",
+        "tz_time": "2026-11-06T17:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 297.76,
+        "datetime": "2026-11-06T19:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:00:00Z",
+        "tz_time": "2026-11-06T18:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 360.95,
+        "datetime": "2026-11-06T19:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:00:00Z",
+        "tz_time": "2026-11-06T18:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 297.76,
+        "datetime": "2026-11-06T19:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:00:00Z",
+        "tz_time": "2026-11-06T18:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 360.95,
+        "datetime": "2026-11-06T19:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:00:00Z",
+        "tz_time": "2026-11-06T18:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 360.95,
+        "datetime": "2026-11-06T19:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:00:00Z",
+        "tz_time": "2026-11-06T18:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 360.95,
+        "datetime": "2026-11-06T19:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:00:00Z",
+        "tz_time": "2026-11-06T18:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 296.46,
+        "datetime": "2026-11-06T19:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:15:00Z",
+        "tz_time": "2026-11-06T18:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 349.99,
+        "datetime": "2026-11-06T19:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:15:00Z",
+        "tz_time": "2026-11-06T18:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 296.46,
+        "datetime": "2026-11-06T19:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:15:00Z",
+        "tz_time": "2026-11-06T18:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 349.99,
+        "datetime": "2026-11-06T19:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:15:00Z",
+        "tz_time": "2026-11-06T18:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 349.99,
+        "datetime": "2026-11-06T19:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:15:00Z",
+        "tz_time": "2026-11-06T18:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 349.99,
+        "datetime": "2026-11-06T19:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:15:00Z",
+        "tz_time": "2026-11-06T18:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 294.84,
+        "datetime": "2026-11-06T19:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:30:00Z",
+        "tz_time": "2026-11-06T18:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 340.64,
+        "datetime": "2026-11-06T19:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:30:00Z",
+        "tz_time": "2026-11-06T18:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 294.84,
+        "datetime": "2026-11-06T19:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:30:00Z",
+        "tz_time": "2026-11-06T18:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 340.64,
+        "datetime": "2026-11-06T19:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:30:00Z",
+        "tz_time": "2026-11-06T18:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 340.64,
+        "datetime": "2026-11-06T19:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:30:00Z",
+        "tz_time": "2026-11-06T18:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 340.64,
+        "datetime": "2026-11-06T19:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:30:00Z",
+        "tz_time": "2026-11-06T18:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 298.26,
+        "datetime": "2026-11-06T19:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:45:00Z",
+        "tz_time": "2026-11-06T18:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 340.23,
+        "datetime": "2026-11-06T19:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:45:00Z",
+        "tz_time": "2026-11-06T18:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 298.26,
+        "datetime": "2026-11-06T19:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:45:00Z",
+        "tz_time": "2026-11-06T18:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 338.42,
+        "datetime": "2026-11-06T19:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:45:00Z",
+        "tz_time": "2026-11-06T18:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 339.66,
+        "datetime": "2026-11-06T19:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:45:00Z",
+        "tz_time": "2026-11-06T18:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 339.35,
+        "datetime": "2026-11-06T19:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T18:45:00Z",
+        "tz_time": "2026-11-06T18:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 298.26,
+        "datetime": "2026-11-06T20:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:00:00Z",
+        "tz_time": "2026-11-06T19:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 336.0,
+        "datetime": "2026-11-06T20:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:00:00Z",
+        "tz_time": "2026-11-06T19:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 298.26,
+        "datetime": "2026-11-06T20:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:00:00Z",
+        "tz_time": "2026-11-06T19:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 330.46,
+        "datetime": "2026-11-06T20:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:00:00Z",
+        "tz_time": "2026-11-06T19:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 334.32,
+        "datetime": "2026-11-06T20:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:00:00Z",
+        "tz_time": "2026-11-06T19:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 333.4,
+        "datetime": "2026-11-06T20:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:00:00Z",
+        "tz_time": "2026-11-06T19:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 299.57,
+        "datetime": "2026-11-06T20:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:15:00Z",
+        "tz_time": "2026-11-06T19:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 329.0,
+        "datetime": "2026-11-06T20:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:15:00Z",
+        "tz_time": "2026-11-06T19:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 299.57,
+        "datetime": "2026-11-06T20:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:15:00Z",
+        "tz_time": "2026-11-06T19:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 324.67,
+        "datetime": "2026-11-06T20:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:15:00Z",
+        "tz_time": "2026-11-06T19:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 327.69,
+        "datetime": "2026-11-06T20:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:15:00Z",
+        "tz_time": "2026-11-06T19:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 326.96,
+        "datetime": "2026-11-06T20:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:15:00Z",
+        "tz_time": "2026-11-06T19:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 298.04,
+        "datetime": "2026-11-06T20:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:30:00Z",
+        "tz_time": "2026-11-06T19:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 317.14,
+        "datetime": "2026-11-06T20:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:30:00Z",
+        "tz_time": "2026-11-06T19:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 298.04,
+        "datetime": "2026-11-06T20:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:30:00Z",
+        "tz_time": "2026-11-06T19:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 315.0,
+        "datetime": "2026-11-06T20:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:30:00Z",
+        "tz_time": "2026-11-06T19:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 316.49,
+        "datetime": "2026-11-06T20:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:30:00Z",
+        "tz_time": "2026-11-06T19:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 316.13,
+        "datetime": "2026-11-06T20:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:30:00Z",
+        "tz_time": "2026-11-06T19:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 294.84,
+        "datetime": "2026-11-06T20:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:45:00Z",
+        "tz_time": "2026-11-06T19:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 311.53,
+        "datetime": "2026-11-06T20:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:45:00Z",
+        "tz_time": "2026-11-06T19:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 283.87,
+        "datetime": "2026-11-06T20:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:45:00Z",
+        "tz_time": "2026-11-06T19:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 310.99,
+        "datetime": "2026-11-06T20:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:45:00Z",
+        "tz_time": "2026-11-06T19:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 311.29,
+        "datetime": "2026-11-06T20:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:45:00Z",
+        "tz_time": "2026-11-06T19:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 311.16,
+        "datetime": "2026-11-06T20:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T19:45:00Z",
+        "tz_time": "2026-11-06T19:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 300.0,
+        "datetime": "2026-11-06T21:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:00:00Z",
+        "tz_time": "2026-11-06T20:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 311.75,
+        "datetime": "2026-11-06T21:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:00:00Z",
+        "tz_time": "2026-11-06T20:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 300.0,
+        "datetime": "2026-11-06T21:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:00:00Z",
+        "tz_time": "2026-11-06T20:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 306.43,
+        "datetime": "2026-11-06T21:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:00:00Z",
+        "tz_time": "2026-11-06T20:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 309.79,
+        "datetime": "2026-11-06T21:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:00:00Z",
+        "tz_time": "2026-11-06T20:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 308.69,
+        "datetime": "2026-11-06T21:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:00:00Z",
+        "tz_time": "2026-11-06T20:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 296.47,
+        "datetime": "2026-11-06T21:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:15:00Z",
+        "tz_time": "2026-11-06T20:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 300.86,
+        "datetime": "2026-11-06T21:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:15:00Z",
+        "tz_time": "2026-11-06T20:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 296.47,
+        "datetime": "2026-11-06T21:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:15:00Z",
+        "tz_time": "2026-11-06T20:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 298.0,
+        "datetime": "2026-11-06T21:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:15:00Z",
+        "tz_time": "2026-11-06T20:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 299.84,
+        "datetime": "2026-11-06T21:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:15:00Z",
+        "tz_time": "2026-11-06T20:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 299.27,
+        "datetime": "2026-11-06T21:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:15:00Z",
+        "tz_time": "2026-11-06T20:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 286.77,
+        "datetime": "2026-11-06T21:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:30:00Z",
+        "tz_time": "2026-11-06T20:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 298.0,
+        "datetime": "2026-11-06T21:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:30:00Z",
+        "tz_time": "2026-11-06T20:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 286.77,
+        "datetime": "2026-11-06T21:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:30:00Z",
+        "tz_time": "2026-11-06T20:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 294.43,
+        "datetime": "2026-11-06T21:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:30:00Z",
+        "tz_time": "2026-11-06T20:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 296.43,
+        "datetime": "2026-11-06T21:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:30:00Z",
+        "tz_time": "2026-11-06T20:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 295.56,
+        "datetime": "2026-11-06T21:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:30:00Z",
+        "tz_time": "2026-11-06T20:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 285.46,
+        "datetime": "2026-11-06T21:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:45:00Z",
+        "tz_time": "2026-11-06T20:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 275.74,
+        "datetime": "2026-11-06T21:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:45:00Z",
+        "tz_time": "2026-11-06T20:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 275.74,
+        "datetime": "2026-11-06T21:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:45:00Z",
+        "tz_time": "2026-11-06T20:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 272.69,
+        "datetime": "2026-11-06T21:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:45:00Z",
+        "tz_time": "2026-11-06T20:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 274.4,
+        "datetime": "2026-11-06T21:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:45:00Z",
+        "tz_time": "2026-11-06T20:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 273.65,
+        "datetime": "2026-11-06T21:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T20:45:00Z",
+        "tz_time": "2026-11-06T20:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 285.44,
+        "datetime": "2026-11-06T22:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:00:00Z",
+        "tz_time": "2026-11-06T21:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 290.8,
+        "datetime": "2026-11-06T22:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:00:00Z",
+        "tz_time": "2026-11-06T21:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 285.44,
+        "datetime": "2026-11-06T22:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:00:00Z",
+        "tz_time": "2026-11-06T21:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 289.64,
+        "datetime": "2026-11-06T22:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:00:00Z",
+        "tz_time": "2026-11-06T21:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 290.29,
+        "datetime": "2026-11-06T22:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:00:00Z",
+        "tz_time": "2026-11-06T21:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 290.0,
+        "datetime": "2026-11-06T22:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:00:00Z",
+        "tz_time": "2026-11-06T21:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 277.98,
+        "datetime": "2026-11-06T22:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:15:00Z",
+        "tz_time": "2026-11-06T21:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 277.98,
+        "datetime": "2026-11-06T22:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:15:00Z",
+        "tz_time": "2026-11-06T21:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 277.98,
+        "datetime": "2026-11-06T22:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:15:00Z",
+        "tz_time": "2026-11-06T21:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 276.45,
+        "datetime": "2026-11-06T22:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:15:00Z",
+        "tz_time": "2026-11-06T21:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 277.3,
+        "datetime": "2026-11-06T22:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:15:00Z",
+        "tz_time": "2026-11-06T21:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 276.93,
+        "datetime": "2026-11-06T22:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:15:00Z",
+        "tz_time": "2026-11-06T21:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 274.69,
+        "datetime": "2026-11-06T22:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:30:00Z",
+        "tz_time": "2026-11-06T21:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 274.69,
+        "datetime": "2026-11-06T22:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:30:00Z",
+        "tz_time": "2026-11-06T21:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 274.69,
+        "datetime": "2026-11-06T22:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:30:00Z",
+        "tz_time": "2026-11-06T21:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 274.17,
+        "datetime": "2026-11-06T22:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:30:00Z",
+        "tz_time": "2026-11-06T21:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 274.46,
+        "datetime": "2026-11-06T22:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:30:00Z",
+        "tz_time": "2026-11-06T21:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 274.33,
+        "datetime": "2026-11-06T22:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:30:00Z",
+        "tz_time": "2026-11-06T21:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 263.68,
+        "datetime": "2026-11-06T22:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:45:00Z",
+        "tz_time": "2026-11-06T21:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 263.68,
+        "datetime": "2026-11-06T22:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:45:00Z",
+        "tz_time": "2026-11-06T21:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 263.68,
+        "datetime": "2026-11-06T22:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:45:00Z",
+        "tz_time": "2026-11-06T21:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 263.68,
+        "datetime": "2026-11-06T22:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:45:00Z",
+        "tz_time": "2026-11-06T21:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 263.68,
+        "datetime": "2026-11-06T22:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:45:00Z",
+        "tz_time": "2026-11-06T21:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 263.68,
+        "datetime": "2026-11-06T22:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T21:45:00Z",
+        "tz_time": "2026-11-06T21:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 270.0,
+        "datetime": "2026-11-06T23:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:00:00Z",
+        "tz_time": "2026-11-06T22:00:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 273.26,
+        "datetime": "2026-11-06T23:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:00:00Z",
+        "tz_time": "2026-11-06T22:00:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 270.0,
+        "datetime": "2026-11-06T23:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:00:00Z",
+        "tz_time": "2026-11-06T22:00:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 273.26,
+        "datetime": "2026-11-06T23:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:00:00Z",
+        "tz_time": "2026-11-06T22:00:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 273.26,
+        "datetime": "2026-11-06T23:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:00:00Z",
+        "tz_time": "2026-11-06T22:00:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 273.26,
+        "datetime": "2026-11-06T23:00:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:00:00Z",
+        "tz_time": "2026-11-06T22:00:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 254.58,
+        "datetime": "2026-11-06T23:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:15:00Z",
+        "tz_time": "2026-11-06T22:15:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 254.58,
+        "datetime": "2026-11-06T23:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:15:00Z",
+        "tz_time": "2026-11-06T22:15:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 254.58,
+        "datetime": "2026-11-06T23:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:15:00Z",
+        "tz_time": "2026-11-06T22:15:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 254.58,
+        "datetime": "2026-11-06T23:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:15:00Z",
+        "tz_time": "2026-11-06T22:15:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 254.58,
+        "datetime": "2026-11-06T23:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:15:00Z",
+        "tz_time": "2026-11-06T22:15:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 254.58,
+        "datetime": "2026-11-06T23:15:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:15:00Z",
+        "tz_time": "2026-11-06T22:15:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 241.88,
+        "datetime": "2026-11-06T23:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:30:00Z",
+        "tz_time": "2026-11-06T22:30:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 247.26,
+        "datetime": "2026-11-06T23:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:30:00Z",
+        "tz_time": "2026-11-06T22:30:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 241.88,
+        "datetime": "2026-11-06T23:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:30:00Z",
+        "tz_time": "2026-11-06T22:30:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 247.26,
+        "datetime": "2026-11-06T23:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:30:00Z",
+        "tz_time": "2026-11-06T22:30:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 247.26,
+        "datetime": "2026-11-06T23:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:30:00Z",
+        "tz_time": "2026-11-06T22:30:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 247.26,
+        "datetime": "2026-11-06T23:30:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:30:00Z",
+        "tz_time": "2026-11-06T22:30:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      },
+      {
+        "value": 232.26,
+        "datetime": "2026-11-06T23:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:45:00Z",
+        "tz_time": "2026-11-06T22:45:00.000Z",
+        "geo_id": 1,
+        "geo_name": "Portugal"
+      },
+      {
+        "value": 235.23,
+        "datetime": "2026-11-06T23:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:45:00Z",
+        "tz_time": "2026-11-06T22:45:00.000Z",
+        "geo_id": 2,
+        "geo_name": "Francia"
+      },
+      {
+        "value": 229.0,
+        "datetime": "2026-11-06T23:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:45:00Z",
+        "tz_time": "2026-11-06T22:45:00.000Z",
+        "geo_id": 3,
+        "geo_name": "España"
+      },
+      {
+        "value": 235.23,
+        "datetime": "2026-11-06T23:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:45:00Z",
+        "tz_time": "2026-11-06T22:45:00.000Z",
+        "geo_id": 8826,
+        "geo_name": "Alemania"
+      },
+      {
+        "value": 235.23,
+        "datetime": "2026-11-06T23:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:45:00Z",
+        "tz_time": "2026-11-06T22:45:00.000Z",
+        "geo_id": 8827,
+        "geo_name": "Bélgica"
+      },
+      {
+        "value": 235.23,
+        "datetime": "2026-11-06T23:45:00.000+01:00",
+        "datetime_utc": "2026-11-06T22:45:00Z",
+        "tz_time": "2026-11-06T22:45:00.000Z",
+        "geo_id": 8828,
+        "geo_name": "Países Bajos"
+      }
+    ]
+  }
+}

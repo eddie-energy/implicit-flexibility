@@ -9,6 +9,8 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.util.UriComponentsBuilder;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 import java.net.URI;
 
@@ -17,26 +19,41 @@ public class EsiosClient {
 
     private final RestClient restClient;
     private final ClientExceptionHandler clientExceptionHandler;
+    private final ObjectMapper objectMapper;
 
     public EsiosClient(
             RestClient.Builder restClientBuilder,
             EsiosProperties properties,
-            ClientExceptionHandler clientExceptionHandler
+            ClientExceptionHandler clientExceptionHandler,
+            ObjectMapper objectMapper
     ) {
         this.restClient = restClientBuilder.baseUrl(properties.baseUrl().toString())
                                            .defaultHeaders(headers -> headers.setBearerAuth(
                                                    properties.token()))
                                            .build();
         this.clientExceptionHandler = clientExceptionHandler;
+        this.objectMapper = objectMapper;
     }
 
     public Indicator getIndicatorTariff(EsiosTariffQuery query) {
+        String indicator = "indicator";
         return clientExceptionHandler.execute(
-                "indicator",
-                () -> restClient.get()
-                                .uri(buildIndicatorUri(query))
-                                .retrieve()
-                                .requiredBody(Indicator.class),
+                indicator,
+                () -> {
+                    JsonNode response = restClient.get()
+                                                  .uri(buildIndicatorUri(query))
+                                                  .retrieve()
+                                                  .body(JsonNode.class);
+
+                    if (response == null || !response.hasNonNull(indicator)) {
+                        throw new IllegalStateException("ESIOS response does not contain an indicator");
+                    }
+
+                    return objectMapper.treeToValue(
+                            response.get(indicator),
+                            Indicator.class
+                    );
+                },
                 EsiosDataSource.DATA_SOURCE_ID
         );
     }

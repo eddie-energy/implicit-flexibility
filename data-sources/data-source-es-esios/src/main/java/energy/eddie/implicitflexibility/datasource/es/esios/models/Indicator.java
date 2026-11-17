@@ -8,6 +8,7 @@ import java.util.List;
 public class Indicator extends IndicatorItem {
 
     private final Boolean composited;
+    @JsonProperty("step_type")
     private final String stepType;
     private final Boolean disaggregated;
     private final List<IndicatorBase> geos;

@@ -17,9 +17,9 @@ public class IndicatorValue extends IndicatorBase {
     @JsonProperty("tz_time")
     private final Instant tzTime;
 
-    IndicatorValue(
-            String name,
-            long id,
+    public IndicatorValue(
+            @JsonProperty("geo_name") String name,
+            @JsonProperty("geo_id") long id,
             BigDecimal value,
             OffsetDateTime datetime,
             Instant datetimeUtc,

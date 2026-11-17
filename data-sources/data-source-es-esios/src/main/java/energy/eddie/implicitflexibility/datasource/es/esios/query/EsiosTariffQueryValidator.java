@@ -29,21 +29,21 @@ public class EsiosTariffQueryValidator
         if (hasDatetime && (hasStartDate || hasEndDate)) {
             return buildViolation(
                     context,
-                    "datetime cannot be combined with startDate or endDate."
+                    "datetime cannot be combined with start date or end date."
             );
         }
 
         if (hasStartDate != hasEndDate) {
             return buildViolation(
                     context,
-                    "startDate and endDate must be provided together."
+                    "start date and end date must be provided together."
             );
         }
 
         if (startDate != null && endDate != null && startDate.isAfter(endDate)) {
             return buildViolation(
                     context,
-                    "startDate must be before or equal to endDate."
+                    "start date must be before or equal to end date."
             );
         }
 
