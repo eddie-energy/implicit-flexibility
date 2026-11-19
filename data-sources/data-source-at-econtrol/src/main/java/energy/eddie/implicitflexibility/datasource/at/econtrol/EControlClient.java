@@ -5,7 +5,6 @@ import energy.eddie.implicitflexibility.datasource.at.econtrol.config.EControlPr
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperatorQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQueryMapper;
-import energy.eddie.implicitflexibility.transport.exception.ClientExceptionHandler;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -20,46 +19,39 @@ public class EControlClient {
 
     private final RestClient restClient;
     private final ProductQueryMapper productQueryMapper;
-    private final ClientExceptionHandler clientExceptionHandler;
 
     public EControlClient(
             RestClient.Builder restClientBuilder,
             EControlProperties properties,
-            ProductQueryMapper productQueryMapper,
-            ClientExceptionHandler clientExceptionHandler
+            ProductQueryMapper productQueryMapper
     ) {
         this.restClient = restClientBuilder.baseUrl(properties.baseUrl().toString())
                                            .defaultHeaders(headers -> headers.setBasicAuth(
                                                    properties.username(), properties.password())).build();
         this.productQueryMapper = productQueryMapper;
-        this.clientExceptionHandler = clientExceptionHandler;
     }
 
     public List<GridOperator> findGridOperators(GridOperatorQuery query) {
-        return clientExceptionHandler.execute("grid operators",
-                                              () -> restClient.get()
-                                                              .uri(uriBuilder -> uriBuilder
-                                                                      .path("/grid-operators")
-                                                                      .queryParam("zipCode",
-                                                                                  query.zipCode())
-                                                                      .queryParam("energyType",
-                                                                                  query.energyType())
-                                                                      .build())
-                                                              .retrieve()
-                                                              .body(new ParameterizedTypeReference<>() {
-                                                              }),
-                                              EControlDataSource.DATA_SOURCE_ID);
+        return restClient.get()
+                         .uri(uriBuilder -> uriBuilder
+                                 .path("/grid-operators")
+                                 .queryParam("zipCode",
+                                             query.zipCode())
+                                 .queryParam("energyType",
+                                             query.energyType())
+                                 .build())
+                         .retrieve()
+                         .requiredBody(new ParameterizedTypeReference<>() {
+                         });
     }
 
     public BrandSearchResult findBrands(BrandSearch query) {
-        return clientExceptionHandler.execute("brands",
-                                              () -> restClient.post()
-                                                              .uri("/brands/search")
-                                                              .body(query)
-                                                              .retrieve()
-                                                              .body(new ParameterizedTypeReference<>() {
-                                                              }),
-                                              EControlDataSource.DATA_SOURCE_ID);
+        return restClient.post()
+                         .uri("/brands/search")
+                         .body(query)
+                         .retrieve()
+                         .requiredBody(new ParameterizedTypeReference<>() {
+                         });
     }
 
     public CurrentProductData findProducts(ProductQuery query) {
@@ -69,33 +61,27 @@ public class EControlClient {
                 "smartMeter", query.getSmartMeter());
         RateProductsRequest requestPayload = productQueryMapper.toRateProductsRequest(query);
 
-        return clientExceptionHandler.execute("products",
-                                              () -> restClient.post()
-                                                              .uri("/brands/{brandId}/products/{energyType}/search?smartMeter={smartMeter}",
-                                                                   uriVariables)
-                                                              .contentType(MediaType.APPLICATION_JSON)
-                                                              .body(requestPayload)
-                                                              .retrieve()
-                                                              .body(new ParameterizedTypeReference<>() {
-                                                              }),
-                                              EControlDataSource.DATA_SOURCE_ID);
+        return restClient.post()
+                         .uri("/brands/{brandId}/products/{energyType}/search?smartMeter={smartMeter}",
+                              uriVariables)
+                         .contentType(MediaType.APPLICATION_JSON)
+                         .body(requestPayload)
+                         .retrieve()
+                         .requiredBody(new ParameterizedTypeReference<>() {
+                         });
     }
 
     public ProductContractTermInfo getPriceInfo(String productId) {
-        return clientExceptionHandler.execute("price information",
-                                              () -> restClient.get()
-                                                              .uri("/products/{productId}/price-info", productId)
-                                                              .retrieve()
-                                                              .body(ProductContractTermInfo.class),
-                                              EControlDataSource.DATA_SOURCE_ID);
+        return restClient.get()
+                         .uri("/products/{productId}/price-info", productId)
+                         .retrieve()
+                         .requiredBody(ProductContractTermInfo.class);
     }
 
     public ProductContractTerm getContract(String productId) {
-        return clientExceptionHandler.execute("product contract",
-                                              () -> restClient.get()
-                                                              .uri("/products/{productId}/contract", productId)
-                                                              .retrieve()
-                                                              .body(ProductContractTerm.class),
-                                              EControlDataSource.DATA_SOURCE_ID);
+        return restClient.get()
+                         .uri("/products/{productId}/contract", productId)
+                         .retrieve()
+                         .requiredBody(ProductContractTerm.class);
     }
 }

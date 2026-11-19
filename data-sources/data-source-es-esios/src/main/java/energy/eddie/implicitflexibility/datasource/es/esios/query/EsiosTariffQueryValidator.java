@@ -4,8 +4,6 @@ import jakarta.annotation.Nullable;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-import java.time.OffsetDateTime;
-
 public class EsiosTariffQueryValidator
         implements ConstraintValidator<ValidEsiosTariffQuery, EsiosTariffQuery> {
 
@@ -18,13 +16,11 @@ public class EsiosTariffQueryValidator
             return true;
         }
 
-        OffsetDateTime datetime = query.getDatetime();
-        OffsetDateTime startDate = query.getStartDate();
-        OffsetDateTime endDate = query.getEndDate();
-
-        boolean hasDatetime = datetime != null;
-        boolean hasStartDate = startDate != null;
-        boolean hasEndDate = endDate != null;
+        var hasDatetime = query.getDatetime() != null;
+        var startDate = query.getStartDate();
+        var hasStartDate = startDate != null;
+        var endDate = query.getEndDate();
+        var hasEndDate = endDate != null;
 
         if (hasDatetime && (hasStartDate || hasEndDate)) {
             return buildViolation(

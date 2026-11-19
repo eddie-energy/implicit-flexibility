@@ -1,47 +1,55 @@
 package energy.eddie.implicitflexibility.transport.exception;
 
-import energy.eddie.implicitflexibility.interactions.exception.DataSourceNotFoundException;
-import energy.eddie.implicitflexibility.interactions.exception.DataSourceServerException;
-import energy.eddie.implicitflexibility.interactions.exception.DataSourceUnavailableException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.ResourceAccessException;
+import org.springframework.web.client.RestClientResponseException;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
 
-    @ExceptionHandler(DataSourceNotFoundException.class)
-    public ResponseEntity<ProblemDetail> handleDataSourceNotFound() {
-        var problem = ProblemDetail.forStatus(HttpStatus.NOT_FOUND);
-        problem.setTitle("Data not found");
-        problem.setDetail("The requested data was not found.");
+    private static final Logger LOG = LoggerFactory.getLogger(ApiExceptionHandler.class);
 
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .body(problem);
+    @ExceptionHandler(HttpClientErrorException.NotFound.class)
+    public ResponseEntity<ProblemDetail> handleNotFound(HttpClientErrorException.NotFound exception) {
+        LOG.warn("Upstream server returned a not found error", exception);
+        return createResponse(
+                HttpStatus.NOT_FOUND,
+                "Data not found",
+                "The requested data was not found."
+        );
     }
 
-    @ExceptionHandler(DataSourceServerException.class)
-    public ResponseEntity<ProblemDetail> handleDataSourceServerError() {
-        var problem = ProblemDetail.forStatus(HttpStatus.BAD_GATEWAY);
-        problem.setTitle("Data source error");
-        problem.setDetail("The requested data could not be retrieved from the data source.");
-
-        return ResponseEntity
-                .status(HttpStatus.BAD_GATEWAY)
-                .body(problem);
+    @ExceptionHandler(RestClientResponseException.class)
+    public ResponseEntity<ProblemDetail> handleUpstreamHttpError(RestClientResponseException exception) {
+        LOG.error("Upstream HTTP request failed with status {}", exception.getStatusCode(), exception);
+        return createResponse(
+                HttpStatus.BAD_GATEWAY,
+                "Data source error",
+                "The data source could not successfully process the request."
+        );
     }
 
-    @ExceptionHandler(DataSourceUnavailableException.class)
-    public ResponseEntity<ProblemDetail> handleDataSourceUnavailable() {
-        var problem = ProblemDetail.forStatus(HttpStatus.BAD_GATEWAY);
-        problem.setTitle("Data source unavailable");
-        problem.setDetail("The requested data could not be retrieved because the data source is unavailable.");
+    @ExceptionHandler(ResourceAccessException.class)
+    public ResponseEntity<ProblemDetail> handleNetworkingError(ResourceAccessException exception) {
+        LOG.error("Error communicating with an upstream server", exception);
+        return createResponse(
+                HttpStatus.SERVICE_UNAVAILABLE,
+                "Service unavailable",
+                "The service is temporarily unavailable."
+        );
+    }
 
-        return ResponseEntity
-                .status(HttpStatus.BAD_GATEWAY)
-                .body(problem);
+    private ResponseEntity<ProblemDetail> createResponse(HttpStatus status, String title, String detail) {
+        var problem = ProblemDetail.forStatusAndDetail(status, detail);
+        problem.setTitle(title);
+
+        return ResponseEntity.status(status).body(problem);
     }
 }

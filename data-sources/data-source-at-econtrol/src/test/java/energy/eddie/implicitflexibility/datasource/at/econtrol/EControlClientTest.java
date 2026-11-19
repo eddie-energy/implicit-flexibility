@@ -6,18 +6,18 @@ import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GasProductQ
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperatorQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.PowerProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQueryMapper;
-import energy.eddie.implicitflexibility.interactions.exception.DataSourceNotFoundException;
-import energy.eddie.implicitflexibility.interactions.exception.DataSourceServerException;
-import energy.eddie.implicitflexibility.transport.exception.ClientExceptionHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.response.DefaultResponseCreator;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestClient;
 
 import java.net.URI;
@@ -52,7 +52,7 @@ class EControlClientTest {
                                             URI.create(BASE_URL),
                                             "username",
                                             "password");
-        client = new EControlClient(builder, properties, productQueryMapper, new ClientExceptionHandler());
+        client = new EControlClient(builder, properties, productQueryMapper);
     }
 
     @Test
@@ -206,12 +206,14 @@ class EControlClientTest {
               .andRespond(withStatus(NOT_FOUND));
 
         // When
-        DataSourceNotFoundException exception = assertThrows(DataSourceNotFoundException.class,
-                                                             () -> client.getPriceInfo("product-123"));
+        HttpClientErrorException.NotFound exception =
+                assertThrows(
+                        HttpClientErrorException.NotFound.class,
+                        () -> client.getPriceInfo("product-123")
+                );
 
         // Then
-        assertEquals(EControlDataSource.DATA_SOURCE_ID, exception.getDataSourceId());
-        assertEquals("The requested data was not found.", exception.getMessage());
+        assertEquals(NOT_FOUND, exception.getStatusCode());
 
         server.verify();
     }
@@ -223,13 +225,14 @@ class EControlClientTest {
               .andRespond(withServerError());
 
         // When
-        DataSourceServerException exception = assertThrows(DataSourceServerException.class,
-                                                           () -> client.getPriceInfo("product-123"));
+        HttpServerErrorException exception =
+                assertThrows(
+                        HttpServerErrorException.class,
+                        () -> client.getPriceInfo("product-123")
+                );
 
         // Then
-        assertEquals(EControlDataSource.DATA_SOURCE_ID, exception.getDataSourceId());
-        assertEquals("The requested data could not be retrieved from the data source.",
-                     exception.getMessage());
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, exception.getStatusCode());
 
         server.verify();
     }

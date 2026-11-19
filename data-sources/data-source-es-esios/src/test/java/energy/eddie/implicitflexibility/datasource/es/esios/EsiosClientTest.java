@@ -3,7 +3,6 @@ package energy.eddie.implicitflexibility.datasource.es.esios;
 import energy.eddie.implicitflexibility.datasource.es.esios.config.EsiosProperties;
 import energy.eddie.implicitflexibility.datasource.es.esios.models.*;
 import energy.eddie.implicitflexibility.datasource.es.esios.query.EsiosTariffQuery;
-import energy.eddie.implicitflexibility.transport.exception.ClientExceptionHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -52,7 +51,7 @@ class EsiosClientTest {
         RestClient.Builder builder = RestClient.builder().baseUrl(BASE_URL);
         mockServer = MockRestServiceServer.bindTo(builder).build();
         EsiosProperties properties = new EsiosProperties(true, URI.create(BASE_URL), TOKEN);
-        esiosClient = new EsiosClient(builder, properties, new ClientExceptionHandler(), objectMapper);
+        esiosClient = new EsiosClient(builder, properties, objectMapper);
     }
 
     @Test
