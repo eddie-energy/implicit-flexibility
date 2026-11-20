@@ -16,6 +16,8 @@ public class Indicator extends IndicatorItem {
     private final List<IndicatorBase> tiempo;
     @JsonProperty("values_updated_at")
     private final OffsetDateTime valuesUpdatedAt;
+    @JsonProperty("values_sum")
+    private final Integer valuesSum;
     private final List<IndicatorValue> values;
 
     public Indicator(
@@ -29,6 +31,7 @@ public class Indicator extends IndicatorItem {
             List<IndicatorBase> magnitud,
             List<IndicatorBase> tiempo,
             OffsetDateTime valuesUpdatedAt,
+            Integer valuesSum,
             List<IndicatorValue> values
     ) {
         super(name, id, shortName);
@@ -39,6 +42,7 @@ public class Indicator extends IndicatorItem {
         this.magnitud = magnitud;
         this.tiempo = tiempo;
         this.valuesUpdatedAt = valuesUpdatedAt;
+        this.valuesSum = valuesSum;
         this.values = values;
     }
 
@@ -68,6 +72,10 @@ public class Indicator extends IndicatorItem {
 
     public OffsetDateTime getValuesUpdatedAt() {
         return valuesUpdatedAt;
+    }
+
+    public Integer getValuesSum() {
+        return valuesSum;
     }
 
     public List<IndicatorValue> getValues() {
