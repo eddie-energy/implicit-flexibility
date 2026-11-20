@@ -1,7 +1,9 @@
 package energy.eddie.implicitflexibility.interactions.tariff;
 
-public interface TariffInformationRepository{
+public interface TariffQueryExecutor {
     String getCountryCode();
+
     Class<?> getQueryType();
+
     Object execute(Object query);
 }

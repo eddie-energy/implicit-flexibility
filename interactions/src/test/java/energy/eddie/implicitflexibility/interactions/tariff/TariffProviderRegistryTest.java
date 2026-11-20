@@ -15,12 +15,12 @@ class TariffProviderRegistryTest {
     @Test
     void registerTariffProviders() {
         // Given
-        TariffInformationRepository atProvider = tariffProvider("AT");
-        TariffInformationRepository dkProvider = tariffProvider("DK");
+        TariffQueryExecutor atProvider = tariffProvider("AT");
+        TariffQueryExecutor dkProvider = tariffProvider("DK");
 
         // When
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of(atProvider, dkProvider));
-        Collection<TariffInformationRepository> result = registry.getAll("AT");
+        Collection<TariffQueryExecutor> result = registry.getAll("AT");
 
         // Then
         assertEquals(1, result.size());
@@ -31,11 +31,11 @@ class TariffProviderRegistryTest {
     @Test
     void registerTariffProviders_NotRegisteredCountry() {
         // Given
-        TariffInformationRepository atProvider = tariffProvider("AT");
+        TariffQueryExecutor atProvider = tariffProvider("AT");
 
         // When
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of(atProvider));
-        Collection<TariffInformationRepository> result = registry.getAll("DK");
+        Collection<TariffQueryExecutor> result = registry.getAll("DK");
 
         // Then
         assertNotNull(result);
@@ -45,9 +45,9 @@ class TariffProviderRegistryTest {
     @Test
     void registerTariffProviders_DuplicateCountryCodes() {
         // Given
-        TariffInformationRepository first = tariffProvider("AT");
-        TariffInformationRepository second = tariffProvider("AT");
-        List<TariffInformationRepository> providers = List.of(first, second);
+        TariffQueryExecutor first = tariffProvider("AT");
+        TariffQueryExecutor second = tariffProvider("AT");
+        List<TariffQueryExecutor> providers = List.of(first, second);
 
         // When / Then
         assertThrows(IllegalStateException.class, () -> new TariffProviderRegistry(providers));
@@ -59,7 +59,7 @@ class TariffProviderRegistryTest {
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of());
 
         // When
-        Collection<TariffInformationRepository> result = registry.getAll("AT");
+        Collection<TariffQueryExecutor> result = registry.getAll("AT");
 
         // Then
         assertNotNull(result);
@@ -69,11 +69,11 @@ class TariffProviderRegistryTest {
     @Test
     void findTariffProviderForCountry() {
         // Given
-        TariffInformationRepository atProvider = tariffProvider("AT");
+        TariffQueryExecutor atProvider = tariffProvider("AT");
 
         // When
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of(atProvider));
-        Optional<TariffInformationRepository> result = registry.find("AT");
+        Optional<TariffQueryExecutor> result = registry.find("AT");
 
         // Then
         assertTrue(result.isPresent());
@@ -83,12 +83,12 @@ class TariffProviderRegistryTest {
     @Test
     void findTariffProvider_NotAvailable() {
         // Given
-        TariffInformationRepository atProvider = tariffProvider("AT");
+        TariffQueryExecutor atProvider = tariffProvider("AT");
 
 
         // When
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of(atProvider));
-        Optional<TariffInformationRepository> result = registry.find("DK");
+        Optional<TariffQueryExecutor> result = registry.find("DK");
 
         // Then
         assertTrue(result.isEmpty());
@@ -97,12 +97,12 @@ class TariffProviderRegistryTest {
     @Test
     void getTariffsForCountry() {
         // Given
-        TariffInformationRepository atProvider = tariffProvider("AT");
+        TariffQueryExecutor atProvider = tariffProvider("AT");
 
 
         // When
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of(atProvider));
-        TariffInformationRepository result = registry.getTariffs("AT");
+        TariffQueryExecutor result = registry.getTariffs("AT");
 
         // Then
         assertSame(atProvider, result);
@@ -111,7 +111,7 @@ class TariffProviderRegistryTest {
     @Test
     void getTariffs_TariffProviderNotAvailable() {
         // Given
-        TariffInformationRepository atProvider = tariffProvider("AT");
+        TariffQueryExecutor atProvider = tariffProvider("AT");
 
         TariffProviderRegistry registry = new TariffProviderRegistry(List.of(atProvider));
 
@@ -121,8 +121,8 @@ class TariffProviderRegistryTest {
         assertEquals("Tariff interaction not available for DK", exception.getMessage());
     }
 
-    private TariffInformationRepository tariffProvider(String countryCode) {
-        TariffInformationRepository provider = mock(TariffInformationRepository.class);
+    private TariffQueryExecutor tariffProvider(String countryCode) {
+        TariffQueryExecutor provider = mock(TariffQueryExecutor.class);
         when(provider.getCountryCode()).thenReturn(countryCode);
         return provider;
     }

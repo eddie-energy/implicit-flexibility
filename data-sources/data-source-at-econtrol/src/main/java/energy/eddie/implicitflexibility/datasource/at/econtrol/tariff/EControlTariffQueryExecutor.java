@@ -3,7 +3,7 @@ package energy.eddie.implicitflexibility.datasource.at.econtrol.tariff;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.EControlClient;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.EControlDataSource;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.EControlTariffQuery;
-import energy.eddie.implicitflexibility.interactions.tariff.TariffInformationRepository;
+import energy.eddie.implicitflexibility.interactions.tariff.TariffQueryExecutor;
 import energy.eddie.implicitflexibility.transport.tariff.TariffDiscovery;
 import org.springframework.hateoas.Link;
 import org.springframework.stereotype.Component;
@@ -12,11 +12,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Component
-public class EControlTariffInformationRepository implements TariffInformationRepository, TariffDiscovery {
+public class EControlTariffQueryExecutor implements TariffQueryExecutor, TariffDiscovery {
 
     private final EControlClient client;
 
-    public EControlTariffInformationRepository(EControlClient client) {
+    public EControlTariffQueryExecutor(EControlClient client) {
         this.client = client;
     }
 
@@ -40,7 +40,7 @@ public class EControlTariffInformationRepository implements TariffInformationRep
     }
 
     @Override
-    public Link getDiscoveryLink(String countryCode) {
+    public Link getDiscoveryLink() {
         return linkTo(methodOn(EControlTariffController.class)
                               .discovery())
                 .withRel("discovery");

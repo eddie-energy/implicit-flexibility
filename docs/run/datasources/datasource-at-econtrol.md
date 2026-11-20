@@ -64,8 +64,6 @@ Content-Type: application/json
 
 **Example response**
 
-The response below illustrates the expected documentation format.
-
 <details>
 <summary>🔍 Click to expand JSON response</summary>
 
@@ -395,6 +393,8 @@ Content-Type: application/json
 </details>
 
 The client selects a product from the returned results and retains its identifier for the next step.
+
+## Tariff Query
 
 **Endpoint:** `POST /countries/AT/tariffs`
 
