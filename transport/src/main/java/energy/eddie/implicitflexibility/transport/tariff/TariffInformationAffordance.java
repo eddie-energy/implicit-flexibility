@@ -1,7 +1,8 @@
 package energy.eddie.implicitflexibility.transport.tariff;
 
-import energy.eddie.implicitflexibility.interactions.tariff.TariffInformationRepository;
 import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
+import energy.eddie.implicitflexibility.interactions.tariff.TariffQueryExecutor;
+import jakarta.annotation.Nullable;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mediatype.Affordances;
 import org.springframework.http.HttpMethod;
@@ -20,7 +21,7 @@ public class TariffInformationAffordance {
     }
 
     public Link create(String countryCode) {
-        TariffInformationRepository repository = registry.getTariffs(countryCode);
+        TariffQueryExecutor repository = registry.getTariffs(countryCode);
         return Affordances.of(linkTo(methodOn(TariffController.class)
                                              .query(countryCode, JsonNodeFactory.instance.objectNode()))
                                       .withRel("tariff-information"))
@@ -30,11 +31,14 @@ public class TariffInformationAffordance {
                           .toLink();
     }
 
-    public Link generateDiscoveryLink(String name, Class<?> link, Class<?> input) {
-        return Affordances.of(linkTo(link).slash(name).withRel(name))
-                          .afford(HttpMethod.POST)
-                          .withInput(input)
-                          .withName(name)
-                          .toLink();
+    public Link generateDiscoveryLink(String name, Class<?> link, @Nullable Class<?> input) {
+        var affordance = Affordances.of(linkTo(link).slash(name).withRel(name))
+                                    .afford(HttpMethod.POST);
+
+        if (input != null) {
+            affordance.withInput(input);
+        }
+
+        return affordance.withName(name).toLink();
     }
 }

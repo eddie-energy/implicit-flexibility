@@ -37,7 +37,7 @@ public class TariffController {
         model.add(tariffInformationAffordance.create(countryCode));
 
         if (interaction instanceof TariffDiscovery tariffDiscovery) {
-            model.add(tariffDiscovery.getDiscoveryLink(countryCode));
+            model.add(tariffDiscovery.getDiscoveryLink());
         }
 
         return model;

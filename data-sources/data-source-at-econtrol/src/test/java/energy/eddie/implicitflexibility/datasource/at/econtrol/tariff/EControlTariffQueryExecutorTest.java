@@ -18,13 +18,13 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class EControlTariffInformationRepositoryTest {
+class EControlTariffQueryExecutorTest {
 
     @Mock
     private EControlClient client;
 
     @InjectMocks
-    private EControlTariffInformationRepository repository;
+    private EControlTariffQueryExecutor repository;
 
     @Test
     void testGetCountryCode() {
@@ -84,11 +84,8 @@ class EControlTariffInformationRepositoryTest {
 
     @Test
     void testGetDiscoveryLink() {
-        // Given
-        String countryCode = "AT";
-
-        // When
-        Link result = repository.getDiscoveryLink(countryCode);
+        // Given / When
+        Link result = repository.getDiscoveryLink();
 
         // Then
         assertEquals("discovery", result.getRel().value());

@@ -19,7 +19,7 @@ Defines the application-level interactions and configuration metadata used by th
 
 - `DataSourceRegistry` collects the enabled `data source implementations and indexes them by country.
 
-- `TariffInformationRepository` defines the country-specific query type and tariff information execution operation.
+- `TariffQueryExecutor` defines the country-specific query type and tariff information execution operation.
   Provider-specific implementations translate the framework's incoming request into the external API operations required to retrieve the result.
   They should include the country code supported, the request type expected by the provider and the operation that executes a tariff information query.
 
@@ -55,7 +55,7 @@ The request flow is as follows:
 
 1. A client sends a request to the common tariff API, which is received by the transport controller.
 2. The country associated with the request is identified.
-3. The tariff provider registry resolves the corresponding `TariffInformationRepository`.
+3. The tariff provider registry resolves the corresponding `TariffQueryExecutor`.
 4. The request body is converted into the repository's query type.
 5. The query is sent to the repository.
 6. The tariff information is requested.

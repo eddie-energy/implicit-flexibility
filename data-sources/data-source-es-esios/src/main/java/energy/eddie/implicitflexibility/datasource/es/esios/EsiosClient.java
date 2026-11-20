@@ -2,6 +2,7 @@ package energy.eddie.implicitflexibility.datasource.es.esios;
 
 import energy.eddie.implicitflexibility.datasource.es.esios.config.EsiosProperties;
 import energy.eddie.implicitflexibility.datasource.es.esios.models.Indicator;
+import energy.eddie.implicitflexibility.datasource.es.esios.models.IndicatorList;
 import energy.eddie.implicitflexibility.datasource.es.esios.query.EsiosEnum;
 import energy.eddie.implicitflexibility.datasource.es.esios.query.EsiosTariffQuery;
 import energy.eddie.implicitflexibility.interactions.exception.DataSourceResponseErrorHandler;
@@ -32,6 +33,13 @@ public class EsiosClient {
                                                    new DataSourceResponseErrorHandler(EsiosDataSource.DATA_SOURCE_ID))
                                            .build();
         this.objectMapper = objectMapper;
+    }
+
+    public IndicatorList getIndicators() {
+        return restClient.get()
+                         .uri("/indicators")
+                         .retrieve()
+                         .requiredBody(IndicatorList.class);
     }
 
     public Indicator getIndicatorTariff(EsiosTariffQuery query) {

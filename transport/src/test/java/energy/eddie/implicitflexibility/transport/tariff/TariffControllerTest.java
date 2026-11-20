@@ -1,7 +1,7 @@
 package energy.eddie.implicitflexibility.transport.tariff;
 
-import energy.eddie.implicitflexibility.interactions.tariff.TariffInformationRepository;
 import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
+import energy.eddie.implicitflexibility.interactions.tariff.TariffQueryExecutor;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -36,7 +36,7 @@ class TariffControllerTest {
     @Test
     void getTariffs_SelfLink() {
         // Given
-        TariffInformationRepository interaction = mock(TariffInformationRepository.class);
+        TariffQueryExecutor interaction = mock(TariffQueryExecutor.class);
         when(tariffInteractionRegistry.getTariffs("AT")).thenReturn(interaction);
         when(tariffInformationAffordance.create("AT")).thenReturn(Link.of("/countries/AT/tariffs/query"));
 
@@ -51,7 +51,7 @@ class TariffControllerTest {
     @Test
     void getTariffs_TariffInformationAffordance() {
         // Given
-        TariffInformationRepository interaction = mock(TariffInformationRepository.class);
+        TariffQueryExecutor interaction = mock(TariffQueryExecutor.class);
         Link affordance = Link.of("/countries/AT/tariffs/query");
 
         when(tariffInteractionRegistry.getTariffs("AT")).thenReturn(interaction);
@@ -68,14 +68,14 @@ class TariffControllerTest {
     @Test
     void getTariffs_TariffDiscovery() {
         // Given
-        TariffInformationRepository interaction = mock(TariffInformationRepository.class,
-                                                       withSettings().extraInterfaces(TariffDiscovery.class));
+        TariffQueryExecutor interaction = mock(TariffQueryExecutor.class,
+                                               withSettings().extraInterfaces(TariffDiscovery.class));
         TariffDiscovery discovery = (TariffDiscovery) interaction;
         Link discoveryLink = Link.of("/countries/AT/tariffs/discovery", "discovery");
 
         when(tariffInteractionRegistry.getTariffs("AT")).thenReturn(interaction);
         when(tariffInformationAffordance.create("AT")).thenReturn(Link.of("/countries/AT/tariffs/query"));
-        when(discovery.getDiscoveryLink("AT")).thenReturn(discoveryLink);
+        when(discovery.getDiscoveryLink()).thenReturn(discoveryLink);
 
         // When
         RepresentationModel<?> result = controller.discover("AT");
@@ -84,13 +84,13 @@ class TariffControllerTest {
         assertTrue(result.getLink("discovery").isPresent());
         assertEquals("/countries/AT/tariffs/discovery",
                      result.getLink("discovery").orElseThrow().getHref());
-        verify(discovery).getDiscoveryLink("AT");
+        verify(discovery).getDiscoveryLink();
     }
 
     @Test
     void getTariffs_NoTariffDiscovery() {
         // Given
-        TariffInformationRepository interaction = mock(TariffInformationRepository.class);
+        TariffQueryExecutor interaction = mock(TariffQueryExecutor.class);
 
         when(tariffInteractionRegistry.getTariffs("AT")).thenReturn(interaction);
         when(tariffInformationAffordance.create("AT")).thenReturn(Link.of("/countries/AT/tariffs/query"));
@@ -105,7 +105,7 @@ class TariffControllerTest {
     @Test
     void executeTariffQuery() {
         // Given
-        TariffInformationRepository interaction = mock(TariffInformationRepository.class);
+        TariffQueryExecutor interaction = mock(TariffQueryExecutor.class);
         JsonNode request = mock(JsonNode.class);
         Object query = new Object();
         Object response = new Object();

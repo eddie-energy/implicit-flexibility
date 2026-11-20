@@ -23,8 +23,7 @@ import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Objects;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.*;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
@@ -73,6 +72,32 @@ class EsiosClientTest {
         assertEquals("Precio mercado SPOT Diario", result.getName());
         assertEquals("Mercado SPOT", result.getShortName());
         assertEquals(6, result.getGeos().size());
+
+        mockServer.verify();
+    }
+
+    @Test
+    void testGetIndicators() throws IOException {
+        // Given
+        InputStream inputStream = Objects.requireNonNull(getClass().getResourceAsStream(
+                "/esios/ESIOS_indicators.json"));
+        String responseBody = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+        expectIndicatorRequest("/indicators", responseBody);
+
+        // When
+        IndicatorList result = esiosClient.getIndicators();
+
+        // Then
+        assertNotNull(result);
+        assertNotNull(result.indicators());
+        assertFalse(result.indicators().isEmpty());
+
+        IndicatorSpecification indicator = result.indicators().getFirst();
+
+        assertEquals(1L, indicator.getId());
+        assertEquals("Generación programada PBF Hidráulica UGH", indicator.getName());
+        assertEquals("Hidráulica UGH", indicator.getShortName());
+        assertNotNull(indicator.getDescription());
 
         mockServer.verify();
     }
