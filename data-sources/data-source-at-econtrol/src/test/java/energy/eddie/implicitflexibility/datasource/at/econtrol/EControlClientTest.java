@@ -6,24 +6,24 @@ import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GasProductQ
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperatorQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.PowerProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQueryMapper;
+import energy.eddie.implicitflexibility.interactions.exception.DataSourceNotFoundException;
+import energy.eddie.implicitflexibility.interactions.exception.DataSourceServerException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.response.DefaultResponseCreator;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestClient;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -206,14 +206,12 @@ class EControlClientTest {
               .andRespond(withStatus(NOT_FOUND));
 
         // When
-        HttpClientErrorException.NotFound exception =
-                assertThrows(
-                        HttpClientErrorException.NotFound.class,
-                        () -> client.getPriceInfo("product-123")
-                );
+        var exception = assertThrows(DataSourceNotFoundException.class,
+                                     () -> client.getPriceInfo("product-123"));
 
         // Then
-        assertEquals(NOT_FOUND, exception.getStatusCode());
+        assertEquals(EControlDataSource.DATA_SOURCE_ID, exception.getDataSourceId());
+        assertTrue(Objects.requireNonNull(exception.getMessage()).contains("HTTP 404"));
 
         server.verify();
     }
@@ -225,14 +223,12 @@ class EControlClientTest {
               .andRespond(withServerError());
 
         // When
-        HttpServerErrorException exception =
-                assertThrows(
-                        HttpServerErrorException.class,
-                        () -> client.getPriceInfo("product-123")
-                );
+        var exception = assertThrows(DataSourceServerException.class,
+                                     () -> client.getPriceInfo("product-123"));
 
         // Then
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, exception.getStatusCode());
+        assertEquals(EControlDataSource.DATA_SOURCE_ID, exception.getDataSourceId());
+        assertTrue(Objects.requireNonNull(exception.getMessage()).contains("HTTP 500"));
 
         server.verify();
     }

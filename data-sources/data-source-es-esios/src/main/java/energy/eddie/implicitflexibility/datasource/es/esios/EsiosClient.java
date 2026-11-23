@@ -4,6 +4,7 @@ import energy.eddie.implicitflexibility.datasource.es.esios.config.EsiosProperti
 import energy.eddie.implicitflexibility.datasource.es.esios.models.Indicator;
 import energy.eddie.implicitflexibility.datasource.es.esios.query.EsiosEnum;
 import energy.eddie.implicitflexibility.datasource.es.esios.query.EsiosTariffQuery;
+import energy.eddie.implicitflexibility.interactions.exception.DataSourceResponseErrorHandler;
 import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
@@ -27,6 +28,8 @@ public class EsiosClient {
         this.restClient = restClientBuilder.baseUrl(properties.baseUrl().toString())
                                            .defaultHeaders(headers -> headers.setBearerAuth(
                                                    properties.token()))
+                                           .defaultStatusHandler(
+                                                   new DataSourceResponseErrorHandler(EsiosDataSource.DATA_SOURCE_ID))
                                            .build();
         this.objectMapper = objectMapper;
     }

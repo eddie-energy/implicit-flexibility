@@ -5,6 +5,7 @@ import energy.eddie.implicitflexibility.datasource.at.econtrol.config.EControlPr
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.GridOperatorQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQuery;
 import energy.eddie.implicitflexibility.datasource.at.econtrol.query.ProductQueryMapper;
+import energy.eddie.implicitflexibility.interactions.exception.DataSourceResponseErrorHandler;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -27,7 +28,10 @@ public class EControlClient {
     ) {
         this.restClient = restClientBuilder.baseUrl(properties.baseUrl().toString())
                                            .defaultHeaders(headers -> headers.setBasicAuth(
-                                                   properties.username(), properties.password())).build();
+                                                   properties.username(), properties.password()))
+                                           .defaultStatusHandler(
+                                                   new DataSourceResponseErrorHandler(EControlDataSource.DATA_SOURCE_ID))
+                                           .build();
         this.productQueryMapper = productQueryMapper;
     }
 
