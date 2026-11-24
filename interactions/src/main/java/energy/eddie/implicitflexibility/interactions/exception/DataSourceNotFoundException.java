@@ -1,8 +1,11 @@
 package energy.eddie.implicitflexibility.interactions.exception;
 
-public class DataSourceNotFoundException extends DataSourceException {
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-    public DataSourceNotFoundException(String dataSourceId, String message, Throwable cause) {
-        super(dataSourceId, message, cause);
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class DataSourceNotFoundException extends DataSourceException {
+    public DataSourceNotFoundException(String dataSourceId, String message) {
+        super(dataSourceId, message);
     }
 }

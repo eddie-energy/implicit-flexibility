@@ -1,5 +1,11 @@
 rootProject.name = "implicit-flexibility"
 
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
 include("interactions")
 include("data-sources:data-source-at-econtrol")
 include("transport")

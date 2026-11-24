@@ -1,17 +1,11 @@
 package energy.eddie.implicitflexibility.interactions.exception;
 
-
-public class DataSourceException extends RuntimeException {
-
+public abstract class DataSourceException extends RuntimeException {
     private final String dataSourceId;
 
-    public DataSourceException(String dataSourceId, String message) {
-        super(message);
-        this.dataSourceId = dataSourceId;
-    }
 
-    public DataSourceException(String dataSourceId, String message, Throwable cause) {
-        super(message, cause);
+    protected DataSourceException(String dataSourceId, String message) {
+        super(message);
         this.dataSourceId = dataSourceId;
     }
 

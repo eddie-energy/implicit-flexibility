@@ -20,7 +20,10 @@ import org.springframework.test.web.client.response.DefaultResponseCreator;
 import org.springframework.web.client.RestClient;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -36,6 +39,7 @@ class EControlClientTest {
 
     private MockRestServiceServer server;
     private EControlClient client;
+    private EControlProperties properties;
 
     @Mock
     private ProductQueryMapper productQueryMapper;
@@ -44,15 +48,15 @@ class EControlClientTest {
     void setUp() {
         RestClient.Builder builder = RestClient.builder().baseUrl(BASE_URL);
         server = MockRestServiceServer.bindTo(builder).build();
-        EControlProperties properties = new EControlProperties(true,
-                                                               URI.create(BASE_URL),
-                                                               "username",
-                                                               "password");
+        properties = new EControlProperties(true,
+                                            URI.create(BASE_URL),
+                                            "username",
+                                            "password");
         client = new EControlClient(builder, properties, productQueryMapper);
     }
 
     @Test
-    void testFindGridOperators() {
+    void testFindGridOperatorsWithAuthentication() {
         // Given
         GridOperatorQuery query = mock(GridOperatorQuery.class);
         doReturn("4040").when(query).zipCode();
@@ -60,6 +64,13 @@ class EControlClientTest {
 
         server.expect(requestTo(BASE_URL + "/grid-operators?zipCode=4040&energyType=POWER"))
               .andExpect(method(HttpMethod.GET))
+              .andExpect(header(
+                      "Authorization",
+                      "Basic " + Base64.getEncoder().encodeToString(
+                              (properties.username() + ":" + properties.password())
+                                      .getBytes(StandardCharsets.UTF_8)
+                      )
+              ))
               .andRespond(withJson("""
                                            [
                                                {
@@ -195,12 +206,12 @@ class EControlClientTest {
               .andRespond(withStatus(NOT_FOUND));
 
         // When
-        DataSourceNotFoundException exception = assertThrows(DataSourceNotFoundException.class,
-                                                             () -> client.getPriceInfo("product-123"));
+        var exception = assertThrows(DataSourceNotFoundException.class,
+                                     () -> client.getPriceInfo("product-123"));
 
         // Then
         assertEquals(EControlDataSource.DATA_SOURCE_ID, exception.getDataSourceId());
-        assertEquals("The requested data was not found.", exception.getMessage());
+        assertTrue(Objects.requireNonNull(exception.getMessage()).contains("HTTP 404"));
 
         server.verify();
     }
@@ -212,13 +223,12 @@ class EControlClientTest {
               .andRespond(withServerError());
 
         // When
-        DataSourceServerException exception = assertThrows(DataSourceServerException.class,
-                                                           () -> client.getPriceInfo("product-123"));
+        var exception = assertThrows(DataSourceServerException.class,
+                                     () -> client.getPriceInfo("product-123"));
 
         // Then
         assertEquals(EControlDataSource.DATA_SOURCE_ID, exception.getDataSourceId());
-        assertEquals("The requested data could not be retrieved from the data source.",
-                     exception.getMessage());
+        assertTrue(Objects.requireNonNull(exception.getMessage()).contains("HTTP 500"));
 
         server.verify();
     }

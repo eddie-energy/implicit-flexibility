@@ -1,8 +1,11 @@
 package energy.eddie.implicitflexibility.interactions.exception;
 
-public class DataSourceServerException extends DataSourceException {
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-    public DataSourceServerException(String dataSourceId, String message, Throwable cause) {
-        super(dataSourceId, message, cause);
+@ResponseStatus(HttpStatus.BAD_GATEWAY)
+public class DataSourceServerException extends DataSourceException {
+    public DataSourceServerException(String dataSourceId, String message) {
+        super(dataSourceId, message);
     }
 }

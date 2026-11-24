@@ -7,8 +7,7 @@ import org.springframework.hateoas.mediatype.hal.forms.HalFormsConfiguration;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class HateoasConfigurationTest {
 
@@ -24,5 +23,6 @@ class HateoasConfigurationTest {
 
         // Then
         assertNotNull(result);
+        verify(provider).getFormTypes();
     }
 }
