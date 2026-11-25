@@ -68,10 +68,10 @@ class EsiosClientTest {
 
         // Then
         assertNotNull(result);
-        assertEquals(600L, result.getId());
-        assertEquals("Precio mercado SPOT Diario", result.getName());
-        assertEquals("Mercado SPOT", result.getShortName());
-        assertEquals(6, result.getGeos().size());
+        assertEquals(600L, result.id());
+        assertEquals("Precio mercado SPOT Diario", result.name());
+        assertEquals("Mercado SPOT", result.shortName());
+        assertEquals(6, result.geos().size());
 
         mockServer.verify();
     }
@@ -94,10 +94,10 @@ class EsiosClientTest {
 
         IndicatorSpecification indicator = result.indicators().getFirst();
 
-        assertEquals(1L, indicator.getId());
-        assertEquals("Generación programada PBF Hidráulica UGH", indicator.getName());
-        assertEquals("Hidráulica UGH", indicator.getShortName());
-        assertNotNull(indicator.getDescription());
+        assertEquals(1L, indicator.id());
+        assertEquals("Generación programada PBF Hidráulica UGH", indicator.name());
+        assertEquals("Hidráulica UGH", indicator.shortName());
+        assertNotNull(indicator.description());
 
         mockServer.verify();
     }

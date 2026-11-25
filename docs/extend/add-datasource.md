@@ -22,14 +22,17 @@ The implementation should provide the required Id and country information as bel
 @ConditionalOnProperty(prefix = "data-source.xx.example-provider", name = "enabled", havingValue = "true")
 public class ExampleDataSource implements DataSource {
 
+    public static final String DATA_SOURCE_ID = "example-provider";
+    public static final String COUNTRY_CODE = "XX";
+
     @Override
     public String getId() {
-        return "example-provider";
+        return DATA_SOURCE_ID;
     }
 
     @Override
     public String getCountry() {
-        return "XX";
+        return COUNTRY_CODE;
     }
 }
 ```
@@ -96,6 +99,7 @@ public class ExampleProviderClient {
     ) {
         this.restClient = builder
                 .baseUrl(properties.baseUrl().toString())
+                .defaultStatusHandler(new DataSourceResponseErrorHandler(ExampleDataSource.DATA_SOURCE_ID))
                 .build();
     }
 }
@@ -142,20 +146,17 @@ For example:
 ```java
 
 @Component
-public class ExampleTariffQueryExecutor
-        implements TariffQueryExecutor {
+public class ExampleTariffQueryExecutor implements TariffQueryExecutor {
 
     private final ExampleProviderClient client;
 
-    public ExampleTariffQueryExecutor(
-            ExampleProviderClient client
-    ) {
+    public ExampleTariffQueryExecutor(ExampleProviderClient client) {
         this.client = client;
     }
 
     @Override
     public String getCountryCode() {
-        return "XX";
+        return ExampleDataSource.COUNTRY_CODE;
     }
 
     @Override
@@ -165,9 +166,7 @@ public class ExampleTariffQueryExecutor
 
     @Override
     public Object execute(Object query) {
-        ExampleTariffQuery tariffQuery =
-                (ExampleTariffQuery) query;
-
+        ExampleTariffQuery tariffQuery = (ExampleTariffQuery) query;
         return client.getTariffInformation(tariffQuery);
     }
 }
