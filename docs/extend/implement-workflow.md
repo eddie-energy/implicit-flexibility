@@ -30,17 +30,17 @@ Discovery entry point
 ```
 
 The framework uses the `TariffDiscovery` abstraction to expose provider-specific discovery entry points.
-In this case, the `ExampleProviderTariffInformationRepository` should implement the `getDiscoveryLink` method, referencing the `ExampleProviderTariffController` class in which the discovery workflow is implemented.
+In this case, the `ExampleProviderTariffQueryExecutor` should implement the `getDiscoveryLink` method, referencing the `ExampleProviderTariffController` class in which the discovery workflow is implemented.
 
 ```java
 
 @Component
-public class ExampleProviderTariffInformationRepository implements TariffInformationRepository, TariffDiscovery {
+public class ExampleProviderTariffQueryExecutor implements TariffQueryExecutor, TariffDiscovery {
     
     ...
 
     @Override
-    public Link getDiscoveryLink(String countryCode) {
+    public Link getDiscoveryLink() {
         return linkTo(methodOn(ExampleProviderTariffController.class)
                               .discovery())
                 .withRel("discovery");

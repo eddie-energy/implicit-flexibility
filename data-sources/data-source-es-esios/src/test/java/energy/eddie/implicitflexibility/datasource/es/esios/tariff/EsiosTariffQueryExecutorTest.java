@@ -10,6 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.hateoas.Link;
 
 import java.util.Set;
 
@@ -18,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class EsiosTariffInformationRepositoryTest {
+class EsiosTariffQueryExecutorTest {
 
     @Mock
     private EsiosClient client;
@@ -27,7 +28,7 @@ class EsiosTariffInformationRepositoryTest {
     private Validator validator;
 
     @InjectMocks
-    private EsiosTariffInformationRepository repository;
+    private EsiosTariffQueryExecutor repository;
 
     @Test
     void testGetCountryCode() {
@@ -63,5 +64,15 @@ class EsiosTariffInformationRepositoryTest {
         // Then
         assertSame(expectedResult, result);
         verify(client).getIndicatorTariff(query);
+    }
+
+    @Test
+    void testGetDiscoveryLink() {
+        // Given / When
+        Link result = repository.getDiscoveryLink();
+
+        // Then
+        assertEquals("discovery", result.getRel().value());
+        assertEquals("/countries/ES/tariffs/discovery", result.getHref());
     }
 }

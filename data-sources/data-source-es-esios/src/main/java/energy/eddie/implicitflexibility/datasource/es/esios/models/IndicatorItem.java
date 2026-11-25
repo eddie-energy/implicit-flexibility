@@ -1,18 +1,7 @@
 package energy.eddie.implicitflexibility.datasource.es.esios.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 
-abstract class IndicatorItem extends IndicatorBase {
-    
-    @JsonProperty("short_name")
-    private final String shortName;
-
-    IndicatorItem(String name, long id, String shortName) {
-        super(name, id);
-        this.shortName = shortName;
-    }
-
-    public String getShortName() {
-        return shortName;
-    }
+public record IndicatorItem(@JsonAlias("geo_name") String name,
+                            @JsonAlias("geo_id") long id) implements IndicatorBase {
 }

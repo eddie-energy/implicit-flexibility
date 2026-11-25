@@ -2,8 +2,8 @@ package energy.eddie.implicitflexibility.transport.datasource;
 
 import energy.eddie.implicitflexibility.interactions.datasource.DataSource;
 import energy.eddie.implicitflexibility.interactions.datasource.DataSourceRegistry;
-import energy.eddie.implicitflexibility.interactions.tariff.TariffInformationRepository;
 import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
+import energy.eddie.implicitflexibility.interactions.tariff.TariffQueryExecutor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -75,7 +75,7 @@ class DataSourceControllerTest {
     @Test
     void createTariffsLink() {
         // Given
-        TariffInformationRepository provider = tariffProvider("AT");
+        TariffQueryExecutor provider = tariffProvider("AT");
 
         when(tariffProviderRegistry.getAll("AT")).thenReturn(List.of(provider));
 
@@ -91,8 +91,8 @@ class DataSourceControllerTest {
     @Test
     void createTariffsLink_MultipleProviders() {
         // Given
-        TariffInformationRepository firstProvider = tariffProvider("AT");
-        TariffInformationRepository secondProvider = tariffProvider("AT");
+        TariffQueryExecutor firstProvider = tariffProvider("AT");
+        TariffQueryExecutor secondProvider = tariffProvider("AT");
         when(tariffProviderRegistry.getAll("AT")).thenReturn(List.of(firstProvider, secondProvider));
 
         // When
@@ -130,8 +130,8 @@ class DataSourceControllerTest {
         return dataSource;
     }
 
-    private TariffInformationRepository tariffProvider(String countryCode) {
-        TariffInformationRepository provider = mock(TariffInformationRepository.class);
+    private TariffQueryExecutor tariffProvider(String countryCode) {
+        TariffQueryExecutor provider = mock(TariffQueryExecutor.class);
         when(provider.getCountryCode()).thenReturn(countryCode);
         return provider;
     }

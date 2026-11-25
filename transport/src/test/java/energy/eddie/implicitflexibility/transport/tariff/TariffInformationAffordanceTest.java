@@ -1,7 +1,7 @@
 package energy.eddie.implicitflexibility.transport.tariff;
 
-import energy.eddie.implicitflexibility.interactions.tariff.TariffInformationRepository;
 import energy.eddie.implicitflexibility.interactions.tariff.TariffProviderRegistry;
+import energy.eddie.implicitflexibility.interactions.tariff.TariffQueryExecutor;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -25,7 +25,7 @@ class TariffInformationAffordanceTest {
     @Test
     void create() {
         // Given
-        TariffInformationRepository repository = mock(TariffInformationRepository.class);
+        TariffQueryExecutor repository = mock(TariffQueryExecutor.class);
 
         when(registry.getTariffs("AT")).thenReturn(repository);
         doReturn(this.getClass()).when(repository).getQueryType();

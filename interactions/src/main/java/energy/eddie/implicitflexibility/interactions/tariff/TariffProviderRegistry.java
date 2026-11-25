@@ -12,29 +12,30 @@ import java.util.stream.Collectors;
 @Component
 public class TariffProviderRegistry {
 
-    private final Map<String, TariffInformationRepository> interactions;
+    private final Map<String, TariffQueryExecutor> interactions;
 
-    public TariffProviderRegistry(List<TariffInformationRepository> interactions) {
+    public TariffProviderRegistry(List<TariffQueryExecutor> interactions) {
         this.interactions = interactions.stream().collect(
-                Collectors.toUnmodifiableMap(TariffInformationRepository::getCountryCode, Function.identity())
+                Collectors.toUnmodifiableMap(TariffQueryExecutor::getCountryCode, Function.identity())
         );
     }
 
-    public Collection<TariffInformationRepository> getAll(String countryCode) {
+    public Collection<TariffQueryExecutor> getAll(String countryCode) {
         return interactions.values()
-                .stream()
-                .filter(interaction -> interaction.getCountryCode()
-                        .equals(countryCode))
-                .toList();
+                           .stream()
+                           .filter(interaction -> interaction.getCountryCode()
+                                                             .equals(countryCode))
+                           .toList();
     }
 
-    public Optional<TariffInformationRepository> find(String countryCode) {
+    public Optional<TariffQueryExecutor> find(String countryCode) {
         return Optional.ofNullable(interactions.get(countryCode));
     }
 
-    public TariffInformationRepository getTariffs(String countryCode) {
+    public TariffQueryExecutor getTariffs(String countryCode) {
         return find(countryCode).orElseThrow(() ->
-                new IllegalArgumentException("Tariff interaction not available for " + countryCode)
+                                                     new IllegalArgumentException(
+                                                             "Tariff interaction not available for " + countryCode)
         );
     }
 }

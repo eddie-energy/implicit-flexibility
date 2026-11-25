@@ -22,14 +22,17 @@ The implementation should provide the required Id and country information as bel
 @ConditionalOnProperty(prefix = "data-source.xx.example-provider", name = "enabled", havingValue = "true")
 public class ExampleDataSource implements DataSource {
 
+    public static final String DATA_SOURCE_ID = "example-provider";
+    public static final String COUNTRY_CODE = "XX";
+
     @Override
     public String getId() {
-        return "example-provider";
+        return DATA_SOURCE_ID;
     }
 
     @Override
     public String getCountry() {
-        return "XX";
+        return COUNTRY_CODE;
     }
 }
 ```
@@ -96,6 +99,7 @@ public class ExampleProviderClient {
     ) {
         this.restClient = builder
                 .baseUrl(properties.baseUrl().toString())
+                .defaultStatusHandler(new DataSourceResponseErrorHandler(ExampleDataSource.DATA_SOURCE_ID))
                 .build();
     }
 }
@@ -115,10 +119,9 @@ public ExampleResponse getInformation(
 ) {
     return restClient.post()
                      .uri("/information")
-                     .contentType(MediaType.APPLICATION_JSON)
                      .body(request)
                      .retrieve()
-                     .body(ExampleResponse.class);
+                     .requiredBody(ExampleResponse.class);
 }
 ```
 
@@ -127,7 +130,7 @@ Keep the handling consistent with the project's existing error-handling conventi
 
 ## 5. Implement tariff information retrieval
 
-To make a provider available through the generic tariff API, implement the `TariffInformationRepository` abstraction.
+To make a provider available through the generic tariff API, implement the `TariffQueryExecutor` abstraction.
 The repository connects the framework's generic tariff request mechanism to the provider-specific query and client.
 
 A provider-specific implementation should:
@@ -143,20 +146,17 @@ For example:
 ```java
 
 @Component
-public class ExampleTariffInformationRepository
-        implements TariffInformationRepository {
+public class ExampleTariffQueryExecutor implements TariffQueryExecutor {
 
     private final ExampleProviderClient client;
 
-    public ExampleTariffInformationRepository(
-            ExampleProviderClient client
-    ) {
+    public ExampleTariffQueryExecutor(ExampleProviderClient client) {
         this.client = client;
     }
 
     @Override
     public String getCountryCode() {
-        return "XX";
+        return ExampleDataSource.COUNTRY_CODE;
     }
 
     @Override
@@ -166,9 +166,7 @@ public class ExampleTariffInformationRepository
 
     @Override
     public Object execute(Object query) {
-        ExampleTariffQuery tariffQuery =
-                (ExampleTariffQuery) query;
-
+        ExampleTariffQuery tariffQuery = (ExampleTariffQuery) query;
         return client.getTariffInformation(tariffQuery);
     }
 }
@@ -184,7 +182,7 @@ Other providers can use different query fields, operations, and response models.
 ## 6. Implement tariff discovery (Optional)
 
 The framework's tariff retrieval mechanism is separate from the optional discovery capability.
-A provider can implement `TariffInformationRepository` without implementing `TariffDiscovery`.
+A provider can implement `TariffQueryExecutor` without implementing `TariffDiscovery`.
 
 Check the [next page](./implement-workflow) for more details about tariff discovery workflow.
 
@@ -205,7 +203,7 @@ In the current framework, it collects the data-source beans and indexes them by 
 A new implementation of `DataSource` makes the provider available to this registry when Spring creates the bean.
 The data-source registry represents the availability of general data sources; it does not replace the tariff information registry.
 
-`TariffProviderRegistry` registers `TariffInformationRepository` implementations.
+`TariffProviderRegistry` registers `TariffQueryExecutor` implementations.
 It makes tariff information operations available to the generic tariff controller and resolves repositories by country code.
 For a provider to handle tariff queries, its repository must be registered as a Spring bean and discovered by the registry.
 The registry is responsible for routing a country-specific tariff request to the appropriate repository.
